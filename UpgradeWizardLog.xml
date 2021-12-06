@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\PVCWindowsStudio.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\App.config" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="BlindsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\BlindsForm.resx" />
+  <event action="Analyze" type="Success" name="CalculatorForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\CalculatorForm.resx" />
+  <event action="Analyze" type="Success" name="ClientsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\ClientsForm.resx" />
+  <event action="Analyze" type="Success" name="FormulaForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\FormulaForm.resx" />
+  <event action="Analyze" type="Success" name="LogIn.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\LogIn.resx" />
+  <event action="Analyze" type="Success" name="MaterialsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\MaterialsForm.resx" />
+  <event action="Analyze" type="Success" name="Menu.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\Menu.resx" />
+  <event action="Analyze" type="Success" name="OrderDetailsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\OrderDetailsForm.resx" />
+  <event action="Analyze" type="Success" name="OrderForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\OrderForm.resx" />
+  <event action="Analyze" type="Success" name="PriceListForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\PriceListForm.resx" />
+  <event action="Analyze" type="Success" name="ProductItemsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\ProductItemsForm.resx" />
+  <event action="Analyze" type="Success" name="ProductsForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\ProductsForm.resx" />
+  <event action="Analyze" type="Success" name="ProfilesForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\ProfilesForm.resx" />
+  <event action="Analyze" type="Success" name="RolesForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\RolesForm.resx" />
+  <event action="Analyze" type="Success" name="UsersForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\UsersForm.resx" />
+  <event action="Analyze" type="Success" name="WindowPanesForm.resx" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\UI\WindowPanesForm.resx" />
+  <event action="Analyze" type="Success" name="PVCWindowsStudio" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\PVCWindowsStudio.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.BLL\PVCWindowsStudio.BLL.csproj" />
+  <event action="Analyze" type="Success" name="PVCWindowsStudio.BLL" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.BLL\PVCWindowsStudio.BLL.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.DAL\PVCWindowsStudio.DAL.csproj" />
+  <event action="Analyze" type="Success" name="PVCWindowsStudio.DAL" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.DAL\PVCWindowsStudio.DAL.csproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.BO\PVCWindowsStudio.BO.csproj" />
+  <event action="Analyze" type="Success" name="PVCWindowsStudio.BO" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.BO\PVCWindowsStudio.BO.csproj" />
+  <event action="Analyze" type="Success" name="PVCWindowsStudio" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.sln" />
+  <event action="Backup" type="Success" name="PVCWindowsStudio" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\PVCWindowsStudio.csproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\PVCWindowsStudio.csproj" />
+  <event action="Upgrade" type="Success" name="PVCWindowsStudio" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio\PVCWindowsStudio.csproj" />
+  <event action="Upgrade" type="Success" name="PVCWindowsStudio" path="C:\Users\Lenovo\source\repos\PVCWindowsStudio\PVCWindowsStudio.sln" />
+</log>

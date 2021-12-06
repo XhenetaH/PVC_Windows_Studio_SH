@@ -1,0 +1,2027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="radValidationProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>897, 17</value>
+  </metadata>
+  <metadata name="materialBlueGreyTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblUserName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblUserName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblUserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="lblUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1231, 68</value>
+  </data>
+  <data name="lblUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="lblUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblUserName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Name" xml:space="preserve">
+    <value>lblUserName</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;lblUserName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dashboardMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="dashboardMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dashboardMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dashboardMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dashboardMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="dashboardMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="dashboardMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dashboardMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="dashboardMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="dashboardMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dashboardMenuItem.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="dashboardMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="dashboardMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="materialsManagMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="materialsManagMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="materialsManagMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialsManagMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="materialsManagMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialsManagMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="materialsManagMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="materialMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="materialMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="materialMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="materialMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="materialMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="materialMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="materialMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="materialMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="materialMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialMenuItem.Text" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="materialMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="materialMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="paneMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="paneMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="paneMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="paneMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="paneMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="paneMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="paneMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="paneMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="paneMenuItem.Text" xml:space="preserve">
+    <value>Window Pane</value>
+  </data>
+  <data name="paneMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="paneMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="blindMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="blindMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="blindMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="blindMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="blindMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="blindMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="blindMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="blindMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="blindMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="blindMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="blindMenuItem.Text" xml:space="preserve">
+    <value>Blind</value>
+  </data>
+  <data name="blindMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="blindMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="profileMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="profileMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="profileMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="profileMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="profileMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="profileMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="profileMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="profileMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="profileMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="profileMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="profileMenuItem.Text" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="profileMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="profileMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="materialsManagMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="materialsManagMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="materialsManagMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="materialsManagMenuItem.Text" xml:space="preserve">
+    <value>Materials Management</value>
+  </data>
+  <data name="materialsManagMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="materialsManagMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="productsManagMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="productsManagMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="productsManagMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="productsManagMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="productsManagMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="productsManagMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="productsManagMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radMenuItem2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="radMenuItem2.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radMenuItem2.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radMenuItem2.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radMenuItem2.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="radMenuItem2.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="radMenuItem2.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="radMenuItem2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radMenuItem2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="radMenuItem2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radMenuItem2.Text" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="radMenuItem2.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="radMenuItem2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="productItemMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="productItemMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="productItemMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="productItemMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="productItemMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="productItemMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="productItemMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="productItemMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="productItemMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="productItemMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="productItemMenuItem.Text" xml:space="preserve">
+    <value>Product Items</value>
+  </data>
+  <data name="productItemMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="productItemMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="formulaMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="formulaMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="formulaMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="formulaMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="formulaMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="formulaMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="formulaMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="formulaMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="formulaMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="formulaMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="formulaMenuItem.Text" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="formulaMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="formulaMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="productsManagMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="productsManagMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="productsManagMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="productsManagMenuItem.Text" xml:space="preserve">
+    <value>Products Management</value>
+  </data>
+  <data name="productsManagMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="productsManagMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="pricelistMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="pricelistMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pricelistMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pricelistMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pricelistMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="pricelistMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="pricelistMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="handworkMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="handworkMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="handworkMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="handworkMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="handworkMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="handworkMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="handworkMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="handworkMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="handworkMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="handworkMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="handworkMenuItem.Text" xml:space="preserve">
+    <value>Hand Work</value>
+  </data>
+  <data name="handworkMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="handworkMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="pricelistMenuItem1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="pricelistMenuItem1.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pricelistMenuItem1.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pricelistMenuItem1.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pricelistMenuItem1.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="pricelistMenuItem1.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="pricelistMenuItem1.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pricelistMenuItem1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pricelistMenuItem1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pricelistMenuItem1.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pricelistMenuItem1.Text" xml:space="preserve">
+    <value>Price List</value>
+  </data>
+  <data name="pricelistMenuItem1.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="pricelistMenuItem1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="pricelistMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pricelistMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pricelistMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="pricelistMenuItem.Text" xml:space="preserve">
+    <value>Price List</value>
+  </data>
+  <data name="pricelistMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="pricelistMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="calculatorMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="calculatorMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="calculatorMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calculatorMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calculatorMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="calculatorMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="calculatorMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calculatorMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="calculatorMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="calculatorMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="calculatorMenuItem.Text" xml:space="preserve">
+    <value>Calculator</value>
+  </data>
+  <data name="calculatorMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="calculatorMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="orderHistoryMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="orderHistoryMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="orderHistoryMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderHistoryMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderHistoryMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="orderHistoryMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="orderHistoryMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="orderMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="orderMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="orderMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="orderMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderMenuItem.Text" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="orderMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="orderMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="orderDetailsMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="orderDetailsMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="orderDetailsMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderDetailsMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderDetailsMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="orderDetailsMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="orderDetailsMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="orderDetailsMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderDetailsMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderDetailsMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderDetailsMenuItem.Text" xml:space="preserve">
+    <value>Order Details</value>
+  </data>
+  <data name="orderDetailsMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="orderDetailsMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="orderHistoryMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderHistoryMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="orderHistoryMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="orderHistoryMenuItem.Text" xml:space="preserve">
+    <value>Order History</value>
+  </data>
+  <data name="orderHistoryMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="orderHistoryMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="invoicesMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="invoicesMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="invoicesMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="invoicesMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="invoicesMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="invoicesMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="invoicesMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="invoicesMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="invoicesMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="invoicesMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="invoicesMenuItem.Text" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="invoicesMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="invoicesMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="clientsMenuItem.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="clientsMenuItem.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="clientsMenuItem.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clientsMenuItem.HintText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="clientsMenuItem.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="clientsMenuItem.ImageIndex" type="System.Int32, mscorlib">
+    <value>-1</value>
+  </data>
+  <data name="clientsMenuItem.ImageKey" xml:space="preserve">
+    <value />
+  </data>
+  <data name="clientsMenuItem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="clientsMenuItem.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="clientsMenuItem.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="clientsMenuItem.Text" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="clientsMenuItem.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="clientsMenuItem.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="radMenu1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="radMenu1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1405, 37</value>
+  </data>
+  <data name="radMenu1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;radMenu1.Name" xml:space="preserve">
+    <value>radMenu1</value>
+  </data>
+  <data name="&gt;&gt;radMenu1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radMenu1.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radMenu1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblNewProduct.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNewProduct.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10.2pt</value>
+  </data>
+  <data name="lblNewProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 91</value>
+  </data>
+  <data name="lblNewProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="lblNewProduct.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblNewProduct.Text" xml:space="preserve">
+    <value>67 New Products</value>
+  </data>
+  <data name="&gt;&gt;lblNewProduct.Name" xml:space="preserve">
+    <value>lblNewProduct</value>
+  </data>
+  <data name="&gt;&gt;lblNewProduct.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNewProduct.Parent" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblNewProduct.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblProductNr.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblProductNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 16.2pt</value>
+  </data>
+  <data name="lblProductNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 44</value>
+  </data>
+  <data name="lblProductNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 32</value>
+  </data>
+  <data name="lblProductNr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblProductNr.Text" xml:space="preserve">
+    <value>2354</value>
+  </data>
+  <data name="&gt;&gt;lblProductNr.Name" xml:space="preserve">
+    <value>lblProductNr</value>
+  </data>
+  <data name="&gt;&gt;lblProductNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblProductNr.Parent" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblProductNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 10.2pt</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 14</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 20</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radPictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="radPictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 79</value>
+  </data>
+  <data name="radPictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox4.Name" xml:space="preserve">
+    <value>radPictureBox4</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPictureBox, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox4.Parent" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 581</value>
+  </data>
+  <data name="radPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 136</value>
+  </data>
+  <data name="radPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Name" xml:space="preserve">
+    <value>radPanel1</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chart3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="chart3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>951, 450</value>
+  </data>
+  <data name="chart3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>433, 267</value>
+  </data>
+  <data name="chart3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="chart3.Text" xml:space="preserve">
+    <value>chart3</value>
+  </data>
+  <data name="&gt;&gt;chart3.Name" xml:space="preserve">
+    <value>chart3</value>
+  </data>
+  <data name="&gt;&gt;chart3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart3.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;chart3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="chart2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="chart2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 450</value>
+  </data>
+  <data name="chart2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>605, 267</value>
+  </data>
+  <data name="chart2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="chart2.Text" xml:space="preserve">
+    <value>chart2</value>
+  </data>
+  <data name="&gt;&gt;chart2.Name" xml:space="preserve">
+    <value>chart2</value>
+  </data>
+  <data name="&gt;&gt;chart2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart2.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;chart2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblNewInvoice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNewInvoice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10.2pt</value>
+  </data>
+  <data name="lblNewInvoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 91</value>
+  </data>
+  <data name="lblNewInvoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 22</value>
+  </data>
+  <data name="lblNewInvoice.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblNewInvoice.Text" xml:space="preserve">
+    <value>2 New Invoices</value>
+  </data>
+  <data name="&gt;&gt;lblNewInvoice.Name" xml:space="preserve">
+    <value>lblNewInvoice</value>
+  </data>
+  <data name="&gt;&gt;lblNewInvoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNewInvoice.Parent" xml:space="preserve">
+    <value>radPanel4</value>
+  </data>
+  <data name="&gt;&gt;lblNewInvoice.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblInvoiceNr.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblInvoiceNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 16.2pt</value>
+  </data>
+  <data name="lblInvoiceNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 44</value>
+  </data>
+  <data name="lblInvoiceNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 32</value>
+  </data>
+  <data name="lblInvoiceNr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblInvoiceNr.Text" xml:space="preserve">
+    <value>658</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceNr.Name" xml:space="preserve">
+    <value>lblInvoiceNr</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceNr.Parent" xml:space="preserve">
+    <value>radPanel4</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 10.2pt</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 14</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 20</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>radPanel4</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radPictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 33</value>
+  </data>
+  <data name="radPictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 80</value>
+  </data>
+  <data name="radPictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox3.Name" xml:space="preserve">
+    <value>radPictureBox3</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPictureBox, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox3.Parent" xml:space="preserve">
+    <value>radPanel4</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 261</value>
+  </data>
+  <data name="radPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 136</value>
+  </data>
+  <data name="radPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;radPanel4.Name" xml:space="preserve">
+    <value>radPanel4</value>
+  </data>
+  <data name="&gt;&gt;radPanel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel4.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radPanel4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblNewClients.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNewClients.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10.2pt</value>
+  </data>
+  <data name="lblNewClients.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 91</value>
+  </data>
+  <data name="lblNewClients.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 22</value>
+  </data>
+  <data name="lblNewClients.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblNewClients.Text" xml:space="preserve">
+    <value>6 New Clients</value>
+  </data>
+  <data name="&gt;&gt;lblNewClients.Name" xml:space="preserve">
+    <value>lblNewClients</value>
+  </data>
+  <data name="&gt;&gt;lblNewClients.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNewClients.Parent" xml:space="preserve">
+    <value>radPanel3</value>
+  </data>
+  <data name="&gt;&gt;lblNewClients.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblClientNr.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblClientNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 16.2pt</value>
+  </data>
+  <data name="lblClientNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 44</value>
+  </data>
+  <data name="lblClientNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 32</value>
+  </data>
+  <data name="lblClientNr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblClientNr.Text" xml:space="preserve">
+    <value>966</value>
+  </data>
+  <data name="&gt;&gt;lblClientNr.Name" xml:space="preserve">
+    <value>lblClientNr</value>
+  </data>
+  <data name="&gt;&gt;lblClientNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblClientNr.Parent" xml:space="preserve">
+    <value>radPanel3</value>
+  </data>
+  <data name="&gt;&gt;lblClientNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 10.2pt</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 14</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>radPanel3</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radPictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 21</value>
+  </data>
+  <data name="radPictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 92</value>
+  </data>
+  <data name="radPictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox2.Name" xml:space="preserve">
+    <value>radPictureBox2</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPictureBox, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox2.Parent" xml:space="preserve">
+    <value>radPanel3</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 425</value>
+  </data>
+  <data name="radPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 136</value>
+  </data>
+  <data name="radPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;radPanel3.Name" xml:space="preserve">
+    <value>radPanel3</value>
+  </data>
+  <data name="&gt;&gt;radPanel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel3.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radPanel3.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="radPanel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lblNewOrders.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNewOrders.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Narrow, 10.2pt</value>
+  </data>
+  <data name="lblNewOrders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 91</value>
+  </data>
+  <data name="lblNewOrders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 22</value>
+  </data>
+  <data name="lblNewOrders.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblNewOrders.Name" xml:space="preserve">
+    <value>lblNewOrders</value>
+  </data>
+  <data name="&gt;&gt;lblNewOrders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNewOrders.Parent" xml:space="preserve">
+    <value>radPanel5</value>
+  </data>
+  <data name="&gt;&gt;lblNewOrders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblOrderNr.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblOrderNr.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 16.2pt</value>
+  </data>
+  <data name="lblOrderNr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 43</value>
+  </data>
+  <data name="lblOrderNr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="lblOrderNr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblOrderNr.Name" xml:space="preserve">
+    <value>lblOrderNr</value>
+  </data>
+  <data name="&gt;&gt;lblOrderNr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOrderNr.Parent" xml:space="preserve">
+    <value>radPanel5</value>
+  </data>
+  <data name="&gt;&gt;lblOrderNr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Rounded MT Bold, 10.2pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 14</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>radPanel5</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radPictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 33</value>
+  </data>
+  <data name="radPictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 80</value>
+  </data>
+  <data name="radPictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox1.Name" xml:space="preserve">
+    <value>radPictureBox1</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPictureBox, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox1.Parent" xml:space="preserve">
+    <value>radPanel5</value>
+  </data>
+  <data name="&gt;&gt;radPictureBox1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radPanel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 101</value>
+  </data>
+  <data name="radPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 136</value>
+  </data>
+  <data name="radPanel5.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;radPanel5.Name" xml:space="preserve">
+    <value>radPanel5</value>
+  </data>
+  <data name="&gt;&gt;radPanel5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel5.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radPanel5.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chart1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="chart1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 103</value>
+  </data>
+  <data name="chart1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1016, 341</value>
+  </data>
+  <data name="chart1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="chart1.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Name" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;chart1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;chart1.Parent" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;chart1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="radPanel6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="radPanel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="radPanel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1405, 759</value>
+  </data>
+  <data name="radPanel6.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;radPanel6.Name" xml:space="preserve">
+    <value>radPanel6</value>
+  </data>
+  <data name="&gt;&gt;radPanel6.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radPanel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="radPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="radPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1405, 759</value>
+  </data>
+  <data name="radPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Name" xml:space="preserve">
+    <value>radPanel2</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPanel, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radPanel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="materialBlueGreyTheme2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>244, 60</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1405, 759</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEAAAMMOAADDDgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5
+        GwBTORsAUzkcAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5
+        GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5
+        GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAUzkcAFM5GwBTORsAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAVDkbAFQ5GwBUORsAVDkbAlQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5
+        GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5
+        GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5
+        GwRUORsCVDkbAFQ5GwBUORsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAUzkcAFQ5GwBUORsAVDkbAlQ5GwFUORsAVDkbAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFQ5GwBUORsAVDkbAVQ5GwJUORsAVDkbAFM5HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQ5GwBQMQ8AVDkbAVQ5GwBUORspVDkbflQ5
+        G4pUORuIVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5
+        G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5
+        G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4hUORuKVDkbflQ5GylUORsAVDkbAV8yCQBUORsAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVDkbAlQ5
+        GwBUORs2VDkb9VQ5G/9UORv+VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5
+        G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5
+        G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/lQ5G/9UORv1VDkbNlQ5
+        GwBUORsCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAVDkbAFQ5GwNUORsAVDkbo1Q5G/9UORtjVDkbLFQ5GzdUORs1VTobNVU5GzVVORs1VTkbNVU5
+        GzVVORs1VTkbNVU5GzVVORs1VTkbNVU5GzVVORs1VTkbNVU5GzVUORs1VDkbNVQ5GzVUORs1VTkbNVU5
+        GzVVORs1VTkbNVU5GzVVORs1VTkbNVU5GzVVORs1VTkbNVU5GzVVORs1VTkbNVU6GzVUORs1VDkbN1Q5
+        GyxUORtjVDkb/1Q5G6NUORsAVDkbA1Q5GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBUORsCVDkbAFQ5G7xUORv9VDkbElQ5GwBUORsBAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFQ5GwFUORsAVDkbEVQ5G/1UORu8VDkbAFU5GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbA1Q5GwBUORu8VDkb/1U5
+        GxRVOBoAUDUbA1g8GwBYPBsAIA8cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABUORsAVDkbAFQ5GwFUORsDVDkbA1Q5GwFUORsAVDkbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAkDxsAWD0bAFg8GwBQNRsDVTgbAFQ5GxRUORv/VDkbvFQ5GwBVOBsCUzobAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5
+        GwJUORsAVDkbvFQ5G/9jRRoUrIEYAN2qFi3hrRbB4a0WxuGtFsjhrRbI4a0WyOGtFsjhrRbI4a0WyOGt
+        FsjhrRbI4a0WyOGtFsjhrRbI4a0WxeGtFsrhrRZG4a0WAOGtFgDhrRZG4a0WyuGtFsXhrRbI4a0WyOGt
+        FsjhrRbI4a0WyOGtFsjhrRbI4a0WyOGtFsjhrRbI4a0WyOGtFsbhrRbB3aoWLayBGABjRBoTVDkb/1Q5
+        G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGSFwDfrBZm4a0W/+GtFvbhrRb24a0W9uCs
+        FvjgrBb44a0W9uGtFvbhrRb24a0W9uGtFvbhrRb24a0W9uGtFvThrRb/4a0WjeGtFgDhrRYA4a0WjeGt
+        Fv/hrRb04a0W9uGtFvbgrBb44KwW9+GtFvbhrRb24a0W9uGtFvbhrRb24a0W9uGtFvbhrRb24a0W/9+s
+        FmbBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkhcA36wWYuGt
+        Fv/hrRZd4a0TAOCtFxDyzBUEz6kWBs6dGA7ksBcL4K0XC+GtFwvhrRcL4a0XDeFHAADhrRY64a0W/+Gt
+        FovhrRYA4a0WAOGtFovhrRb/4a0WOuG4AADgrRcO/+oSAsyhFwjRoBgN5bAXC+CtFwvhrRcL4a0XC+Gt
+        Fw/hrRMA4a0WXeGtFv/frBZiwZIXAG5OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5
+        G/9uThoVwZMXAN+sFmPhrRb/4a0WV+izFgAAAFwARi4bHUYuGxlLMRsARC0gAQAAVAAAAFMAAAAAAOGt
+        FgPhrRYA4a0WMuGtFv/hrRaM4a0WAOGtFgDhrRaM4a0W/+GtFjLnshYAAAA8AEYuHCNFLRwSSTAbAEEr
+        HgEAAEEAAABAAAAAAADhrRYE4a0WAOGtFlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5
+        GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGTFwDfrBZj4a0W/+CsFljfrBYA//8RAlU6G9dVOhvqVjsbJUsy
+        GwB1VBoF/9QVAduoFwHhrRYE4a0WAOGtFjPhrRb/4a0WjOGtFgDhrRYA4a0WjOGtFv/eqhY0tIgYAGtM
+        GhZVORv2VTobzFg8GxEnExwAflwaBP/VFQHbqBcB4a0WBeGtFgDhrRZY4a0W/9+sFmPBkxcAb04aFVQ5
+        G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/hrRZX9b4VAAAA
+        HwBUORtxVDkb/1Q5G99UORsmVDkbAFQ5GwRUORsA3qsWA+GtFgDhrRYy4a0W/+GtFozhrRYA4a0WAOGt
+        FozhrRb/4KwWM+23FgAAACAAVDkbklQ5G/9UORvGVDkbElQ4GgBUORsDVDkbAN+sFgThrRYA4a0WV+Gt
+        Fv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+s
+        FmPhrRb/4a0WV+KuFgCwhRgGVDkbAFQ5G29UORv/VDkb4FQ5GyZUORsAVDkbBPC5FgLirRYA4a0WMuGt
+        Fv/hrRaM4a0WAOGtFgDhrRaM4a0W/+GtFjLmsRYAv5AXA1Q4GwBUORuQVDkb/1Q5G8ZUORsSVDkbAFQ5
+        GwPrthUD4a0WAOGtFlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5
+        G7xUORv/bk4aFcGTFwDfrBZj4a0W/+GtFlfhrRYA3KkWBFQ5GwVUORsAVDkbb1Q5G/9UORvgVDkbJlQ5
+        GwCfdxkF4KwWAOGtFjLhrRb/4a0WjOGtFgDhrRYA4a0WjOGtFv/hrRYy4KwWAL+RFwNUORsEVDgbAFQ5
+        G5BUORv/VDkbxlQ5GxJUOhwAuYwXBeCsFgDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4
+        GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/hrRZX4a0WANqnFgRWOR0AVDkbBFQ5
+        GwBUORtvVDkb/1Q5G99UORslAAAfAPrBFQDhrRYy4a0W/+GtFozhrRYA4a0WAOGtFozhrRb/4a0WMuCs
+        FgDWpBcDVDkbAVQ4GwJUOBsAVDkbkFQ5G/9UORvGVDkbEP//AAHrthUA4a0WV+GtFv/frBZjwZMXAG9O
+        GhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+sFmPhrRb/4a0WV+ey
+        FgD//wAAVDkbGFQ5GxYAAAAAVDkbAFQ5G29UORv/VDkb32xNGg/ClBcA3qoWM+GtFv/hrRaM4a0WAOGt
+        FgDhrRaM4a0W/+GtFjLnsRYA//8AAFQ5GxxUORsOVTgbAVQ4GwBUORuQVDkb/1Q5G78AADEA57IWAOCs
+        FlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGT
+        FwDfrBZj4a0W/+CsFljgrBYA//8DAVQ5G9ZUORvjVDkbHVQ5GgBUORsAVDkbblQ5G7B5VxoKyZkXAN+r
+        FjPhrRb/4a0WjOGtFgDhrRYA4a0WjOGtFv/eqhYzuIsYAGhKGhJUORv9VDkbmVQ5GwBUORsGVDgcAFQ5
+        G4xUORuZAAAmAOaxFgDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5
+        GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/hrRZX9b0VAAAAHgBUORt7VDkb/1Q5G9hUORsfVDkbAFQ5
+        GwJUORsA4KwWA+GtFgDhrRYy4a0W/+GtFozhrRYA4a0WAOGtFozhrRb/4KwWM9ekFwCxhhgEVDkbfFQ5
+        G0JUORsUVDkbEVQ5GgBUORsBVDkbAOGtFgThrRYA4a0WV+GtFv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5
+        GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+sFmPhrRb/4a0WV+OuFgC1iRcFVDkbAFQ5
+        G3lUORv/VDkb2VQ5Gx9VORoAVDkbBtakFwPgrBYA4a0WMuGtFv/hrRaM4a0WAOGtFgDhrRaM4a0W/+Gt
+        FjLhrRYAtIgYBFQ5GwBUORsRVDkb9FQ5G8NUORsLVjkbAVQ5GwXlsBYE4a0WAOGtFlfhrRb/36wWY8GT
+        FwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGTFwDfrBZj4a0W/+Gt
+        FlfhrRYA16UWBFQ5GwVUORsAVDkbeVQ5G/9UORvZVDkbH1Q5GwCheBgF36sWAOGtFjLhrRb/4a0WjOGt
+        FgDhrRYA4a0WjOGtFv/hrRYy4awWAMubFwNUORsGVzcYAFQ5G5xUORv/VDkbvVQ5GwxTORwAvI4XBeCs
+        FgDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25O
+        GhXBkxcA36wWY+GtFv/hrRZX4a0WANmnFgRTOhsAVDkbA1Q5GwBUORt5VDkb/1Q5G9hUORseAAAfAPe/
+        FgDhrRYy4a0W/+GtFozhrRYA4a0WAOGtFozhrRb/4a0WMuCsFgDRoBcDVDkbAVQ5GwFUOxwAVDkbmVQ5
+        G/9UORu9UzkbC///DQHqtBUA4a0WV+GtFv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5
+        GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+sFmPhrRb/4a0WV+WxFgD//wkBVDkbEVQ5Gw9UORsBVDkbAFQ5
+        G3lUORv/VDkb2XBQGg3GlhcA3qsWM+GtFv/hrRaM4a0WAOGtFgDhrRaM4a0W/+GtFjLnsRYA//8AAFQ5
+        GxdUORsMVT8JAFQ2IQBUORuZVDkb/1Q5G7kAACgA6bQVAOCtFlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5
+        G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGTFwDfrBZj4a0W/+CsFljirhYAAAAsAFQ5
+        G9tUORvCVDkbAFQ5GwlUORsAVDkbeVQ5G7x1VBoLxpcXAN+rFjPhrRb/4a0WjOGtFgDhrRYA4a0WjOGt
+        Fv/eqhYzuYwYAGdJGhNUORvzVDkbuVU5GwhYSBcAbgNEAFQ5G5hUORujAAAoAOaxFgDhrRZX4a0W/9+s
+        FmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+Gt
+        Fv/hrRZX6bMWAAAAIgBUORt2VDkbZ1Q5GwBUORsBVDkbAlQ5GwBUORsA4KwWA+GtFgDhrRYy4a0W/+Gt
+        FozhrRYA4a0WAOGtFozhrRb/4KwWM+OuFgD//w4BVDkbplQ5G/9UORu0VTkcCFAvDABUORsBVTgcAOGt
+        FgThrRYA4a0WV+GtFv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5
+        G/9uThoVwZMXAN+sFmPhrRb/4a0WV+GtFgDhrRYEVDkbA1Q5GwBUORtOVDkbtlQ5GxtUORsAVDkbBdOh
+        FwPgrBYA4a0WMuGtFv/hrRaM4a0WAOGtFgDhrRaM4a0W/+GtFjLpsxYA8rwWAlg1GwFUORujVDkb/1Q5
+        G7VVORwIUzkZAVQ5GwTgrBYE4a0WAOGtFlfhrRb/36wWY8KTFwBvThoVVDkb/lQ5G7xUORsAVTgbAlM6
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5
+        GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGTFwDfrBZj4a0W/+GtFlfhrRYA5bAWBFQ5GwdUORsAVDkba1Q5
+        G/9UORvPVDkbGVQ5GwCjehgF36sWAOGtFjLhrRb/4a0WjOGtFgDhrRYA4a0WjOGtFv/hrRYy36wWALaJ
+        GARTOhsCWDUbAVQ5G6NUORv/VDkbtVU5HAhXOyEAv5EXBeCsFgDhrRZX4a0W/9+sFmPBkhcAbk4aFlQ5
+        G/5UORu+VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/hrRZX4a0WAOGt
+        FgRUORsAVDkbAlQ5GwBUORuBVDkb/1Q5G9BUORsYAAAiAPS8FgDhrRYy4a0W/+GtFozhrRYA4a0WAOGt
+        FozhrRb/4a0WMuGtFgDsthYCVDkbAVM6GwJYNRsBVDkbo1Q5G/9UORu0VTkcB//9EQLosxYA4a0WV+Gt
+        Fv/grBZiy5sXAH9cGQ1UORv0VDkbr1Q5GwBUORsDVDobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+s
+        FmPhrRb/4a0WV+GtFgDhrRYEVDobAFQ5GwBUORsCVDkbAFQ5G4NUORv/VDkb03VUGgvKmhcA36sWM+Gt
+        Fv/hrRaM4a0WAOGtFgDhrRaM4a0W/+GtFjLhrRYA36sWA1Q5GwBUORsBUzkbAlg2GwFUORujVDkb/1Q5
+        G7IAACMA67YVAOCtFlfhrRb/4a0WYeeyFgAAAIUAVDkbLlQ5GxxUORsAVDkbAVA4HAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5
+        G7xUORv/bk4aFcGTFwDfrBZj4a0W/+GtFlnhrRYA4a0WB+CsFgTlsRYDypoXBJRuGQZCKRwAWDwbh1Y7
+        G8uJZRkQuYwYAN+rFjbhrRb/4a0WjOGtFgDhrRYA4a0WjOGtFv/hrRY14a0WAOGtFgbgrBYE6bQWA7mM
+        GAWyhxgDnnYYAlc8G6dXOxux//8JAuaxFgDgrRZa4a0W/+GtFmHhrRYA36sWBFwxGgBRPxoAUj4aAFE+
+        GgBRPhoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWYuGtFv/hrRZX4a0WAOGtFgQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA4a0WA+GtFgDhrRYy4a0W/+GtFozhrRYA4a0WAOGtFozhrRb/4a0WMuGt
+        FgDhrRYDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOGtFgThrRYA4a0WV+GtFv/hrRZh5bEWAAAA
+        /wBUORtJVDkbL1Q5GwBUORsBUzgbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZIXAN+sFmThrRb/4a0WiOGt
+        FkLhrRZQ4a0WTuGtFk7hrRZO4a0WTuCsFk7dqhZQ36sWT+CsFlDhrRZG4a0Wb+GtFv/hrRaM4a0WAOGt
+        FgDhrRaM4a0W/+GtFm/hrRZG4a0WUOGtFk7hrRZO4a0WTuGtFk7frBZP3aoWUN+rFk/grBZR4a0WQuGt
+        FojhrRb/4KwWY8ycFwCEYRkLVDkb9FQ5G65UORsAVDkbA1Q5GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk0aFcCS
+        FwDfqxZg4a0W/+GtFvvhrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        FvvhrRb/4a0Wh+GtFgDhrRYA4a0Wh+GtFv/hrRb74a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        Fv/hrRb/4a0W/+GtFv/hrRb74a0W/+GtFl/msRYAAABbAFQ5G0BUORspVDkbAFQ5GwFTORoAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5
+        GwBUORu8VDkb/1s+GhKMZxkA1qQXEeGtFmzhrRZy4a0Wb+GtFm/hrRZv4a0Wb+GtFm/hrRZv4a0Wb+Gt
+        Fm/hrRZv4a0Wb+GtFm/hrRZw4a0Wc+GtFiDjqhcA4awXAOGtFiDhrRZz4a0WcOGtFm/hrRZv4a0Wb+Gt
+        Fm/hrRZv4a0Wb+GtFm/hrRZv4a0Wb+GtFm/hrRZv4a0WcuGtFmzhrRYQ4awWANilFgFaMRkAUjsdAFM7
+        HQBSOx0AUjsdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9VORsSVTkbAGJFGwHgrxoA4K8aAOCvGgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4K4aAOCuGgDgrhoAwJQaAFI4
+        GwFUORsAVDkbNVQ5GyFUORsAVDkbAVM4GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/WT0aEoJfGQDSoRYM4a0WWuGt
+        Fl/hrRZb4a0WXOGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WWeGt
+        FljhrRZY4a0WWeGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WXOGtFlzhrRZc4a0WXOGt
+        FlvhrRZf4a0WWtWjFgyOaRkAXUAbC1Q5G/ZUORuxVDkbAFQ5GwNUORsAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/21N
+        GhW/kRcA36sWXeGtFv/hrRb84a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        Fv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        Fv/hrRb/4a0W/+GtFv/hrRb/4a0W/OGtFv/fqxZdv5EXAG1NGhVUORv9VDkbvVQ5GwBVOBsCUzobAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5
+        GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+sFmThrRb/4a0WlOGtFlbhrRZj4a0WYOGtFmDgrBZh3aoWY96q
+        FmPhrRZg4a0WYOGtFmDhrRZg4a0WYOGtFmDhrRZh3aoWY96qFmPhrRZg4a0WYOGtFmDhrRZg4a0WYOGt
+        FmDhrRZg36sWYt2pFmPfqxZi4a0WYOGtFmDhrRZj4a0WVuGtFpThrRb/36wWZMKTFwBvThoVVDkb/lQ5
+        G7xUORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGSFwDfrBZi4a0W/+GtFlfhrRYA4a0WBAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4a0WBOGtFgDhrRZX4a0W/9+s
+        FmLBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+Gt
+        Fv/hrRZa4a0WAOGtFgi+kBcFAAAnAGlKGhpXOxvBWj4bWkYtHACXcBkI36sWBOGtFgTVoxYE2qcWBAAA
+        OQBXPBuoWDwbiBABHgCfdxgH1aMWBOOvFgThrRYEp34YBxYGHQBbPhtSVzwbwl1AGyIYBB0ApHsYCOax
+        FgfirRYA4a0WWuGtFv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5
+        G/9uThoVwZMXAN+sFmPhrRb/4a0WV+GtFgDhrRYEVDkbAlQ5GwBUORsgVDkb81Q5G/9UORtWVDkbAFQ5
+        GwVVNhcAVDkbAFY5GQBUORsAVDkbzlQ5G6dUORsAVDkbA1Q5GwJUOhsBVDobAFQ5GwRUORsAVDkbZFQ5
+        G/9UORvWVDkbH1Q5GwCugxgG4KwWAOGtFlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5
+        GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGTFwDfrBZj4a0W/+GtFlfhrRYA4a0WBFU4GwBUORsCVDkbAFQ5
+        GzlUORvwVDkb/1Q5G1ZUORsAVDkbBVU2FwBUOhsAVDkbAFQ5GwNUORsCVDkbAFQ5GxJUORsEVDkbAVQ5
+        GwFVORwAVDkbAlQ5GwBUORt4VDkb/1Q5G9hUORseAAAnAO+5FQDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5
+        G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/hrRZX4a0WAOOv
+        FgRUORsDVDkbAlQ5GwNUORsAVDkbOlQ5G/BUORv/VDkbVlQ5GwBUORsFUzwfAFQ5GwBUORsDVDkbAFQ5
+        GyxUORv/VDkbilU4GwBUORsDVDobAW0+JgBUORsDVDkbAFQ5G3pUORv/VDkb2H1aGg3PnhcA4KwWWOGt
+        Fv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZMXAN+s
+        FmPhrRb/4a0WV+GtFgDgrBYEVDkbAFQ5GwFUORsCVDkbBFQ5GwBUORs6VDkb8FQ5G/9UORtWVDkbAFQ5
+        GwVSPyMAVDkbAlQ5GwBUORsRVDkb0FQ5G/9UORuKVDgbAFQ5GwNUOhsBVDkbAFQ5GwRUORsAVDkbeVQ5
+        G7iFYRkLz54WAOCsFljhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5
+        G7xUORv/bk4aFcGTFwDfrBZj4a0W/+GtFlfirhYA//8NAVQ5G0tUORspVDkbAFQ5GwNUORsEVDkbAFQ5
+        GzpUORvwVDkb/1Q5G1ZUORsAVDkbBVU2FwBUORsBVDkbAFQ5GxVUORvLVDkb/1Q5G4pUOBsAVDkbA1Q6
+        GwFVORsAVDkbAmU/FwBPNx0A4a0WBOGtFgDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4
+        GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABTORsAVTkbAlQ5GwBUORu8VDkb/25OGhXBkxcA36wWY+GtFv/fqxZYwpMXAG1OGhVUORvyVDkb6VQ5
+        GylUORsAVDkbA1Q5GwRUORsAVDkbOlQ5G/BUORv/VDkbVlQ5GwBUORsFVDocAFQ5GwJUORsAVDkbFVQ5
+        G8xUORv/VDkbilQ4GwBUORsDVDobAVQ5GgBUORsDVDkbAs+eFgTgrBYA4a0WV+GtFv/frBZjwZMXAG9O
+        GhVUORv+VDkbvVQ5GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9uThoVwZIXAN+sFmLhrRb/4a0WVvW9
+        FQAAAB8AVDkbaVQ5G/9UORvjVDkbKlQ5GwBUORsCVDkbBFQ5GwBUORs6VDkb8FQ5G/9UORtWVDkbAFQ5
+        GwJUORsAVDkbA1Q5GwBUORsVVDkbzFQ5G/9UORuJVDgbAFQ4GwFUOhsAVDkbAFQ5GwDirhYE4a0WAOGt
+        FlfhrRb/36wWY8GTFwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/bk4aFcGT
+        FwDfrBZj4a0W/+GtFlnirhYAr4QYBlQ5GwBUORtqVDkb/1Q5G+ZUORsqVDkbAFQ5GwJUORsEVDkbAFQ5
+        GzpUORvwVDkb/1Q5G1RUORsAVDkbAlQ5GwBUORsDVDkbAFQ5GxVUORvLVDkb/1Q5G4dUORsAVDkbAVQ5
+        GwAAAAAA4a0WBOGtFgDhrRZX4a0W/9+sFmPBkxcAb04aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5
+        GwBUORu8VDkb/2tMGhW9jxcA36sWUeGtFv/hrRZF4a0WANelFgNVOhsEVDkbAFQ5G2dUORv/VDkbdVQ5
+        GwBVOhsEPiccAFU6GwRUORsAVDkbOlQ5G/NUORv1VDkbGFM5GwBWOxsCRy4cAFU6GwNTOBsAVDkbFVQ5
+        G8tUORv/VDkbSlQ5GwBVOhsD4bATAOGtFgThrRYA4a0WV+GtFv/frBZjwZMXAG9OGhVUORv+VDkbvVQ5
+        GwBVOBsCUzobAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAUzkbAFU5GwJUORsAVDkbvFQ5G/9XOxsScVAaAMaXFwfhrRYq4a0WBuGsFgPjrhYE2KUXBKl/
+        GAbdthcBX0IbLHRUGg7//w4B06EXBOCsFgTosxYDm3MZCEEpHABbPxs9WT0bd6V8GAb/4BQD0qEXBN+r
+        FgTsthYDqH4YBwAAHwBdQRsdWD0bgmZIGhwAACUAv5EXBeGtFgThrRYH4a0WAOGtFlnhrRb/36wWY8GT
+        FwBvThoVVDkb/lQ5G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFM5GwBVORsCVDkbAFQ5G7xUORv/VTkbElQ5GwBVOhsB/+Q9AP/k
+        PQD/5D0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4a0WBOGt
+        FgDhrRZX4a0W/9+sFmLBkxcAbk4aFVQ5G/5UORu9VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVTkbAlQ5GwBUORu8VDkb/2FD
+        GhOlfBgA3KkWJeGtFqPhrRaj4a0WouGtFqLhrRai4a0WouGtFqLfrBak4K0Wo+GtFqLhrRai4a0WouGt
+        FqLhrRai4a0Wot+rFqTeqham4a0WouGtFqLhrRai4a0WouGtFqLhrRai4a0WouCsFqPdqham4KwWo+Gt
+        FqLhrRai4a0WouGtFqPhrRac4a0Wv+GtFv/frBZlwZMXAG9OGhVUORv+VDkbvVQ5GwBVOBsCUzobAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzkbAFU5
+        GwJUORsAVDkbvFQ5G/9rSxoVvY8XAN+rFlDhrRb/4a0W/OGtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        Fv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+Gt
+        Fv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv/hrRb/4a0W/+GtFv3hrRb/36sWTbuOFwBqSxoVVDkb/1Q5
+        G71UORsAVTgbAlM6GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAFM5GwBVORsDVDkbAFQ5G7xUORv/VTkbFGFCGgBqTBoE1qQXH9elFybXpBck16QXJdek
+        FyXXpBcl16QXJdekFyXXpBcl16QXJdekFyXXpBcl16QXJdekFyXXpBcl16QXJdekFyXXpBcl16QXJdek
+        FyXXpBcl16QXJdekFyXXpBcl16QXJdekFyXXpBcl16QXJdekFyXXpBcl16QXJdakFyTXpRcn16UXI35b
+        GQRoSBoAVTkbFFQ5G/9UORu8VDkbAFU4GwJTOhsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTORsAVDkbAlQ5GwBUORu8VDkb/VQ5GxJUORsAVDkbAQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABUORsBVDkbAFQ5GxFUORv9VDkbvFQ5GwBVORsCUzobAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVDkbAFQ5GwNUORsAVDkbo1Q5
+        G/9UORtjVDkbLFQ5GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9
+        GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9
+        GzdZPRs3WT0bN1k9GzdZPRs3WT0bN1k9GzdZPRs3VDkbN1Q5GyxUORtjVDkb/1Q5G6NUORsAVDkbA1Q5
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABUORsCVDkbAFQ5GzZUORv2VDkb/1Q5G/5UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5
+        G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5
+        G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv/VDkb/1Q5G/9UORv+VDkb/1Q5
+        G/ZUORs2VDkbAFQ5GwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABUORsAchQRAFQ5GwFUORsAVDkbKlQ5G35UORuKVDkbiFQ5G4lUORuJVDkbiVQ5
+        G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5
+        G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5G4lUORuJVDkbiVQ5
+        G4lUORuIVDkbilQ5G35UORsqVDkbAFQ5GwFVSA4AVDkbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUzgcAFQ5GwBUORsAVDkbAlQ5GwFUORsAVDkbAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQ5GwBUORsAVDkbAVQ5GwJUORsAVDkbAFI4GwAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUORsAVDkbAFQ5
+        GwBUORsCVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5
+        GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5
+        GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwRUORsEVDkbBFQ5GwJUORsAVDkbAFQ5
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABTORsAUzkbAFM5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5
+        GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5
+        GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFQ5GwBUORsAVDkbAFM5
+        GwBTORsAUzkbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA////////////+AAAAAAf//8gAAAAAAT//0v/////0v//oAAAAAAF//9AAAAAAAL//kAAAAAA
+        An/+Rf////+if/5Ff/Qv/qJ//kQAAYAAIn/+RAABgAAif/5EQBGIAiJ//kRlUYy6In/+REIRiEIif/5E
+        YVGMKiJ//kRQkYoSIn/+REhRiQoif/5ERDGIgiJ//kRGEYhGIn/+REMRiKYif/5EYVGIKiJ//kRQkYoC
+        In/+REhRiQoif/5ERDGIgiJ//kRCEYjGIn/+RGURiGYif/5EZFGICiJ//kRIkYgCIn/+REhRiAoif/5E
+        RDGIAiJ//kRCEYoGMv/+REERiAIh//5EX9GL+jJ//kQAAYAAIn/+RAABgAAyf/5EAAGAACH//kT/////
+        Ev/+RAAAAAAif/5EAAAAACJ//kQAAAAAIn/+RF////oif/5ESIJBEiJ//kRIRkUKIn/+REQiQIYif/5E
+        QhSIQiJ//kRRCoQiIn/+RESEQhoif/5EQkKhAiJ//kRhIVCCIn/+RFCQqEoif/5ESKhUIiJ//kQABAIi
+        In/+Rf////oif/5EAAAAACJ//kQAAAAAIn/+RAAAAAAif/5F/////6J//kAAAAAAAn//QAAAAAAC//+g
+        AAAAAAX//0v/////0v//IAAAAAAE///4AAAAAB////////////8=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;radValidationProvider1.Name" xml:space="preserve">
+    <value>radValidationProvider1</value>
+  </data>
+  <data name="&gt;&gt;radValidationProvider1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadValidationProvider, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;materialBlueGreyTheme1.Name" xml:space="preserve">
+    <value>materialBlueGreyTheme1</value>
+  </data>
+  <data name="&gt;&gt;materialBlueGreyTheme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.MaterialBlueGreyTheme, Telerik.WinControls.Themes.MaterialBlueGrey, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;dashboardMenuItem.Name" xml:space="preserve">
+    <value>dashboardMenuItem</value>
+  </data>
+  <data name="&gt;&gt;dashboardMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;materialsManagMenuItem.Name" xml:space="preserve">
+    <value>materialsManagMenuItem</value>
+  </data>
+  <data name="&gt;&gt;materialsManagMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;materialMenuItem.Name" xml:space="preserve">
+    <value>materialMenuItem</value>
+  </data>
+  <data name="&gt;&gt;materialMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;paneMenuItem.Name" xml:space="preserve">
+    <value>paneMenuItem</value>
+  </data>
+  <data name="&gt;&gt;paneMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;blindMenuItem.Name" xml:space="preserve">
+    <value>blindMenuItem</value>
+  </data>
+  <data name="&gt;&gt;blindMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;profileMenuItem.Name" xml:space="preserve">
+    <value>profileMenuItem</value>
+  </data>
+  <data name="&gt;&gt;profileMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;productsManagMenuItem.Name" xml:space="preserve">
+    <value>productsManagMenuItem</value>
+  </data>
+  <data name="&gt;&gt;productsManagMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radMenuItem2.Name" xml:space="preserve">
+    <value>radMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;radMenuItem2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;productItemMenuItem.Name" xml:space="preserve">
+    <value>productItemMenuItem</value>
+  </data>
+  <data name="&gt;&gt;productItemMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;formulaMenuItem.Name" xml:space="preserve">
+    <value>formulaMenuItem</value>
+  </data>
+  <data name="&gt;&gt;formulaMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;pricelistMenuItem.Name" xml:space="preserve">
+    <value>pricelistMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pricelistMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;handworkMenuItem.Name" xml:space="preserve">
+    <value>handworkMenuItem</value>
+  </data>
+  <data name="&gt;&gt;handworkMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;pricelistMenuItem1.Name" xml:space="preserve">
+    <value>pricelistMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;pricelistMenuItem1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;calculatorMenuItem.Name" xml:space="preserve">
+    <value>calculatorMenuItem</value>
+  </data>
+  <data name="&gt;&gt;calculatorMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;orderHistoryMenuItem.Name" xml:space="preserve">
+    <value>orderHistoryMenuItem</value>
+  </data>
+  <data name="&gt;&gt;orderHistoryMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;orderMenuItem.Name" xml:space="preserve">
+    <value>orderMenuItem</value>
+  </data>
+  <data name="&gt;&gt;orderMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;orderDetailsMenuItem.Name" xml:space="preserve">
+    <value>orderDetailsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;orderDetailsMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;invoicesMenuItem.Name" xml:space="preserve">
+    <value>invoicesMenuItem</value>
+  </data>
+  <data name="&gt;&gt;invoicesMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;clientsMenuItem.Name" xml:space="preserve">
+    <value>clientsMenuItem</value>
+  </data>
+  <data name="&gt;&gt;clientsMenuItem.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;materialBlueGreyTheme2.Name" xml:space="preserve">
+    <value>materialBlueGreyTheme2</value>
+  </data>
+  <data name="&gt;&gt;materialBlueGreyTheme2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.MaterialBlueGreyTheme, Telerik.WinControls.Themes.MaterialBlueGrey, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AdminMenu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+</root>
