@@ -28,7 +28,7 @@ namespace PVCWindowsStudio.BLL
         }
         public Blinds Get(int id)
         {
-            throw new NotImplementedException();
+            return dal.Get(id);
         }
 
         public Blinds Get(Blinds model)

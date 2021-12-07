@@ -28,7 +28,7 @@ namespace PVCWindowsStudio.BLL
 
         public WindowPanes Get(int id)
         {
-            throw new NotImplementedException();
+            return dal.Get(id);
         }
 
         public WindowPanes Get(WindowPanes model)

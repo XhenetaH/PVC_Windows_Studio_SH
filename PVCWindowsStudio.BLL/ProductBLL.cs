@@ -24,7 +24,7 @@ namespace PVCWindowsStudio.BLL
 
         public Products Get(int id)
         {
-            throw new NotImplementedException();
+            return dal.Get(id);
         }
 
         public int GetNr()

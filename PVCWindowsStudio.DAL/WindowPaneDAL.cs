@@ -39,7 +39,30 @@ namespace PVCWindowsStudio.DAL
 
         public WindowPanes Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                WindowPanes panes = null;
+                using (var connection = DataConnection.GetConnection())
+                {
+                    using (var command = DataConnection.Command(connection, "usp_WindowPane_Get", CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "WindowPaneID", id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            panes = new WindowPanes();
+                            if (reader.Read())
+                            {
+                                panes = ToObject(reader);
+                            }
+                        }
+                    }
+                }
+                return panes;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public decimal GetPrice(int paneId)
         {

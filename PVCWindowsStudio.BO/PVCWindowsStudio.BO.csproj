@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="AuditColumns.cs" />
     <Compile Include="Blinds.cs" />
-    <Compile Include="ChangeLanguage.cs" />
     <Compile Include="Clients.cs" />
     <Compile Include="Formula.cs" />
     <Compile Include="HandiWork.cs" />

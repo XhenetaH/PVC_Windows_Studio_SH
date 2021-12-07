@@ -33,6 +33,24 @@ namespace PVCWindowsStudio.DAL
                 return false;
             }
         }
+        public bool Delete_Temporary()
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    using (var command = DataConnection.Command(connection, "usp_TemporaryDetails_Delete", CommandType.StoredProcedure))
+                    {
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
         public bool Delete(OrderDetails model)
         {
@@ -195,7 +213,6 @@ namespace PVCWindowsStudio.DAL
                 return null;
             }
         }
-
         public bool Insert(OrderDetails model)
         {
             try
@@ -216,6 +233,95 @@ namespace PVCWindowsStudio.DAL
                         DataConnection.AddParameter(command, "Total", model.Total);
                         DataConnection.AddParameter(command, "HandWorkPrice", model.HandWorkPrice);
                         DataConnection.AddParameter(command, "InsertBy", model.InsertBy);
+                        int result = command.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<OrderDetails> GetAll_Temporary()
+        {
+            try
+            {
+                List<OrderDetails> lista = null;
+                using(var connection = DataConnection.GetConnection())
+                {
+                    using(var command = DataConnection.Command(connection, "usp_TemporaryDetails_GetAll",CommandType.StoredProcedure))
+                    {
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            lista = new List<OrderDetails>();
+                            while (reader.Read())
+                            {
+                                OrderDetails detail = new OrderDetails();
+                                detail.BlindID = int.Parse(reader["BlindID"].ToString());
+                                detail.ProfileID = int.Parse(reader["ProfileID"].ToString());
+                                detail.ProductID = int.Parse(reader["ProductID"].ToString());
+                                detail.WindowPaneID = int.Parse(reader["WindowPaneID"].ToString());
+                                detail.Blind = new Blinds()
+                                {
+                                    Name = reader["BlindName"].ToString()
+                                };
+                                detail.Profile = new Profiles()
+                                {
+                                    Name = reader["ProfileName"].ToString()
+                                };
+                                detail.Product = new Products()
+                                {
+                                    Name = reader["ProductName"].ToString()
+                                };
+                                detail.WindowPane = new WindowPanes()
+                                {
+                                    Name = reader["WindowPaneName"].ToString()
+                                };
+                                detail.Quantity = int.Parse(reader["Quantity"].ToString());
+                                detail.Width = decimal.Parse(reader["Width"].ToString());
+                                detail.Height = decimal.Parse(reader["Height"].ToString());
+                                detail.Price = decimal.Parse(reader["Price"].ToString());
+                                detail.Total = decimal.Parse(reader["Total"].ToString());
+                                detail.HandWorkPrice = decimal.Parse(reader["HandWorkPrice"].ToString());
+
+                                lista.Add(detail);
+                            }
+                        }
+                    }
+                }
+                return lista;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public bool Insert_Temporary(OrderDetails model)
+        {
+            try
+            {
+                using (var connection = DataConnection.GetConnection())
+                {
+                    using (var command = DataConnection.Command(connection, "usp_TemporaryDetails_Insert", CommandType.StoredProcedure))
+                    {                        
+                        DataConnection.AddParameter(command, "ProductID", model.ProductID);
+                        DataConnection.AddParameter(command, "ProductName", model.Product.Name);
+                        DataConnection.AddParameter(command, "ProfileID", model.ProfileID);
+                        DataConnection.AddParameter(command, "ProfileName", model.Profile.Name);
+                        DataConnection.AddParameter(command, "BlindID", model.BlindID);
+                        DataConnection.AddParameter(command, "BlindName", model.Blind.Name);
+                        DataConnection.AddParameter(command, "WindowPaneID", model.WindowPaneID);
+                        DataConnection.AddParameter(command, "WindowPaneName", model.WindowPane.Name);
+                        DataConnection.AddParameter(command, "Quantity", model.Quantity);
+                        DataConnection.AddParameter(command, "Width", model.Width);
+                        DataConnection.AddParameter(command, "Height", model.Height);
+                        DataConnection.AddParameter(command, "Price", model.Price);
+                        DataConnection.AddParameter(command, "Total", model.Total);
+                        DataConnection.AddParameter(command, "HandWorkPrice", model.HandWorkPrice);
+                        
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }

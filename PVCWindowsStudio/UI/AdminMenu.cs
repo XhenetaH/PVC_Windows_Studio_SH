@@ -183,24 +183,7 @@ namespace PVCWindowsStudio.UI
 
      
 
-        private void helpBtn_Click_1(object sender, EventArgs e)
-        {
-            Help.ShowHelp(this, "C:\\Users\\Lenovo\\Documents\\My HelpAndManual Projects\\NewProject.chm", HelpNavigator.Topic, "Dashboard.htm");
-
-        }
-
-        private void btnAmerican_Click_1(object sender, EventArgs e)
-        {
-            ChangeLanguage change = new ChangeLanguage();
-            change.UpdateConfig("language", "en");
-            Application.Restart();
-        }
-
-        private void btnAlbania_Click_1(object sender, EventArgs e)
-        {
-            ChangeLanguage change = new ChangeLanguage();
-            change.UpdateConfig("language", "sq");
-            Application.Restart();
-        }
+    
+        
     }
 }

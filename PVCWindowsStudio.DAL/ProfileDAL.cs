@@ -145,7 +145,10 @@ namespace PVCWindowsStudio.DAL
                             profile = new Profiles();
                             if(reader.Read())
                             {
+                                profile.ProfileID = int.Parse(reader["ProfileID"].ToString());
+                                profile.Name = reader["Name"].ToString();
                                 profile.Color = reader["Color"].ToString();
+                                profile.NameProf = reader["Name"].ToString() + reader["Color"].ToString();
                             }
                         }
                     }

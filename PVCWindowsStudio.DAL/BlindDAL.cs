@@ -39,7 +39,30 @@ namespace PVCWindowsStudio.DAL
 
         public Blinds Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Blinds blind = null;
+                using(var connection = DataConnection.GetConnection())
+                {
+                    using(var command = DataConnection.Command(connection, "usp_Blind_Get",CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "BlindID", id);
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            blind = new Blinds();
+                            if(reader.Read())
+                            {
+                                blind = ToObject(reader);
+                            }
+                        }
+                    }
+                }
+                return blind;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public Blinds Get(Blinds model)

@@ -88,7 +88,30 @@ namespace PVCWindowsStudio.DAL
 
         public Products Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Products product = null;
+                using(var connection = DataConnection.GetConnection())
+                {
+                    using(var command = DataConnection.Command(connection, "usp_Product_Get",CommandType.StoredProcedure))
+                    {
+                        DataConnection.AddParameter(command, "ProductID", id);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            product = new Products();
+                            if(reader.Read())
+                            {
+                                product = ToObject(reader);
+                            }
+                        }
+                    }
+                }
+                return product;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
        

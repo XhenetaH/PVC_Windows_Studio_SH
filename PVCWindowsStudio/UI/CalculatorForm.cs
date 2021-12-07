@@ -105,12 +105,6 @@ namespace PVCWindowsStudio.UI
             col.DisplayMember = "Name";
             col.ValueMember = "BlindID";
 
-            //GridViewMultiComboBoxColumn multi = this.calculatorGridView.Columns["Product"] as GridViewMultiComboBoxColumn;
-            //multi = this.calculatorGridView.Columns["Product"] as GridViewMultiComboBoxColumn;
-            //multi.DataSource = calcM.productBll.GetExistProd();
-            //multi.DisplayMember = "Name";
-            //multi.ValueMember = "ProductID";
-
             GridViewComboBoxColumn combo = this.calculatorGridView.Columns["Profile"] as GridViewComboBoxColumn;
             combo.DataSource = calcM.profileBll.GetExistProfile();
             combo.DisplayMember = "NameProf";
@@ -132,84 +126,27 @@ namespace PVCWindowsStudio.UI
             discountCmb.SelectedIndex = 1;
 
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+
+            System.Timers.Timer timer = new System.Timers.Timer();
+            timer.Interval = 60000;
+            timer.Elapsed += timer_Elapsed;
+            timer.Start();
+
+            LoadTemporaryData();
         }
-
-
-        private void btnSaveAs_Click(object sender, EventArgs e)
+        private void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            int clientID = 0;
-            if (calculatorGridView.RowCount != 0)
-            {
-                if (String.IsNullOrEmpty(lblClientID.Text))
-                {
-                    if(ValidationMethod())
-                    { 
-                        radValidationProvider1.ClearErrorStatus();
-
-                        calcM.client.Name = txtName.Text;
-                        calcM.client.LastName = txtLastName.Text;
-                        calcM.client.PhoneNumber = txtPhoneNr.Text;
-                        calcM.client.Address = txtAddress.Text;
-                        calcM.client.Email = txtEmail.Text;
-                        calcM.client.InsertBy = 1;
-
-                        calcM.clientBll.Insert(calcM.client);
-                        clientID = calcM.clientBll.GetID();
-                    }
-                    
-                }
-                else
-                {
-                    clientID = int.Parse(lblClientID.Text);
-                }
-                if (clientID != 0)
-                {
-                    calcM.order.ClientID = clientID;
-                    calcM.order.Date = DateTime.Now;
-                    calcM.order.Comment = "";
-                    if (String.IsNullOrEmpty(txtDiscount.Text))
-                        calcM.order.Discount = 0;
-                    else
-                        calcM.order.Discount = Convert.ToDecimal(txtDiscount.Text);
-                    calcM.order.DiscountType = discountCmb.Text;
-                    calcM.order.TotalPrice = Convert.ToDecimal(txtTotal.Text);
-                    calcM.order.InsertBy = 1;
-                    if (calcM.orderBll.Insert(calcM.order))
-                    {
-                        
-                        RadMessageBox.Show("Order inserted successfully!");
-                        
-                    }
-                    for (int i = 0; i < calculatorGridView.RowCount; i++)
-                    {
-                        calcM.details.OrderID = calcM.orderBll.GetID();
-                        calcM.details.ProductID = int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString());
-                        calcM.details.BlindID = int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString());
-                        calcM.details.WindowPaneID = int.Parse(ddlWindowPane.SelectedValue.ToString());
-                        calcM.details.Quantity = int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
-                        calcM.details.Width = int.Parse(calculatorGridView.Rows[i].Cells["Width"].Value.ToString());
-                        calcM.details.Height = int.Parse(calculatorGridView.Rows[i].Cells["Height"].Value.ToString());
-                        calcM.details.Price = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value);
-                        calcM.details.Total = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Total"].Value);
-                        calcM.details.HandWorkPrice = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["HandWorkPrice"].Value);
-                        calcM.details.InsertBy = 1;
-                        if (chooseProfile.SelectedIndex == 0)
-                            calcM.details.ProfileID = int.Parse(ddlProfile.SelectedValue.ToString());
-                        else if (chooseProfile.SelectedIndex == 1)
-                            calcM.details.ProfileID = int.Parse(calculatorGridView.Rows[i].Cells["Profile"].Value.ToString());
-                        calcM.detailsBll.Insert(calcM.details);
-                    }
-                }
-
-            }
-            else
-            {
-                
-                RadMessageBox.Show("Your order is empty!");
-                
-            }       
+            SaveTemporary();
         }
 
+        private void LoadTemporaryData()
+        {
+            var list = calcM.detailsBll.GetAll_Temporary();
+            if (list!=null)
+            {
+                calculatorGridView.DataSource = list;
+            }
+        }
 
         private void clientradMultiColumnComboBox1_EditorControl_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
@@ -368,112 +305,127 @@ namespace PVCWindowsStudio.UI
                     if (calculatorGridView.CurrentRow.Cells["Profile"].Value != null)
                         profileId = int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString());
                 }
-                if (e.Column.Name == "Product")
+                if (ddlWindowPane.SelectedIndex < 0)
                 {
-                    if (e.Value == null)
-                    {                        
-                        e.Cancel = true;
-                        RadMessageBox.Show($"{e.Column.Name} can't be empty!");
-                    }
-                    else
-                    {
-                        
-                        currentRow.Cells["Price"].Value = CalcPrice(int.Parse(e.Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
-                        currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
-
-                    }
+                    RadMessageBox.Show("Please select a window pane!");
                 }
-                if(e.Column.Name == "Blind")
+                else if (chooseProfile.SelectedIndex == 0 && ddlProfile.SelectedIndex < 0)
                 {
-                    if(e.Value == null)
-                    {
-                        e.Cancel = true;
-                        RadMessageBox.Show($"{e.Column.Name} can't be empty!");
-                    }
-                    else
-                    {
-                        currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(e.Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
-                        currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
-
-                    }
+                    RadMessageBox.Show("Please select a profile!");
                 }
-                if(e.Column.Name == "Width")
+                else if (chooseProfile.SelectedIndex == 1 && calculatorGridView.CurrentRow.Cells["Profile"].Value == null)
                 {
-                    if (e.Value != null)
+                    RadMessageBox.Show("Please select a profile!");
+                }                              
+                else
+                {
+                    if (e.Column.Name == "Product")
                     {
-                        int nr;
-                        if (!int.TryParse(e.Value.ToString(), out nr))
+                        if (e.Value == null)
                         {
                             e.Cancel = true;
-                            RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            RadMessageBox.Show($"{e.Column.Name} can't be empty!");
                         }
                         else
                         {
-                            currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(e.Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
+
+                            currentRow.Cells["Price"].Value = CalcPrice(int.Parse(e.Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
                             currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
-                            currentRow.Cells["HandWorkPrice"].Value = Convert.ToDecimal(calcM.workBll.GetPrice(Convert.ToDecimal(e.Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString())));
+
                         }
                     }
-                    else
+                    if (e.Column.Name == "Blind")
                     {
-                        e.Cancel = true;
-                        RadMessageBox.Show($"{e.Column.Name} can't be empty!");
-                    }
-
-                }
-                if (e.Column.Name == "Height")
-                {
-                    if (e.Value != null)
-                    {
-                        int nr;
-                        if (!int.TryParse(e.Value.ToString(), out nr))
+                        if (e.Value == null)
                         {
                             e.Cancel = true;
-                            RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            RadMessageBox.Show($"{e.Column.Name} can't be empty!");
                         }
                         else
                         {
-                            currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(e.Value.ToString()));
+                            currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(e.Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
                             currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
-                            currentRow.Cells["HandWorkPrice"].Value = Convert.ToDecimal(calcM.workBll.GetPrice(Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()),Convert.ToDecimal(e.Value.ToString())));
 
                         }
                     }
-                    else
+                    if (e.Column.Name == "Width")
                     {
-                        e.Cancel = true;
-                        RadMessageBox.Show($"{e.Column.Name} can't be empty!");
-                    }
-                }
-                if (e.Column.Name == "Quantity")
-                {
-                    if (e.Value != null)
-                    {
-                        int nr;
-                        if (!int.TryParse(e.Value.ToString(), out nr))
+                        if (e.Value != null)
                         {
-                            e.Cancel = true;
-                            RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            int nr;
+                            if (!int.TryParse(e.Value.ToString(), out nr))
+                            {
+                                e.Cancel = true;
+                                RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            }
+                            else
+                            {
+                                currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(e.Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()));
+                                currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
+                                currentRow.Cells["HandWorkPrice"].Value = Convert.ToDecimal(calcM.workBll.GetPrice(Convert.ToDecimal(e.Value.ToString()), Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString())));
+                            }
                         }
                         else
                         {
-                            currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(e.Value.ToString());
+                            e.Cancel = true;
+                            RadMessageBox.Show($"{e.Column.Name} can't be empty!");
+                        }
 
+                    }
+                    if (e.Column.Name == "Height")
+                    {
+                        if (e.Value != null)
+                        {
+                            int nr;
+                            if (!int.TryParse(e.Value.ToString(), out nr))
+                            {
+                                e.Cancel = true;
+                                RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            }
+                            else
+                            {
+                                currentRow.Cells["Price"].Value = CalcPrice(int.Parse(currentRow.Cells["Product"].Value.ToString()), profileId, int.Parse(currentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(currentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(e.Value.ToString()));
+                                currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(currentRow.Cells["Quantity"].Value.ToString());
+                                currentRow.Cells["HandWorkPrice"].Value = Convert.ToDecimal(calcM.workBll.GetPrice(Convert.ToDecimal(currentRow.Cells["Height"].Value.ToString()), Convert.ToDecimal(e.Value.ToString())));
+
+                            }
+                        }
+                        else
+                        {
+                            e.Cancel = true;                           
+                            RadMessageBox.Show($"{e.Column.Name} can't be empty!");
                         }
                     }
-                    else
+                    if (e.Column.Name == "Quantity")
                     {
-                        e.Cancel = true;         
-                        RadMessageBox.Show($"{e.Column.Name} can't be empty!");
-                    }
+                        if (e.Value != null)
+                        {
+                            int nr;
+                            if (!int.TryParse(e.Value.ToString(), out nr))
+                            {
+                                e.Cancel = true;
+                                RadMessageBox.Show($"{e.Column.Name} must be a number!");
+                            }
+                            else
+                            {
+                                currentRow.Cells["Total"].Value = Convert.ToDecimal(currentRow.Cells["Price"].Value) * int.Parse(e.Value.ToString());
 
-                }                
+                            }
+                        }
+                        else
+                        {
+                            e.Cancel = true;
+                            RadMessageBox.Show($"{e.Column.Name} can't be empty!");
+                        }
+
+                    }
+                }
             }
         }
 
         private void calculatorGridView_UserAddingRow(object sender, GridViewRowCancelEventArgs e)
         {
-           
+
             if (e.Rows[0].Cells["Product"].Value == null)
             {
                 RadMessageBox.Show("Product can't be empty!");
@@ -482,7 +434,6 @@ namespace PVCWindowsStudio.UI
             if (e.Rows[0].Cells["Blind"].Value == null)
             {
                 RadMessageBox.Show("Blind can't be empty!");
-                e.Cancel = true;
             }
             if (e.Rows[0].Cells["Width"].Value != null)
             {
@@ -492,7 +443,7 @@ namespace PVCWindowsStudio.UI
                     RadMessageBox.Show("Width must be a number!");
                     e.Cancel = true;
                 }
-                               
+
             }
             if (e.Rows[0].Cells["Width"].Value == null)
             {
@@ -535,23 +486,78 @@ namespace PVCWindowsStudio.UI
 
 
         private void ddlProfile_SelectedValueChanged(object sender, EventArgs e)
-        {
-            for (int i = 0; i < calculatorGridView.RowCount; i++)
+        {            
+            if (ddlProfile.SelectedIndex > -1)
             {
-                calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
-                calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                if (calculatorGridView.CurrentRow.Cells["Product"].Value != null)
+                {
+                    if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
+                    {
+                        if (ddlWindowPane.SelectedIndex > -1)
+                        {
+                            if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
+                            {
+                                if (calculatorGridView.CurrentRow.Cells["Height"].Value != null)
+                                {
+                                    if (calculatorGridView.CurrentRow.Cells["Quantity"].Value != null)
+                                    {
+                                        for (int i = 0; i < calculatorGridView.RowCount; i++)
+                                        {
+                                            calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
+                                            calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
             }
-            
+
         }
 
         private void ddlWindowPane_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            for (int i = 0; i < calculatorGridView.RowCount; i++)
+            int profileID = -2;
+            if (chooseProfile.SelectedIndex == 0)
             {
-                calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
-                calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                if (ddlProfile.SelectedIndex > -1)
+                    profileID = int.Parse(ddlProfile.SelectedValue.ToString());
+            }
+            else if (chooseProfile.SelectedIndex == 1)
+                if (calculatorGridView.CurrentRow.Cells["Profile"].Value != null)
+                    profileID = int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString());
+            if (profileID >-1)
+            {
+                if (calculatorGridView.CurrentRow.Cells["Product"].Value != null)
+                {
+                    if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
+                    {
+                        if (ddlWindowPane.SelectedIndex > -1)
+                        {
+                            if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
+                            {
+                                if (calculatorGridView.CurrentRow.Cells["Height"].Value != null)
+                                {
+                                    if (calculatorGridView.CurrentRow.Cells["Quantity"].Value != null)
+                                    {
+                                        for (int i = 0; i < calculatorGridView.RowCount; i++)
+                                        {
+                                            calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
+                                            calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
 
             }
+
+
         }
         private bool ValidationMethod()
         {
@@ -660,8 +666,29 @@ namespace PVCWindowsStudio.UI
         {
             if (e.Column.HeaderText == "Profile")
             {
-                calculatorGridView.CurrentRow.Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.CurrentRow.Cells["Product"].Value.ToString()), int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString()), int.Parse(calculatorGridView.CurrentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Height"].Value.ToString()));
-                calculatorGridView.CurrentRow.Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Price"].Value) * int.Parse(calculatorGridView.CurrentRow.Cells["Quantity"].Value.ToString());                
+                if (calculatorGridView.CurrentRow.Cells["Product"].Value != null)
+                {
+                    if (calculatorGridView.CurrentRow.Cells["Profile"].Value != null)
+                    {
+                        if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
+                        {
+                            if (ddlWindowPane.SelectedIndex >-1)
+                            {
+                                if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
+                                {
+                                    if (calculatorGridView.CurrentRow.Cells["Height"].Value != null)
+                                    {
+                                        if (calculatorGridView.CurrentRow.Cells["Quantity"].Value != null)
+                                        {
+                                            calculatorGridView.CurrentRow.Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.CurrentRow.Cells["Product"].Value.ToString()), int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString()), int.Parse(calculatorGridView.CurrentRow.Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Height"].Value.ToString()));
+                                            calculatorGridView.CurrentRow.Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.CurrentRow.Cells["Price"].Value) * int.Parse(calculatorGridView.CurrentRow.Cells["Quantity"].Value.ToString());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -687,28 +714,129 @@ namespace PVCWindowsStudio.UI
         }
 
         private void save_Click(object sender, EventArgs e)
+        {           
+            SaveTemporary();            
+        }
+
+        private void SaveTemporary()
         {
-            for (int i = 0; i < calculatorGridView.RowCount; i++)
+            calcM.detailsBll.Delete_Temporary();
+            if (calculatorGridView.RowCount > 0)
             {
-                calcM.details.ProductID = int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString());
-                calcM.details.Product = new Products()
+                for (int i = 0; i < calculatorGridView.RowCount; i++)
                 {
-                    Name = calcM.productBll.Get(calcM.details.ProductID).Name
-                };
-                if (chooseProfile.SelectedIndex == 0)
-                {
-                    if (ddlProfile.SelectedIndex > -1)
-                        calcM.details.ProfileID = ddlProfile.SelectedIndex;
+                    calcM.details.ProductID = int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString());
+                    calcM.details.Product = new Products()
+                    {
+                        Name = calcM.productBll.Get(calcM.details.ProductID).Name
+                    };
+                    if (chooseProfile.SelectedIndex == 0)
+                    {
+                        if (ddlProfile.SelectedIndex > -1)
+                            calcM.details.ProfileID = int.Parse(ddlProfile.SelectedValue.ToString());
+                    }
+                    else if (chooseProfile.SelectedIndex == 1)
+                    {
+                        if (calculatorGridView.Rows[i].Cells["Profile"].Value != null)
+                            calcM.details.ProfileID = int.Parse(calculatorGridView.Rows[i].Cells["Profile"].Value.ToString());
+                    }
+                    calcM.details.Profile = new Profiles()
+                    {
+                        Name = calcM.profileBll.Get(calcM.details.ProfileID).NameProf
+                    };
+                    calcM.details.BlindID = int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString());
+                    calcM.details.Blind = new Blinds()
+                    {
+                        Name = calcM.blindBll.Get(calcM.details.BlindID).Name
+                    };
+                    calcM.details.WindowPaneID = int.Parse(ddlWindowPane.SelectedValue.ToString());
+                    calcM.details.WindowPane = new WindowPanes()
+                    {
+                        Name = calcM.windowpaneBll.Get(calcM.details.WindowPaneID).Name
+                    };
+                    calcM.details.Quantity = int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                    calcM.details.Width = decimal.Parse(calculatorGridView.Rows[i].Cells["Width"].Value.ToString());
+                    calcM.details.Height = decimal.Parse(calculatorGridView.Rows[i].Cells["Height"].Value.ToString());
+                    calcM.details.Price = decimal.Parse(calculatorGridView.Rows[i].Cells["Price"].Value.ToString());
+                    calcM.details.Total = decimal.Parse(calculatorGridView.Rows[i].Cells["Total"].Value.ToString());
+                    calcM.details.HandWorkPrice = decimal.Parse(calculatorGridView.Rows[i].Cells["HandWorkPrice"].Value.ToString());
+                    calcM.detailsBll.Insert_Temporary(calcM.details);
+
                 }
-                else if(chooseProfile.SelectedIndex == 1)
+            }
+        }
+
+        private void saveAs_Click(object sender, EventArgs e)
+        {
+            int clientID = 0;
+            if (calculatorGridView.RowCount != 0)
+            {
+                if (String.IsNullOrEmpty(lblClientID.Text))
                 {
-                    if (calculatorGridView.Rows[i].Cells["Profile"].Value != null)
-                        calcM.details.ProfileID = int.Parse(calculatorGridView.Rows[i].Cells["Profile"].Value.ToString());
+                    if (ValidationMethod())
+                    {
+                        radValidationProvider1.ClearErrorStatus();
+
+                        calcM.client.Name = txtName.Text;
+                        calcM.client.LastName = txtLastName.Text;
+                        calcM.client.PhoneNumber = txtPhoneNr.Text;
+                        calcM.client.Address = txtAddress.Text;
+                        calcM.client.Email = txtEmail.Text;
+                        calcM.client.InsertBy = 1;
+
+                        calcM.clientBll.Insert(calcM.client);
+                        clientID = calcM.clientBll.GetID();
+                    }
+
                 }
-                calcM.details.Profile = new Profiles()
+                else
                 {
-                    Name = calcM.profileBll.Get(calcM.details.ProfileID).Name
-                };
+                    clientID = int.Parse(lblClientID.Text);
+                }
+                if (clientID != 0)
+                {
+                    calcM.order.ClientID = clientID;
+                    calcM.order.Date = DateTime.Now;
+                    calcM.order.Comment = "";
+                    if (String.IsNullOrEmpty(txtDiscount.Text))
+                        calcM.order.Discount = 0;
+                    else
+                        calcM.order.Discount = Convert.ToDecimal(txtDiscount.Text);
+                    calcM.order.DiscountType = discountCmb.Text;
+                    calcM.order.TotalPrice = Convert.ToDecimal(txtTotal.Text);
+                    calcM.order.InsertBy = 1;
+                    if (calcM.orderBll.Insert(calcM.order))
+                    {
+
+                        RadMessageBox.Show("Order inserted successfully!");
+
+                    }
+                    for (int i = 0; i < calculatorGridView.RowCount; i++)
+                    {
+                        calcM.details.OrderID = calcM.orderBll.GetID();
+                        calcM.details.ProductID = int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString());
+                        calcM.details.BlindID = int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString());
+                        calcM.details.WindowPaneID = int.Parse(ddlWindowPane.SelectedValue.ToString());
+                        calcM.details.Quantity = int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                        calcM.details.Width = int.Parse(calculatorGridView.Rows[i].Cells["Width"].Value.ToString());
+                        calcM.details.Height = int.Parse(calculatorGridView.Rows[i].Cells["Height"].Value.ToString());
+                        calcM.details.Price = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value);
+                        calcM.details.Total = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Total"].Value);
+                        calcM.details.HandWorkPrice = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["HandWorkPrice"].Value);
+                        calcM.details.InsertBy = 1;
+                        if (chooseProfile.SelectedIndex == 0)
+                            calcM.details.ProfileID = int.Parse(ddlProfile.SelectedValue.ToString());
+                        else if (chooseProfile.SelectedIndex == 1)
+                            calcM.details.ProfileID = int.Parse(calculatorGridView.Rows[i].Cells["Profile"].Value.ToString());
+                        calcM.detailsBll.Insert(calcM.details);
+                    }
+                }
+
+            }
+            else
+            {
+
+                RadMessageBox.Show("Your order is empty!");
 
             }
         }
