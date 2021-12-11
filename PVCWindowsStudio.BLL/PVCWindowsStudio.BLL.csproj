@@ -48,6 +48,7 @@
     <Compile Include="BlindBLL.cs" />
     <Compile Include="ClientBLL.cs" />
     <Compile Include="FormModels\CalculatorModel.cs" />
+    <Compile Include="FormModels\OderDetailsModel.cs" />
     <Compile Include="FormModels\ProductItemsModel.cs" />
     <Compile Include="FormulaBLL.cs" />
     <Compile Include="HandiWorkBLL.cs" />

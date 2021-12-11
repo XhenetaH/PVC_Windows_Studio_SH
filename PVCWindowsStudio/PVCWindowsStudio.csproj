@@ -164,6 +164,7 @@
     <Compile Include="Reports\OrdersReportViewerForm.Designer.cs">
       <DependentUpon>OrdersReportViewerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session\CopyList.cs" />
     <Compile Include="UI\AdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +388,7 @@
     <Content Include="Reports\SampleReport.trdp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\copy.png" />
     <None Include="Resources\information %281%29.png" />
     <None Include="Resources\information.png" />
     <None Include="Resources\albania %281%29.png" />
