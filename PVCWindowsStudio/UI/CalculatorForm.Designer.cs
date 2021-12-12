@@ -565,7 +565,9 @@
             this.calculatorGridView.CellValidating += new Telerik.WinControls.UI.CellValidatingEventHandler(this.calculatorGridView_CellValidating);
             this.calculatorGridView.UserAddingRow += new Telerik.WinControls.UI.GridViewRowCancelEventHandler(this.calculatorGridView_UserAddingRow);
             this.calculatorGridView.RowsChanged += new Telerik.WinControls.UI.GridViewCollectionChangedEventHandler(this.calculatorGridView_RowsChanged);
+            this.calculatorGridView.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.calculatorGridView_CellClick);
             this.calculatorGridView.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.calculatorGridView_CellValueChanged);
+            this.calculatorGridView.CommandCellClick += new Telerik.WinControls.UI.CommandCellClickEventHandler(this.calculatorGridView_CommandCellClick);
             // 
             // radPanel3
             // 

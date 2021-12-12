@@ -126,6 +126,7 @@ namespace PVCWindowsStudio.UI
             discountCmb.SelectedIndex = 1;
 
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            
 
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Interval = 60000;
@@ -200,7 +201,6 @@ namespace PVCWindowsStudio.UI
         {            
             if (e.Action == Telerik.WinControls.Data.NotifyCollectionChangedAction.Add)
             {                
-
                 var newRow = e.NewItems[0] as GridViewDataRowInfo;
                 int profileId=-2;
                 if (chooseProfile.SelectedIndex == 0)
@@ -282,10 +282,10 @@ namespace PVCWindowsStudio.UI
                     editor.EditorControl.Columns[2].Width = 100;
                     editor.EditorControl.TableElement.RowHeight = 110;
                     editor.EditorControl.Width = 200;
-                    
-                    
+
+
                 }
-            }
+            }            
 
         }
 
@@ -397,125 +397,57 @@ namespace PVCWindowsStudio.UI
 
         private void calculatorGridView_UserAddingRow(object sender, GridViewRowCancelEventArgs e)
         {
-            var row = e.Rows[0];
-            if (row.Cells["Product"].Value == null)
+            if (e.Rows[0].Cells["Width"].Value == null 
+                || e.Rows[0].Cells["Height"].Value == null 
+                ||e.Rows[0].Cells["Product"].Value == null
+                || e.Rows[0].Cells["Blind"].Value == null
+                || e.Rows[0].Cells["Quantity"].Value == null)
             {
                 e.Cancel = true;
-                row.ErrorText = "Product can't be empty!";                
-            }
-            else
-                row.ErrorText = string.Empty;
-            if (row.Cells["Blind"].Value == null)
-            {
-                e.Cancel = true;
-                row.ErrorText = "Blind can't be empty!";
-            }
-            else
-                row.ErrorText = string.Empty;
 
-            if (row.Cells["Width"].Value == null)
-            {
-
-                e.Cancel = true;
-                row.ErrorText = "Width cant be empty!;";                              
+                var confirmClear = RadMessageBox.Show("Please fill all the fields!","", MessageBoxButtons.OKCancel,RadMessageIcon.Info);
+                if (DialogResult.Cancel == confirmClear)
+                {
+                    calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
+                    
+                }
             }
-            else
-                row.ErrorText = string.Empty;
-
-            if (row.Cells["Height"].Value == null)
-            {
-                e.Cancel = true;
-                row.ErrorText = "Height can't be empty!";               
-                
-            }
-            else
-                row.ErrorText = string.Empty;       
-            
-            
-            if (row.Cells["Quantity"].Value == null)
-            {
-                e.Cancel = true;
-                row.ErrorText = "Quantity can't be empty!";
-            }
-            else
-                row.ErrorText = string.Empty;
-
         }
 
 
 
         private void ddlProfile_SelectedValueChanged(object sender, EventArgs e)
-        {            
-            if (ddlProfile.SelectedIndex > -1)
+        {
+            for (int i = 0; i < calculatorGridView.RowCount; i++)
             {
-                if (calculatorGridView.CurrentRow.Cells["Product"].Value != null)
-                {
-                    if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
-                    {
-                        if (ddlWindowPane.SelectedIndex > -1)
-                        {
-                            if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
-                            {
-                                if (calculatorGridView.CurrentRow.Cells["Height"].Value != null)
-                                {
-                                    if (calculatorGridView.CurrentRow.Cells["Quantity"].Value != null)
-                                    {
-                                        for (int i = 0; i < calculatorGridView.RowCount; i++)
-                                        {
-                                            calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
-                                            calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-            }
-
+                calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
+                calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+            }            
         }
 
         private void ddlWindowPane_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            int profileID = -2;
-            if (chooseProfile.SelectedIndex == 0)
+            if (calculatorGridView.RowCount > 0)
             {
-                if (ddlProfile.SelectedIndex > -1)
-                    profileID = int.Parse(ddlProfile.SelectedValue.ToString());
-            }
-            else if (chooseProfile.SelectedIndex == 1)
-                if (calculatorGridView.CurrentRow.Cells["Profile"].Value != null)
-                    profileID = int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString());
-            if (profileID >-1)
-            {
-                if (calculatorGridView.CurrentRow.Cells["Product"].Value != null)
+                int profileID = -2;
+                if (chooseProfile.SelectedIndex == 0)
                 {
-                    if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
+                    if (ddlProfile.SelectedIndex > -1)
+                        profileID = int.Parse(ddlProfile.SelectedValue.ToString());
+                }
+                else if (chooseProfile.SelectedIndex == 1)
+                    if (calculatorGridView.CurrentRow.Cells["Profile"].Value != null)
+                        profileID = int.Parse(calculatorGridView.CurrentRow.Cells["Profile"].Value.ToString());
+                if (profileID > -1)
+                {
+                    for (int i = 0; i < calculatorGridView.RowCount; i++)
                     {
-                        if (ddlWindowPane.SelectedIndex > -1)
-                        {
-                            if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
-                            {
-                                if (calculatorGridView.CurrentRow.Cells["Height"].Value != null)
-                                {
-                                    if (calculatorGridView.CurrentRow.Cells["Quantity"].Value != null)
-                                    {
-                                        for (int i = 0; i < calculatorGridView.RowCount; i++)
-                                        {
-                                            calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), int.Parse(ddlProfile.SelectedValue.ToString()), int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
-                                            calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
+                        calculatorGridView.Rows[i].Cells["Price"].Value = CalcPrice(int.Parse(calculatorGridView.Rows[i].Cells["Product"].Value.ToString()), profileID, int.Parse(calculatorGridView.Rows[i].Cells["Blind"].Value.ToString()), int.Parse(ddlWindowPane.SelectedValue.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Width"].Value.ToString()), Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Height"].Value.ToString()));
+                        calculatorGridView.Rows[i].Cells["Total"].Value = Convert.ToDecimal(calculatorGridView.Rows[i].Cells["Price"].Value) * int.Parse(calculatorGridView.Rows[i].Cells["Quantity"].Value.ToString());
 
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
-
             }
-
 
         }
         private bool ValidationMethod()
@@ -631,7 +563,7 @@ namespace PVCWindowsStudio.UI
                     {
                         if (calculatorGridView.CurrentRow.Cells["Blind"].Value != null)
                         {
-                            if (ddlWindowPane.SelectedIndex >-1)
+                            if (ddlWindowPane.SelectedIndex > -1)
                             {
                                 if (calculatorGridView.CurrentRow.Cells["Width"].Value != null)
                                 {
@@ -799,6 +731,40 @@ namespace PVCWindowsStudio.UI
                 calculatorGridView.DataSource = source;
                 
             }
+        }
+
+        private void calculatorGridView_CellClick(object sender, GridViewCellEventArgs e)
+        {
+            if (chooseProfile.SelectedIndex < 0)
+            {             
+                
+                RadMessageBox.Show("Please select a profile method!");
+                calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
+            }
+            else
+            {
+                if (chooseProfile.SelectedIndex == 0 && ddlProfile.SelectedIndex < 0)
+                {
+                    RadMessageBox.Show("Please select a profile!");
+                    calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
+                }
+            }
+            if(ddlWindowPane.SelectedIndex<0)
+            {
+                RadMessageBox.Show("Please select a window pane!");
+                calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
+            }
+        }
+
+        private void calculatorGridView_CommandCellClick(object sender, GridViewCellEventArgs e)
+        {
+            //GridCommandCellElement cell = (GridCommandCellElement)sender;
+            //GridViewDataColumn column = (GridViewCommandColumn)cell.ColumnInfo;
+            //if (column.Name == "Width")
+            //{
+            //    this.calculatorGridView.CancelEdit();
+            //    this.calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
+            //}
         }
     }
 }
