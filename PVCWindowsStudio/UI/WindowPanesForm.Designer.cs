@@ -33,11 +33,13 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
             Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
-            this.txtPrice = new Telerik.WinControls.UI.RadTextBox();
+            this.priceTxt = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.windowpaneGridView = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
@@ -56,7 +58,7 @@
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowpaneGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowpaneGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
@@ -83,16 +85,22 @@
             this.txtName.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtName, radValidationRule1);
             // 
-            // txtPrice
+            // priceTxt
             // 
-            resources.ApplyResources(this.txtPrice, "txtPrice");
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.txtPrice, radValidationRule2);
+            resources.ApplyResources(this.priceTxt, "priceTxt");
+            this.priceTxt.Name = "priceTxt";
+            // 
+            // 
+            // 
+            this.priceTxt.RootElement.CustomFontSize = 10.5F;
+            this.priceTxt.TabStop = false;
+            this.priceTxt.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.priceTxt, radValidationRule2);
             // 
             // windowpaneGridView
             // 
             resources.ApplyResources(this.windowpaneGridView, "windowpaneGridView");
+            this.windowpaneGridView.HideSelection = true;
             // 
             // 
             // 
@@ -101,25 +109,37 @@
             this.windowpaneGridView.MasterTemplate.AllowEditRow = false;
             this.windowpaneGridView.MasterTemplate.AllowSearchRow = true;
             this.windowpaneGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.FieldName = "Name";
+            gridViewTextBoxColumn1.FieldName = "WindowPaneID";
             resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.Name = "Name";
-            gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn1.Width = 188;
-            gridViewTextBoxColumn2.FieldName = "Other";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "WindowPaneID";
+            gridViewTextBoxColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn1.Width = 46;
+            gridViewTextBoxColumn2.FieldName = "Name";
             resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.Name = "Other";
+            gridViewTextBoxColumn2.Name = "Name";
             gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn2.Width = 328;
-            gridViewTextBoxColumn3.FieldName = "Price";
+            gridViewTextBoxColumn2.Width = 188;
+            gridViewTextBoxColumn3.FieldName = "Other";
             resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.Name = "Price";
-            gridViewTextBoxColumn3.Width = 110;
+            gridViewTextBoxColumn3.Name = "Other";
+            gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn3.Width = 328;
+            gridViewTextBoxColumn4.FieldName = "Price";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.Name = "Price";
+            gridViewTextBoxColumn4.Width = 110;
             this.windowpaneGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3});
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.windowpaneGridView.MasterTemplate.EnablePaging = true;
+            this.windowpaneGridView.MasterTemplate.PageSize = 15;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "WindowPaneID";
+            this.windowpaneGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.windowpaneGridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.windowpaneGridView.Name = "windowpaneGridView";
             this.windowpaneGridView.ThemeName = "MaterialBlueGrey";
@@ -140,9 +160,9 @@
             // 
             // radPanel5
             // 
+            this.radPanel5.Controls.Add(this.priceTxt);
             this.radPanel5.Controls.Add(this.label1);
             this.radPanel5.Controls.Add(this.label3);
-            this.radPanel5.Controls.Add(this.txtPrice);
             this.radPanel5.Controls.Add(this.lblID);
             this.radPanel5.Controls.Add(this.label2);
             this.radPanel5.Controls.Add(this.txtDescription);
@@ -270,10 +290,11 @@
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
             radValidationRule1.ToolTipText = "Name can\'t be empty!";
             radValidationRule1.Value = "";
-            radValidationRule2.Controls.Add(this.txtPrice);
-            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule2.ToolTipText = "Price can\'t be empty!";
-            radValidationRule2.Value = "";
+            radValidationRule2.Controls.Add(this.priceTxt);
+            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
+            radValidationRule2.ToolTipText = "Çmimi duhet të jetë më i lartë se zero!";
+            radValidationRule2.ToolTipTitle = "Validimi dështoi";
+            radValidationRule2.Value = "0.00";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1,
             radValidationRule2});
@@ -293,7 +314,7 @@
             this.ThemeName = "MaterialBlueGrey";
             this.Load += new System.EventHandler(this.WindowPanesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowpaneGridView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowpaneGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
@@ -334,7 +355,7 @@
         private Telerik.WinControls.UI.RadValidationProvider radValidationProvider1;
         private Telerik.WinControls.Themes.MaterialBlueGreyTheme materialBlueGreyTheme1;
         private System.Windows.Forms.Label label3;
-        private Telerik.WinControls.UI.RadTextBox txtPrice;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.UI.RadMaskedEditBox priceTxt;
     }
 }

@@ -31,36 +31,41 @@ namespace PVCWindowsStudio.UI
 
         private decimal CalcPrice(int productId,int profileId,int blindId,int paneId,decimal width,decimal height)
         {
-            var formulaList = calcM.detailsBll.GetPrice(profileId,productId);
-
-            for(int i=0; i< formulaList.Count;i++)
+            if (productId > 0)
             {
-                if(formulaList[i].Formula.Contains("Price"))
+                var formulaList = calcM.detailsBll.GetPrice(profileId, productId);
+
+                for (int i = 0; i < formulaList.Count; i++)
                 {
-                    formulaList[i].Formula = formulaList[i].Formula.Replace("Price", formulaList[i].Price);
+                    if (formulaList[i].Formula.Contains("Price"))
+                    {
+                        formulaList[i].Formula = formulaList[i].Formula.Replace("Price", formulaList[i].Price);
+                    }
+                    if (formulaList[i].Formula.Contains("Width"))
+                    {
+                        formulaList[i].Formula = formulaList[i].Formula.Replace("Width", width.ToString());
+                    }
+                    if (formulaList[i].Formula.Contains("Height"))
+                    {
+                        formulaList[i].Formula = formulaList[i].Formula.Replace("Height", height.ToString());
+                    }
                 }
-                if(formulaList[i].Formula.Contains("Width"))
+                string total = "";
+
+                for (int i = 0; i < formulaList.Count; i++)
                 {
-                    formulaList[i].Formula = formulaList[i].Formula.Replace("Width", width.ToString());
+                    total = total + "+" + formulaList[i].Formula;
                 }
-                if (formulaList[i].Formula.Contains("Height"))
-                {
-                    formulaList[i].Formula = formulaList[i].Formula.Replace("Height", height.ToString());
-                }
+
+                decimal price = Convert.ToDecimal(new DataTable().Compute(total, null));
+
+                var paneprice = GetWindowPanePrice(paneId, width, height);
+                var blindprice = GetBlindPrice(blindId, width, height);
+                var handiworkprice = HandiWorkPrice(width, height);
+                return Math.Round(price + paneprice + handiworkprice + blindprice);
             }
-            string total = "";
-
-            for (int i = 0; i < formulaList.Count; i++)
-            {
-                total = total + "+" + formulaList[i].Formula;
-            }
-
-            decimal price = Convert.ToDecimal(new DataTable().Compute(total, null));
-
-            var paneprice = GetWindowPanePrice(paneId,width,height);
-            var blindprice = GetBlindPrice(blindId,width,height);
-            var handiworkprice = HandiWorkPrice(width, height);         
-            return Math.Round(price + paneprice + handiworkprice + blindprice);
+            else
+                return 0;
 
         }
 
@@ -756,15 +761,5 @@ namespace PVCWindowsStudio.UI
             }
         }
 
-        private void calculatorGridView_CommandCellClick(object sender, GridViewCellEventArgs e)
-        {
-            //GridCommandCellElement cell = (GridCommandCellElement)sender;
-            //GridViewDataColumn column = (GridViewCommandColumn)cell.ColumnInfo;
-            //if (column.Name == "Width")
-            //{
-            //    this.calculatorGridView.CancelEdit();
-            //    this.calculatorGridView.MasterView.TableAddNewRow.CancelAddNewRow();
-            //}
-        }
     }
 }

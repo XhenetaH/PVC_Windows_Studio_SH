@@ -74,7 +74,7 @@ namespace PVCWindowsStudio.UI
                 {
                     RadMessageBox.Show("Product is inserted successfully!");
                     InitiateProductItems(int.Parse(lblproductID.Text));
-                    Clear();
+                    
                 }
                 else RadMessageBox.Show("Something went wrong!");
             }
@@ -160,7 +160,7 @@ namespace PVCWindowsStudio.UI
                         productPictureBox.Image = ConvertToImage(productModel.Product.Picture);
                     else
                         productPictureBox.Image = null;
-                    InitiateProductItems(int.Parse(lblproductID.Text));
+                    InitiateProductItems(int.Parse(lblproductID.Text));                   
 
                 }
             }

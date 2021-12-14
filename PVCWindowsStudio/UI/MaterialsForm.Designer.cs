@@ -33,6 +33,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
@@ -217,6 +218,7 @@
             this.materialGridView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.materialGridView, "materialGridView");
             this.materialGridView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.materialGridView.HideSelection = true;
             // 
             // 
             // 
@@ -231,6 +233,7 @@
             gridViewTextBoxColumn1.IsVisible = false;
             gridViewTextBoxColumn1.MinWidth = 6;
             gridViewTextBoxColumn1.Name = "MaterialID";
+            gridViewTextBoxColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
             gridViewTextBoxColumn1.Width = 796;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "Name";
@@ -251,6 +254,11 @@
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3});
             this.materialGridView.MasterTemplate.EnablePaging = true;
+            this.materialGridView.MasterTemplate.PageSize = 15;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "MaterialID";
+            this.materialGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.materialGridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.materialGridView.Name = "materialGridView";
             this.materialGridView.ThemeName = "MaterialBlueGrey";
@@ -261,7 +269,8 @@
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
             radValidationRule1.Controls.Add(this.txtName);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule1.ToolTipText = "Name can\'t be empty!";
+            radValidationRule1.ToolTipText = "Emri nuk duhet të jetë i zbrazët!";
+            radValidationRule1.ToolTipTitle = "Validimi dështoi";
             radValidationRule1.Value = "";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1});

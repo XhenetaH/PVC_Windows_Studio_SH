@@ -36,7 +36,6 @@
             this.windowPaneMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
             this.blindMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
             this.profileMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             this.productMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
             this.productItemMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
@@ -50,6 +49,7 @@
             this.invoiceMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
             this.clientsMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
             this.calculatorMenuBtn = new Telerik.WinControls.UI.RadMenuItem();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -84,39 +84,31 @@
             this.blindMenuBtn,
             this.profileMenuBtn});
             this.radMenuItem2.Name = "radMenuItem2";
-            this.radMenuItem2.Text = "Materials Management";
+            this.radMenuItem2.Text = "Menaxhimi i Materialeve";
             // 
             // materialMenuBtn
             // 
             this.materialMenuBtn.Name = "materialMenuBtn";
-            this.materialMenuBtn.Text = "Material";
+            this.materialMenuBtn.Text = "Materiali";
             this.materialMenuBtn.Click += new System.EventHandler(this.materialMenuBtn_Click);
             // 
             // windowPaneMenuBtn
             // 
             this.windowPaneMenuBtn.Name = "windowPaneMenuBtn";
-            this.windowPaneMenuBtn.Text = "Window Pane";
+            this.windowPaneMenuBtn.Text = "Xhamat";
             this.windowPaneMenuBtn.Click += new System.EventHandler(this.windowPaneMenuBtn_Click);
             // 
             // blindMenuBtn
             // 
             this.blindMenuBtn.Name = "blindMenuBtn";
-            this.blindMenuBtn.Text = "Blind";
+            this.blindMenuBtn.Text = "Roletat";
             this.blindMenuBtn.Click += new System.EventHandler(this.blindMenuBtn_Click);
             // 
             // profileMenuBtn
             // 
             this.profileMenuBtn.Name = "profileMenuBtn";
-            this.profileMenuBtn.Text = "Profile";
+            this.profileMenuBtn.Text = "Profili";
             this.profileMenuBtn.Click += new System.EventHandler(this.profileMenuBtn_Click);
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(0, 72);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1015, 615);
-            this.panelChildForm.TabIndex = 1;
             // 
             // radMenuItem3
             // 
@@ -203,6 +195,14 @@
             this.calculatorMenuBtn.Name = "calculatorMenuBtn";
             this.calculatorMenuBtn.Text = "Calculator";
             this.calculatorMenuBtn.Click += new System.EventHandler(this.calculatorMenuBtn_Click);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 72);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1015, 615);
+            this.panelChildForm.TabIndex = 1;
             // 
             // Menu_
             // 

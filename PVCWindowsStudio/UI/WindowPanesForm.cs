@@ -2,13 +2,9 @@
 using PVCWindowsStudio.BO;
 using PVCWindowsStudio.Session;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -28,6 +24,9 @@ namespace PVCWindowsStudio.UI
         {
             InitiateData();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
+
         }
 
         private void InitiateData()
@@ -37,25 +36,25 @@ namespace PVCWindowsStudio.UI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtName.Text) && !String.IsNullOrEmpty(txtPrice.Text))
-            {
+            if (!String.IsNullOrEmpty(txtName.Text))
+            {                
                 windowpane.Name = txtName.Text;
-                windowpane.Price = Convert.ToDecimal(txtPrice.Text);
+                windowpane.Price = Convert.ToDecimal(priceTxt.Value.ToString());                
                 windowpane.Other = txtDescription.Text;
                 windowpane.InsertBy = 1;
                 if (windowpaneBll.Insert(windowpane))
                 {
-                    RadMessageBox.Show("Window Pane inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertPane);
                     Clear();
                     InitiateData();
                     this.radValidationProvider1.ClearErrorStatus();
                 }
-                else RadMessageBox.Show("Something went worng!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
             }
             else
             {
                 this.radValidationProvider1.Validate(txtName);
-                this.radValidationProvider1.Validate(txtPrice);
+                this.radValidationProvider1.Validate(priceTxt);
             }
             
         }
@@ -64,8 +63,8 @@ namespace PVCWindowsStudio.UI
             this.radValidationProvider1.ClearErrorStatus();
             txtName.Text = "";
             txtDescription.Text = "";
-            lblID.Text = "";
-            txtPrice.Text = "";
+            lblID.Text = "";            
+            priceTxt.Text = "0.00";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -73,42 +72,46 @@ namespace PVCWindowsStudio.UI
             if (!String.IsNullOrEmpty(lblID.Text))
             {
                 windowpane.Name = txtName.Text;
-                windowpane.Price = Convert.ToDecimal(txtPrice.Text);
+                windowpane.Price = Convert.ToDecimal(priceTxt.Value);
                 windowpane.Other = txtDescription.Text;
                 windowpane.LUB = 1;
                 if (!String.IsNullOrEmpty(txtName.Text))
-                {                    
+                {
                     if (windowpaneBll.Update(windowpane))
                     {
-                        RadMessageBox.Show("Window Pane updated successfully!");
+                        RadMessageBox.Show(MessageTexts.successUpdatePane);
                         Clear();
                         InitiateData();
                         this.radValidationProvider1.ClearErrorStatus();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
-                else this.radValidationProvider1.Validate(txtName);
+                else
+                {
+                    this.radValidationProvider1.Validate(priceTxt);
+                    this.radValidationProvider1.Validate(txtName);
+                }
 
             }
-            else RadMessageBox.Show("Please select a Window Pane!");
+            else RadMessageBox.Show(MessageTexts.selectMessagePane);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (windowpaneBll.Delete(int.Parse(lblID.Text)))
                     {
-                        RadMessageBox.Show("Window Pane deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeletePane);
                         InitiateData();
                         Clear();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }                
             }
-            else RadMessageBox.Show("Please select a window pane!");
+            else RadMessageBox.Show(MessageTexts.selectMessagePane);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -127,7 +130,7 @@ namespace PVCWindowsStudio.UI
                 {
                     lblID.Text = windowpane.WindowPaneID.ToString();
                     txtName.Text = windowpane.Name;
-                    txtPrice.Text = windowpane.Price.ToString();
+                    priceTxt.Value = windowpane.Price;
                     txtDescription.Text = windowpane.Other;
                 }
             }

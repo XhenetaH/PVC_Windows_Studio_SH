@@ -17,10 +17,6 @@ namespace PVCWindowsStudio.Reports
             this.Id = _id;
             InitializeComponent();
         }
-        public OrdersReportViewerForm()
-        {
-
-        }
         private void OrdersReportViewerForm_Load(object sender, EventArgs e)
         {
             this.reportViewer1.ReportSource.Parameters.Add("OrderID", Id);

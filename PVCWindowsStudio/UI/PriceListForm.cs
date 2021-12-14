@@ -39,10 +39,13 @@ namespace PVCWindowsStudio.UI
             {
                 if (ValidationMethod())
                 {
-                    if (ddlProfile.SelectedIndex.Equals(-1))
-                        pricelist.ProfileID = 0;
+                    if (ddlProfile.SelectedIndex < 0)
+                        ddlProfile.SelectedValue = 0;
                     else
-                        pricelist.ProfileID = int.Parse(ddlProfile.SelectedValue.ToString());
+                    {
+                        if (ddlProfile.SelectedValue != null)
+                            pricelist.ProfileID = (int)ddlProfile.SelectedValue;
+                    }
                     pricelist.MaterialID = int.Parse(ddlMaterial.SelectedValue.ToString());
                     pricelist.Price = Convert.ToDecimal(txtPrice.Value.ToString());
                     pricelist.InsertBy = 1;

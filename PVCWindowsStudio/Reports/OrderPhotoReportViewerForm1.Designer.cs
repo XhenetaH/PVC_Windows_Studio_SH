@@ -38,10 +38,10 @@ namespace PVCWindowsStudio.Reports
             this.reportViewer1.AccessibilityKeyMap = null;
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(5);
             this.reportViewer1.Name = "reportViewer1";
-            uriReportSource1.Uri = "C:\\Users\\Lenovo\\source\\repos\\PVCWindowsStudio\\PVCWindowsStudio\\Reports\\OrderPhoto" +
-    "Report.trdp";
+            uriReportSource1.Uri = "C:\\Users\\Lenovo\\Desktop\\Customized_PvcWindowsStudio-main\\PVCWindowsStudio\\Reports" +
+    "\\OrderPhotoReport.trdp";
             this.reportViewer1.ReportSource = uriReportSource1;
             this.reportViewer1.Size = new System.Drawing.Size(1200, 862);
             this.reportViewer1.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace PVCWindowsStudio.Reports
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 862);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrderPhotoReportViewerForm1";
             this.Text = "Report Viewer Form";
             this.Load += new System.EventHandler(this.OrderPhotoReportViewerForm1_Load);

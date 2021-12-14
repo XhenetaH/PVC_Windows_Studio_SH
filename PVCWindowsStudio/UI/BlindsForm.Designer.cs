@@ -34,8 +34,11 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
             this.blindsGrindView = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
@@ -45,7 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtColor = new Telerik.WinControls.UI.RadTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPrice = new Telerik.WinControls.UI.RadTextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDescription = new Telerik.WinControls.UI.RadTextBox();
@@ -57,6 +59,7 @@
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
+            this.priceTxt = new Telerik.WinControls.UI.RadMaskedEditBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView.MasterTemplate)).BeginInit();
@@ -67,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).BeginInit();
             this.radPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).BeginInit();
             this.radPanel4.SuspendLayout();
@@ -76,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +95,7 @@
             this.blindsGrindView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.blindsGrindView, "blindsGrindView");
             this.blindsGrindView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.blindsGrindView.HideSelection = true;
             // 
             // 
             // 
@@ -126,12 +130,23 @@
             gridViewTextBoxColumn4.Name = "Other";
             gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn4.Width = 182;
+            gridViewTextBoxColumn5.FieldName = "BlindID";
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "BlindID";
+            gridViewTextBoxColumn5.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn5.Width = 46;
             this.blindsGrindView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
             this.blindsGrindView.MasterTemplate.EnablePaging = true;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "BlindID";
+            this.blindsGrindView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.blindsGrindView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.blindsGrindView.Name = "blindsGrindView";
             this.blindsGrindView.ThemeName = "MaterialBlueGrey";
@@ -152,11 +167,11 @@
             // 
             // radPanel5
             // 
+            this.radPanel5.Controls.Add(this.priceTxt);
             this.radPanel5.Controls.Add(this.label1);
             this.radPanel5.Controls.Add(this.label4);
             this.radPanel5.Controls.Add(this.txtColor);
             this.radPanel5.Controls.Add(this.label3);
-            this.radPanel5.Controls.Add(this.txtPrice);
             this.radPanel5.Controls.Add(this.lblID);
             this.radPanel5.Controls.Add(this.label2);
             this.radPanel5.Controls.Add(this.txtDescription);
@@ -188,13 +203,6 @@
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            // 
-            // txtPrice
-            // 
-            resources.ApplyResources(this.txtPrice, "txtPrice");
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.txtPrice, null);
             // 
             // lblID
             // 
@@ -299,13 +307,30 @@
             // 
             // radValidationProvider1
             // 
-            this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
             radValidationRule1.Controls.Add(this.txtName);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
             radValidationRule1.ToolTipText = "Name can\'t be empty!";
             radValidationRule1.Value = "";
+            radValidationRule2.Controls.Add(this.priceTxt);
+            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
+            radValidationRule2.ToolTipText = "Çmimi duhet të jetë më i lartë se zero!";
+            radValidationRule2.ToolTipTitle = "Validimi dështoi";
+            radValidationRule2.Value = "0.00";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
-            radValidationRule1});
+            radValidationRule1,
+            radValidationRule2});
+            // 
+            // priceTxt
+            // 
+            resources.ApplyResources(this.priceTxt, "priceTxt");
+            this.priceTxt.Name = "priceTxt";
+            // 
+            // 
+            // 
+            this.priceTxt.RootElement.CustomFontSize = 10.5F;
+            this.priceTxt.TabStop = false;
+            this.priceTxt.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.priceTxt, radValidationRule2);
             // 
             // BlindsForm
             // 
@@ -332,7 +357,6 @@
             this.radPanel5.ResumeLayout(false);
             this.radPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtColor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).EndInit();
             this.radPanel4.ResumeLayout(false);
@@ -341,6 +365,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -364,9 +389,9 @@
         private Telerik.WinControls.UI.RadValidationProvider radValidationProvider1;
         private Telerik.WinControls.Themes.MaterialBlueGreyTheme materialBlueGreyTheme1;
         private System.Windows.Forms.Label label3;
-        private Telerik.WinControls.UI.RadTextBox txtPrice;
         private System.Windows.Forms.Label label4;
         private Telerik.WinControls.UI.RadTextBox txtColor;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.UI.RadMaskedEditBox priceTxt;
     }
 }

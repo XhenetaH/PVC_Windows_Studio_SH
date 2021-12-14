@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -26,38 +27,46 @@ namespace PVCWindowsStudio.UI
         private void BlindsForm_Load(object sender, EventArgs e)
         {
             InitiateData();
+            RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {            
+        {
             if (!String.IsNullOrEmpty(txtName.Text))
             {
                 blind.Name = txtName.Text;
                 blind.Other = txtDescription.Text;
-                blind.Price = Convert.ToDecimal(txtPrice.Text);
+                blind.Price = Convert.ToDecimal(priceTxt.Value);
                 blind.Color = txtColor.Text;
                 blind.InsertBy = 1;
                 if (blindBll.Insert(blind))
                 {
-                    MessageBox.Show("Blind inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertBlind);
                     this.radValidationProvider1.ClearErrorStatus();
                     Clear();
                     InitiateData();
                 }
                 else
-                    MessageBox.Show("Something went wrong!");
+                    RadMessageBox.Show(MessageTexts.somethingWrong);
             }
-            else this.radValidationProvider1.Validate(txtName);
+            else
+            {
+                this.radValidationProvider1.Validate(txtName);
+                this.radValidationProvider1.Validate(priceTxt);
+            }
 
         }
         private void Clear()
         {
-            this.radValidationProvider1.ClearErrorStatus();
-            txtPrice.Text = "";
+            this.radValidationProvider1.ClearErrorStatus();      
             txtName.Text = "";
             txtColor.Text = "";
             txtDescription.Text = "";
             lblID.Text = "";
+            priceTxt.Text = "0.00";
         }
         private void InitiateData()
         {
@@ -68,27 +77,30 @@ namespace PVCWindowsStudio.UI
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                
+
                 if (!String.IsNullOrEmpty(txtName.Text))
                 {
                     blind.BlindID = int.Parse(lblID.Text);
                     blind.Name = txtName.Text;
                     blind.Other = txtDescription.Text;
-                    blind.Price = Convert.ToDecimal(txtPrice.Text);
+                    blind.Price = Convert.ToDecimal(priceTxt.Value);
                     blind.Color = txtColor.Text;
                     blind.LUB = 1;
                     if (blindBll.Update(blind))
                     {
-                        MessageBox.Show("Blind is updated successfully!");
+                        RadMessageBox.Show(MessageTexts.successUpdateBlind);
                         Clear();
                         InitiateData();
                         this.radValidationProvider1.ClearErrorStatus();
                     }
-                    else MessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
-                else this.radValidationProvider1.Validate(txtName);                
+                else {                    
+                    this.radValidationProvider1.Validate(txtName);
+                    this.radValidationProvider1.Validate(priceTxt);
+                }
             }
-            else MessageBox.Show("Please select a blind!");
+            else RadMessageBox.Show(MessageTexts.selectMessageBlind);
         }
 
 
@@ -96,18 +108,18 @@ namespace PVCWindowsStudio.UI
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (MessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (blindBll.Delete(int.Parse(lblID.Text)))
                     {
-                        MessageBox.Show("Blind is deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteBlind);
                         InitiateData();
                         Clear();
                     }
-                    else MessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
-            else MessageBox.Show("Please select a blind!");
+            else RadMessageBox.Show(MessageTexts.selectMessageBlind);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -128,7 +140,7 @@ namespace PVCWindowsStudio.UI
                     txtName.Text = blind.Name;
                     txtDescription.Text = blind.Other;
                     txtColor.Text = blind.Color;
-                    txtPrice.Text = blind.Price.ToString();
+                    priceTxt.Value = blind.Price;
                 }
             }
         }

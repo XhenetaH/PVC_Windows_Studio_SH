@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -20,7 +21,7 @@ namespace PVCWindowsStudio.UI
         public MaterialsForm()
         {
             material = new Materials();
-            materialBll = new MaterialBLL();
+            materialBll = new MaterialBLL();            
             InitializeComponent();
         }
 
@@ -37,8 +38,9 @@ namespace PVCWindowsStudio.UI
                     Clear();
                     InitiateData();
                     this.radValidationProvider1.ClearErrorStatus();
+                    RadMessageBox.Show(MessageTexts.successInsertMaterial);
                 }
-                else RadMessageBox.Show("Something went wrong!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
             }
             
         }
@@ -59,6 +61,8 @@ namespace PVCWindowsStudio.UI
         {
             InitiateData();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
 
         }
         private bool ValidationMethod()
@@ -97,17 +101,17 @@ namespace PVCWindowsStudio.UI
                     material.LUB = 1;
                     if (materialBll.Update(material))
                     {
-                        RadMessageBox.Show("Material is updated successfully");
+                        RadMessageBox.Show(MessageTexts.successUpdateMaterial);
                         Clear();
                         InitiateData();
                         this.radValidationProvider1.ClearErrorStatus();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
                 else this.radValidationProvider1.Validate(txtName);
             }
             else
-                RadMessageBox.Show("Please select an material!");
+                RadMessageBox.Show(MessageTexts.selectMessageMaterial);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -119,20 +123,20 @@ namespace PVCWindowsStudio.UI
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (materialBll.Delete(int.Parse(lblID.Text)))
                     {
-                        RadMessageBox.Show("Material is deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteMaterial);
                         InitiateData();
                         Clear();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
 
             }
             else
-                RadMessageBox.Show("Please select an material!");
+                RadMessageBox.Show(MessageTexts.selectMessageMaterial);
 
         }
 
