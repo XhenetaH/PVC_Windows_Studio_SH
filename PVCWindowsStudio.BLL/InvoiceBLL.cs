@@ -12,9 +12,9 @@ namespace PVCWindowsStudio.BLL
     public class InvoiceBLL : IRepository<Invoices>
     {
         private readonly InvoiceDAL dal = new InvoiceDAL();
-        public bool Delete(int id)
+        public bool Delete(int id,int orderId)
         {
-            return dal.Delete(id);
+            return dal.Delete(id,orderId);
         }
 
         public bool Delete(Invoices model)
@@ -53,6 +53,11 @@ namespace PVCWindowsStudio.BLL
         public bool Update(Invoices model)
         {
             return dal.Update(model);
+        }
+
+        public bool Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

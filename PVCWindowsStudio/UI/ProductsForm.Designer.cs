@@ -30,17 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsForm));
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn1 = new Telerik.WinControls.UI.GridViewImageColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
+            this.ddlColor = new Telerik.WinControls.UI.RadDropDownList();
             this.productGridView = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.radPanel5 = new Telerik.WinControls.UI.RadPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.btnRemove = new Telerik.WinControls.UI.RadButton();
@@ -56,9 +62,8 @@
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ddlColor = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
@@ -78,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ddlColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,12 +93,23 @@
             this.txtName.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtName, radValidationRule1);
             // 
+            // ddlColor
+            // 
+            this.ddlColor.DropDownAnimationEnabled = true;
+            radListDataItem1.Text = "Choose Role";
+            this.ddlColor.Items.Add(radListDataItem1);
+            resources.ApplyResources(this.ddlColor, "ddlColor");
+            this.ddlColor.Name = "ddlColor";
+            this.ddlColor.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.ddlColor, radValidationRule2);
+            // 
             // productGridView
             // 
             this.productGridView.BackColor = System.Drawing.Color.White;
             this.productGridView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.productGridView, "productGridView");
             this.productGridView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.productGridView.HideSelection = true;
             // 
             // 
             // 
@@ -107,29 +122,49 @@
             gridViewImageColumn1.FieldName = "Picture";
             resources.ApplyResources(gridViewImageColumn1, "gridViewImageColumn1");
             gridViewImageColumn1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewImageColumn1.MinWidth = 6;
+            gridViewImageColumn1.MinWidth = 8;
             gridViewImageColumn1.Name = "Picture";
-            gridViewImageColumn1.Width = 205;
+            gridViewImageColumn1.Width = 189;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "Name";
             resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.MinWidth = 6;
+            gridViewTextBoxColumn1.MinWidth = 8;
             gridViewTextBoxColumn1.Name = "Name";
             gridViewTextBoxColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn1.Width = 211;
+            gridViewTextBoxColumn1.Width = 142;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Other";
+            gridViewTextBoxColumn2.FieldName = "Color";
             resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
             gridViewTextBoxColumn2.MinWidth = 6;
-            gridViewTextBoxColumn2.Name = "Other";
-            gridViewTextBoxColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewTextBoxColumn2.Width = 220;
+            gridViewTextBoxColumn2.Name = "Color";
+            gridViewTextBoxColumn2.Width = 137;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Other";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.MinWidth = 8;
+            gridViewTextBoxColumn3.Name = "Other";
+            gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewTextBoxColumn3.Width = 168;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "ProductID";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.IsVisible = false;
+            gridViewTextBoxColumn4.MinWidth = 6;
+            gridViewTextBoxColumn4.Name = "ProductID";
+            gridViewTextBoxColumn4.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn4.Width = 54;
             this.productGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewImageColumn1,
             gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4});
             this.productGridView.MasterTemplate.EnablePaging = true;
             this.productGridView.MasterTemplate.PageSize = 10;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "ProductID";
+            this.productGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.productGridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.productGridView.Name = "productGridView";
             this.productGridView.ThemeName = "MaterialBlueGrey";
@@ -164,6 +199,11 @@
             resources.ApplyResources(this.radPanel5, "radPanel5");
             this.radPanel5.Name = "radPanel5";
             this.radPanel5.ThemeName = "MaterialBlueGrey";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // label1
             // 
@@ -306,23 +346,13 @@
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
             radValidationRule1.ToolTipText = "Name can\'t be empty!";
             radValidationRule1.Value = "";
+            radValidationRule2.Controls.Add(this.ddlColor);
+            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
+            radValidationRule2.ToolTipText = "Name can\'t be empty!";
+            radValidationRule2.Value = "Zgjidhni një ngjyrë";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
-            radValidationRule1});
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // ddlColor
-            // 
-            this.ddlColor.DropDownAnimationEnabled = true;
-            radListDataItem1.Text = "Choose Role";
-            this.ddlColor.Items.Add(radListDataItem1);
-            resources.ApplyResources(this.ddlColor, "ddlColor");
-            this.ddlColor.Name = "ddlColor";
-            this.ddlColor.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.ddlColor, null);
+            radValidationRule1,
+            radValidationRule2});
             // 
             // ProductsForm
             // 
@@ -339,6 +369,7 @@
             this.ThemeName = "MaterialBlueGrey";
             this.Load += new System.EventHandler(this.ProductsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddlColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
@@ -359,7 +390,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ddlColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

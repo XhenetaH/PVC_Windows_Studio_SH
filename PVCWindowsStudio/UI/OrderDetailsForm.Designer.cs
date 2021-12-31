@@ -38,9 +38,9 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -54,10 +54,15 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
             Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
             Telerik.WinControls.UI.RadValidationRule radValidationRule3 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule4 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule5 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule6 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule7 = new Telerik.WinControls.UI.RadValidationRule();
             this.productMultiColumnComboBox1 = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.orderMultiComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.txtQuantity = new Telerik.WinControls.UI.RadMaskedEditBox();
@@ -173,7 +178,7 @@
             this.productMultiColumnComboBox1.Name = "productMultiColumnComboBox1";
             this.productMultiColumnComboBox1.TabStop = false;
             this.productMultiColumnComboBox1.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.productMultiColumnComboBox1, null);
+            this.radValidationProvider1.SetValidationRule(this.productMultiColumnComboBox1, radValidationRule4);
             // 
             // orderMultiComboBox
             // 
@@ -256,32 +261,32 @@
             // ddlProfile
             // 
             this.ddlProfile.DropDownAnimationEnabled = true;
-            radListDataItem1.Text = "Choose Role";
-            this.ddlProfile.Items.Add(radListDataItem1);
+            radListDataItem2.Text = "Choose Role";
+            this.ddlProfile.Items.Add(radListDataItem2);
             resources.ApplyResources(this.ddlProfile, "ddlProfile");
             this.ddlProfile.Name = "ddlProfile";
             this.ddlProfile.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.ddlProfile, null);
+            this.radValidationProvider1.SetValidationRule(this.ddlProfile, radValidationRule6);
             // 
             // ddlWindowPane
             // 
             this.ddlWindowPane.DropDownAnimationEnabled = true;
-            radListDataItem2.Text = "Choose Role";
-            this.ddlWindowPane.Items.Add(radListDataItem2);
+            radListDataItem3.Text = "Choose Role";
+            this.ddlWindowPane.Items.Add(radListDataItem3);
             resources.ApplyResources(this.ddlWindowPane, "ddlWindowPane");
             this.ddlWindowPane.Name = "ddlWindowPane";
             this.ddlWindowPane.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.ddlWindowPane, null);
+            this.radValidationProvider1.SetValidationRule(this.ddlWindowPane, radValidationRule7);
             // 
             // ddlBlinds
             // 
             this.ddlBlinds.DropDownAnimationEnabled = true;
-            radListDataItem3.Text = "Choose Role";
-            this.ddlBlinds.Items.Add(radListDataItem3);
+            radListDataItem1.Text = "Choose Role";
+            this.ddlBlinds.Items.Add(radListDataItem1);
             resources.ApplyResources(this.ddlBlinds, "ddlBlinds");
             this.ddlBlinds.Name = "ddlBlinds";
             this.ddlBlinds.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.ddlBlinds, null);
+            this.radValidationProvider1.SetValidationRule(this.ddlBlinds, radValidationRule5);
             // 
             // radPanel1
             // 
@@ -488,72 +493,102 @@
             // 
             // 
             this.orderDetailsradGridView.MasterTemplate.AllowAddNewRow = false;
+            this.orderDetailsradGridView.MasterTemplate.AllowDeleteRow = false;
+            this.orderDetailsradGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.FieldName = "Product.Name";
             resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.MinWidth = 6;
+            gridViewTextBoxColumn6.MinWidth = 8;
             gridViewTextBoxColumn6.Name = "Product";
-            gridViewTextBoxColumn6.Width = 173;
+            gridViewTextBoxColumn6.ReadOnly = true;
+            gridViewTextBoxColumn6.Width = 102;
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "Quantity";
             resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
-            gridViewTextBoxColumn7.MinWidth = 6;
+            gridViewTextBoxColumn7.MinWidth = 8;
             gridViewTextBoxColumn7.Name = "Quantity";
-            gridViewTextBoxColumn7.Width = 83;
+            gridViewTextBoxColumn7.ReadOnly = true;
+            gridViewTextBoxColumn7.Width = 49;
             gridViewTextBoxColumn8.EnableExpressionEditor = false;
             gridViewTextBoxColumn8.FieldName = "Width";
             resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
-            gridViewTextBoxColumn8.MinWidth = 6;
+            gridViewTextBoxColumn8.MinWidth = 8;
             gridViewTextBoxColumn8.Name = "Width";
-            gridViewTextBoxColumn8.Width = 81;
+            gridViewTextBoxColumn8.ReadOnly = true;
+            gridViewTextBoxColumn8.Width = 49;
             gridViewTextBoxColumn9.EnableExpressionEditor = false;
             gridViewTextBoxColumn9.FieldName = "Height";
             resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
-            gridViewTextBoxColumn9.MinWidth = 6;
+            gridViewTextBoxColumn9.MinWidth = 8;
             gridViewTextBoxColumn9.Name = "Height";
-            gridViewTextBoxColumn9.Width = 86;
+            gridViewTextBoxColumn9.ReadOnly = true;
+            gridViewTextBoxColumn9.Width = 51;
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
             gridViewTextBoxColumn10.FieldName = "Blind.Name";
             resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
-            gridViewTextBoxColumn10.MinWidth = 6;
+            gridViewTextBoxColumn10.MinWidth = 8;
             gridViewTextBoxColumn10.Name = "Blind";
-            gridViewTextBoxColumn10.Width = 185;
+            gridViewTextBoxColumn10.ReadOnly = true;
+            gridViewTextBoxColumn10.Width = 108;
             gridViewTextBoxColumn11.EnableExpressionEditor = false;
             gridViewTextBoxColumn11.FieldName = "Price";
             resources.ApplyResources(gridViewTextBoxColumn11, "gridViewTextBoxColumn11");
-            gridViewTextBoxColumn11.MinWidth = 6;
+            gridViewTextBoxColumn11.MinWidth = 8;
             gridViewTextBoxColumn11.Name = "Price";
-            gridViewTextBoxColumn11.Width = 129;
+            gridViewTextBoxColumn11.Width = 76;
             gridViewTextBoxColumn12.EnableExpressionEditor = false;
             gridViewTextBoxColumn12.FieldName = "Total";
             resources.ApplyResources(gridViewTextBoxColumn12, "gridViewTextBoxColumn12");
-            gridViewTextBoxColumn12.MinWidth = 6;
+            gridViewTextBoxColumn12.MinWidth = 8;
             gridViewTextBoxColumn12.Name = "Total";
-            gridViewTextBoxColumn12.Width = 139;
+            gridViewTextBoxColumn12.Width = 83;
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
             gridViewTextBoxColumn13.FieldName = "ProductID";
             resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
             gridViewTextBoxColumn13.IsVisible = false;
+            gridViewTextBoxColumn13.MinWidth = 6;
             gridViewTextBoxColumn13.Name = "ProductID";
+            gridViewTextBoxColumn13.Width = 62;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
             gridViewTextBoxColumn14.FieldName = "BlindID";
             resources.ApplyResources(gridViewTextBoxColumn14, "gridViewTextBoxColumn14");
             gridViewTextBoxColumn14.IsVisible = false;
+            gridViewTextBoxColumn14.MinWidth = 6;
             gridViewTextBoxColumn14.Name = "BlindID";
+            gridViewTextBoxColumn14.Width = 62;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
             gridViewTextBoxColumn15.FieldName = "ProfileID";
             resources.ApplyResources(gridViewTextBoxColumn15, "gridViewTextBoxColumn15");
             gridViewTextBoxColumn15.IsVisible = false;
+            gridViewTextBoxColumn15.MinWidth = 6;
             gridViewTextBoxColumn15.Name = "ProfileID";
+            gridViewTextBoxColumn15.Width = 55;
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
             gridViewTextBoxColumn16.FieldName = "WindowPaneID";
             resources.ApplyResources(gridViewTextBoxColumn16, "gridViewTextBoxColumn16");
             gridViewTextBoxColumn16.IsVisible = false;
+            gridViewTextBoxColumn16.MinWidth = 6;
             gridViewTextBoxColumn16.Name = "WindowPaneID";
+            gridViewTextBoxColumn16.Width = 62;
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
             gridViewTextBoxColumn17.FieldName = "Profile.Name";
             resources.ApplyResources(gridViewTextBoxColumn17, "gridViewTextBoxColumn17");
             gridViewTextBoxColumn17.IsVisible = false;
+            gridViewTextBoxColumn17.MinWidth = 6;
             gridViewTextBoxColumn17.Name = "Profile";
+            gridViewTextBoxColumn17.Width = 123;
+            gridViewTextBoxColumn18.EnableExpressionEditor = false;
             gridViewTextBoxColumn18.FieldName = "WindowPane.Name";
             resources.ApplyResources(gridViewTextBoxColumn18, "gridViewTextBoxColumn18");
             gridViewTextBoxColumn18.IsVisible = false;
+            gridViewTextBoxColumn18.MinWidth = 6;
             gridViewTextBoxColumn18.Name = "WindowPane";
+            gridViewTextBoxColumn18.Width = 62;
+            gridViewTextBoxColumn19.FieldName = "HandWorkPrice";
+            resources.ApplyResources(gridViewTextBoxColumn19, "gridViewTextBoxColumn19");
+            gridViewTextBoxColumn19.IsVisible = false;
+            gridViewTextBoxColumn19.Name = "HandWorkPrice";
+            gridViewTextBoxColumn19.Width = 45;
             this.orderDetailsradGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn6,
             gridViewTextBoxColumn7,
@@ -567,10 +602,10 @@
             gridViewTextBoxColumn15,
             gridViewTextBoxColumn16,
             gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18});
+            gridViewTextBoxColumn18,
+            gridViewTextBoxColumn19});
             this.orderDetailsradGridView.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.orderDetailsradGridView.Name = "orderDetailsradGridView";
-            this.orderDetailsradGridView.ReadOnly = true;
             this.orderDetailsradGridView.ThemeName = "MaterialBlueGrey";
             this.orderDetailsradGridView.RowsChanged += new Telerik.WinControls.UI.GridViewCollectionChangedEventHandler(this.orderDetailsradGridView_RowsChanged);
             this.orderDetailsradGridView.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.orderDetailsradGridView_CellClick);
@@ -588,20 +623,47 @@
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
             radValidationRule1.Controls.Add(this.txtQuantity);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule1.ToolTipText = "Quantity can\'t be empty!";
+            radValidationRule1.ToolTipText = "Sasia duhet të jetë me e lartë se zero!";
+            radValidationRule1.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule1.Value = "0";
             radValidationRule2.Controls.Add(this.txtHeight);
             radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule2.ToolTipText = "Height can\'t be empty";
+            radValidationRule2.ToolTipText = "Gjatësia duhet të jetë më e madhe se zero!";
+            radValidationRule2.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule2.Value = "0";
             radValidationRule3.Controls.Add(this.txtWidth);
             radValidationRule3.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule3.ToolTipText = "Width can\'t be empty!";
+            radValidationRule3.ToolTipText = "Gjerësia duhet të jetë më e madhe se zero!";
+            radValidationRule3.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule3.Value = "0";
+            radValidationRule4.Controls.Add(this.productMultiColumnComboBox1);
+            radValidationRule4.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
+            radValidationRule4.ToolTipText = "Ju lutem zgjidhni një produkt";
+            radValidationRule4.ToolTipTitle = "Validimi Dështoi!";
+            radValidationRule4.Value = "Zgjidhni një produkt";
+            radValidationRule5.Controls.Add(this.ddlBlinds);
+            radValidationRule5.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
+            radValidationRule5.ToolTipText = "Ju lutem zgjidhni roletat!";
+            radValidationRule5.ToolTipTitle = "Validimi Dështoi!";
+            radValidationRule5.Value = "Zgjidhni roletat";
+            radValidationRule6.Controls.Add(this.ddlProfile);
+            radValidationRule6.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
+            radValidationRule6.ToolTipText = "Ju lutem zgjidhni një profil!";
+            radValidationRule6.ToolTipTitle = "Validmi Dështoi!";
+            radValidationRule6.Value = "Zgjidhni një profil";
+            radValidationRule7.Controls.Add(this.ddlWindowPane);
+            radValidationRule7.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
+            radValidationRule7.ToolTipText = "Ju lutem zgjidhni xhamat!";
+            radValidationRule7.ToolTipTitle = "Validimi Dështoi!";
+            radValidationRule7.Value = "Zgjidhni llojin e xhamave";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1,
             radValidationRule2,
-            radValidationRule3});
+            radValidationRule3,
+            radValidationRule4,
+            radValidationRule5,
+            radValidationRule6,
+            radValidationRule7});
             // 
             // OrderDetailsForm
             // 

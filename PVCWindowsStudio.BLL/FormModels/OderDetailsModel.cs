@@ -17,6 +17,7 @@ namespace PVCWindowsStudio.BLL.FormModels
         public ProfileBLL profileBll;
         public WindowPaneBLL windowpaneBll;
         public ProductBLL productBLL;
+        public HandiWorkBLL handiWorkBLL;
 
         public OderDetailsModel()
         {
@@ -28,6 +29,7 @@ namespace PVCWindowsStudio.BLL.FormModels
             details = new OrderDetails();
             profileBll = new ProfileBLL();
             windowpaneBll = new WindowPaneBLL();
+            handiWorkBLL = new HandiWorkBLL();
 
         }
     }

@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -217,34 +218,21 @@ namespace PVCWindowsStudio.UI
 
                 if(formulaBLL.Insert(formula))
                 {
-                    MessageBox.Show("Formula inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertFormula);
                     InitiateData();
                     Clear();
                 }
-                else MessageBox.Show("Something went wrong!");                
+                else RadMessageBox.Show(MessageTexts.somethingWrong);                
             }
-            else MessageBox.Show("Please fill the formula box!");
+            else RadMessageBox.Show(MessageTexts.fillFormulaBox);
         }
 
         private void FormulaForm_Load(object sender, EventArgs e)
         {
             InitiateData();
-        }
-
-        private void radGridView1_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
-        {
-            
-            int rowindex = e.RowIndex;
-            if (!rowindex.Equals(-1))
-            {
-                formula = (Formula)radGridView3.Rows[rowindex].DataBoundItem;
-                if (formula != null)
-                {
-                    lblID.Text = formula.FormulaID.ToString();
-                    txtValue.Text = formula.FormulaType;
-
-                }
-            }
+            RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -255,14 +243,14 @@ namespace PVCWindowsStudio.UI
                 formula.LUB = 1;
                 if (formulaBLL.Update(formula))
                 {
-                    MessageBox.Show("Formula updated successfully!");
+                    RadMessageBox.Show(MessageTexts.successUpdateFormula);
                     InitiateData();
                     Clear();
                 }
-                else MessageBox.Show("Something went wrong!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
 
             }
-            else MessageBox.Show("Please select an formula!");
+            else RadMessageBox.Show(MessageTexts.selectMessageFormula);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -274,26 +262,41 @@ namespace PVCWindowsStudio.UI
 
                     if (!formulaList.Contains(int.Parse(lblID.Text)))
                     {
-                        if (MessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (RadMessageBox.Show(MessageTexts.deleteMessage, "",MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                         {
                             if (formulaBLL.Delete(int.Parse(lblID.Text)))
                             {
-                                MessageBox.Show("Formula is deleted successfully!");
+                                RadMessageBox.Show(MessageTexts.successDeleteFormula);
                                 InitiateData();
                                 Clear();
                             }
-                            else MessageBox.Show("Something went wrong!");
+                            else RadMessageBox.Show(MessageTexts.somethingWrong);
                         }                        
                     }
-                    else MessageBox.Show("Selected formula is in use!");                                       
+                    else RadMessageBox.Show(MessageTexts.formulaIsUsed);                                       
             }
-            else MessageBox.Show("Please select a formula!");
+            else RadMessageBox.Show(MessageTexts.selectMessageFormula);
         }
 
         private void Clear()
         {
             txtValue.Text = "";
             lblID.Text = "";
+        }
+
+        private void radGridView3_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            int rowindex = e.RowIndex;
+            if (!rowindex.Equals(-1))
+            {
+                formula = (Formula)radGridView3.Rows[rowindex].DataBoundItem;
+                if (formula != null)
+                {
+                    lblID.Text = formula.FormulaID.ToString();
+                    txtValue.Text = formula.FormulaType;
+
+                }
+            }
         }
     }
 }

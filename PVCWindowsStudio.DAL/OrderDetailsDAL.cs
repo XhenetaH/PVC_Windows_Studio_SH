@@ -103,6 +103,7 @@ namespace PVCWindowsStudio.DAL
                                 order.Quantity = int.Parse(reader["Quantity"].ToString());
                                 order.Width = Convert.ToDecimal(reader["Width"].ToString());
                                 order.Height = Convert.ToDecimal(reader["Height"].ToString());
+                                order.HandWorkPrice = Convert.ToDecimal(reader["HandWorkPrice"].ToString());
                                 order.Price = Convert.ToDecimal(reader["Price"].ToString());
                                 order.Total = Convert.ToDecimal(reader["Total"].ToString());
 
@@ -349,6 +350,7 @@ namespace PVCWindowsStudio.DAL
                         DataConnection.AddParameter(command, "Quantity", model.Quantity); 
                         DataConnection.AddParameter(command, "Width", model.Width);
                         DataConnection.AddParameter(command, "Height", model.Height);
+                        DataConnection.AddParameter(command, "HandWorkPrice", model.HandWorkPrice);
                         DataConnection.AddParameter(command, "Price", model.Price);
                         DataConnection.AddParameter(command, "Total", model.Total);
                         DataConnection.AddParameter(command, "LUB", model.LUB);

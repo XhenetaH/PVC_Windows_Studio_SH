@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -32,7 +33,8 @@ namespace PVCWindowsStudio.UI
             OrderInitData();
             InvoiceInitData();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
-
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();           
         }
         private void OrderInitData()
         {            
@@ -54,16 +56,16 @@ namespace PVCWindowsStudio.UI
                 invoice.Date = DateTime.Now;
                 invoice.InsertBy = 1;
 
-                if (RadMessageBox.Show("Are you sure you want to save this order as a invoice?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.saveInvoice, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (invoiceBll.Insert(invoice))
                     {
-                        RadMessageBox.Show("Invoice inserted successfully!");
+                        RadMessageBox.Show(MessageTexts.successInsertInvoice);
                         InvoiceInitData();
                         OrderInitData();
                     }
                     else
-                        RadMessageBox.Show("Something went wrong!");
+                        RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
             
@@ -81,8 +83,6 @@ namespace PVCWindowsStudio.UI
                 txtPaid.Text = invoice.Paid.ToString();
                 txtDebt.Text = invoice.Debt.ToString();
                 radDateTimePicker1.Value = invoice.Date;
-
-                txtPay.ReadOnly = false;
             }
         }
 
@@ -90,57 +90,53 @@ namespace PVCWindowsStudio.UI
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (ValidationMethod())
-                {
-                    invoice.InvoiceID = int.Parse(lblID.Text);
-                    invoice.Paid = Convert.ToDecimal(txtPaid.Text);
-                    invoice.Debt = Convert.ToDecimal(txtDebt.Text);
-                    invoice.Date = radDateTimePicker1.Value;
-                    invoice.LUB = 1;
+                invoice.InvoiceID = int.Parse(lblID.Text);
+                invoice.Paid = Convert.ToDecimal(txtPaid.Text);
+                invoice.Debt = Convert.ToDecimal(txtDebt.Text);
+                invoice.Date = radDateTimePicker1.Value;
+                invoice.LUB = 1;
 
-                    if (invoiceBll.Update(invoice))
-                    {
-                        RadMessageBox.Show("Invoice updated successfully!");
-                        InvoiceInitData();
-                        Clear();
-                    }
-                    else
-                        RadMessageBox.Show("Something went wrong!");
+                if (invoiceBll.Update(invoice))
+                {
+                    RadMessageBox.Show(MessageTexts.successUpdateInvoice);
+                    InvoiceInitData();                    
+                    Clear();
                 }
+                else
+                    RadMessageBox.Show(MessageTexts.somethingWrong);
             }
-            else RadMessageBox.Show("Please select an invoice!");
+            else RadMessageBox.Show(MessageTexts.selectMessageInvoice);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
-                    if (invoiceBll.Delete(int.Parse(lblID.Text)))
+                    if (invoiceBll.Delete(int.Parse(lblID.Text),invoice.OrderID))
                     {
-                        RadMessageBox.Show("Invoice deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteInvoice);
                         InvoiceInitData();
                         OrderInitData();
                         Clear();
                     }
                     else
-                        RadMessageBox.Show("Something went wrong!");
+                        RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
             else
-                RadMessageBox.Show("Please select an invoice!");
+                RadMessageBox.Show(MessageTexts.selectMessageInvoice);
         }
 
         private void Clear()
         {
             lblID.Text = "";
-            txtClient.Text = "";
-            txtDebt.Text = "";
+            txtClient.Text = "";            
             txtPaid.Text = "";
             txtTotalPrice.Text = "";
-            txtPay.Text = "";
-            txtPay.ReadOnly = true;
+            txtDebt.Text = "";
+            radDateTimePicker1.Value = DateTime.Now;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -156,31 +152,8 @@ namespace PVCWindowsStudio.UI
                 invoiceReport.Show();
             }
             else
-                RadMessageBox.Show("Please select an invoice!");
-        }
-        private bool ValidationMethod()
-        {
-            bool valid = true;
-            if (this.radValidationProvider1.ValidationMode == ValidationMode.Programmatically)
-            {
-                foreach (Control control in this.radPanel1.Controls)
-                {
-                    RadEditorControl editorControl = control as RadEditorControl;
-                    if (editorControl != null)
-                    {
-                        this.radValidationProvider1.Validate(editorControl);
-                        var mode = this.radValidationProvider1.AssociatedControls;
-                        decimal nr;
-                        foreach (var i in mode)
-                        {
-                            if (!decimal.TryParse(i.AccessibilityObject.Value, out nr))
-                                valid = false;
-                        }
-                    }
-                }
-            }
-            return valid;
-        }
+                RadMessageBox.Show(MessageTexts.selectMessageInvoice);
+        }       
         private void InvoiceradGridView_CellFormatting(object sender, CellFormattingEventArgs e)
         {
             if (e.Column.Name == "Paid" && e.Row.Cells["Paid"].Value.ToString() == e.Row.Cells["Total"].Value.ToString())
@@ -204,22 +177,9 @@ namespace PVCWindowsStudio.UI
             }
         }
 
-        private void txtPay_TextChanged(object sender, EventArgs e)
+        private void txtPaid_TextChanged(object sender, EventArgs e)
         {
-            if (ValidationMethod())
-            {
-                if (String.IsNullOrEmpty(txtPay.Value.ToString()))
-                {
-                    txtDebt.Text = (invoice.Debt - 0).ToString();
-                    txtPaid.Text = invoice.Paid.ToString();
-                }
-                else
-                {
-                    txtDebt.Text = (invoice.Debt - Convert.ToDecimal(txtPay.Value)).ToString();
-                    txtPaid.Text = (invoice.Order.TotalPrice - Convert.ToDecimal(txtDebt.Text)).ToString();
-                }
-            }
+            txtDebt.Text = (Convert.ToDecimal(txtTotalPrice.Text) - Convert.ToDecimal(txtPaid.Value)).ToString();
         }
-
     }
 }

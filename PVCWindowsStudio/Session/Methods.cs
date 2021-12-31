@@ -12,7 +12,7 @@ namespace PVCWindowsStudio.Session
     public static class Methods
     {
        
-        public static decimal CalcPrice(int productId, string width,string height, int profileId,int blindId, decimal blindPrice, decimal panePrice, int paneId, List<PriceCalculation> details)
+        public static decimal CalcPrice(int productId, string width,string height, int profileId,int blindId, decimal blindPrice, decimal panePrice, int paneId, List<PriceCalculation> details,decimal handworkPrice)
         { 
 
             for (int i = 0; i < details.Count; i++)
@@ -39,17 +39,35 @@ namespace PVCWindowsStudio.Session
 
             decimal price = Convert.ToDecimal(new DataTable().Compute(total, null));
 
-            if (blindId > -1)
-            {
-                var pr = blindPrice;
-                price += pr;
-            }
-            if (paneId > -1)
-            {
-                price += panePrice;
-            }
-            return price;
+            decimal width_d = Convert.ToDecimal(width);
+            decimal height_d = Convert.ToDecimal(height);
+            var paneprice = GetWindowPanePrice(paneId, width_d,height_d,panePrice);
+            var blindprice = GetBlindPrice(blindId, width_d, height_d,blindPrice);
+            var handiworkprice = HandiWorkPrice(width_d, height_d, handworkPrice);
+            return Math.Round(price + paneprice + handiworkprice + blindprice);
 
+        }
+
+        private static decimal GetWindowPanePrice(int id, decimal width, decimal height,decimal price)
+        {            
+            if (price != -1)
+                return (height / 100) * (width / 100) * price;
+            else return 0;
+
+        }
+        private static decimal GetBlindPrice(int id, decimal width, decimal height,decimal price)
+        {
+            if (price != -1)
+                return (height / 100) * (width / 100) * price;
+            else return 0;
+
+        }
+
+        private static decimal HandiWorkPrice(decimal width, decimal height,decimal price)
+        {
+            if (price != -1)
+                return price;
+            else return 0;
         }
     }
 }

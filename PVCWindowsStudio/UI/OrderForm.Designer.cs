@@ -40,6 +40,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.clientMultiComboBox = new Telerik.WinControls.UI.RadMultiColumnComboBox();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
@@ -113,11 +114,11 @@
             gridViewTextBoxColumn1.FieldName = "ClientID";
             resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
             gridViewTextBoxColumn1.Name = "ClientID";
-            gridViewTextBoxColumn1.Width = 43;
+            gridViewTextBoxColumn1.Width = 41;
             gridViewTextBoxColumn2.FieldName = "FullName";
             resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
             gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 237;
+            gridViewTextBoxColumn2.Width = 229;
             this.clientMultiComboBox.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2});
@@ -251,6 +252,7 @@
             this.orderGridView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.orderGridView, "orderGridView");
             this.orderGridView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.orderGridView.HideSelection = true;
             // 
             // 
             // 
@@ -264,6 +266,7 @@
             resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
             gridViewTextBoxColumn3.MinWidth = 6;
             gridViewTextBoxColumn3.Name = "OrderID";
+            gridViewTextBoxColumn3.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
             gridViewTextBoxColumn3.Width = 88;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "Clients.FullName";
@@ -304,6 +307,10 @@
             gridViewTextBoxColumn7,
             gridViewTextBoxColumn8});
             this.orderGridView.MasterTemplate.EnablePaging = true;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "OrderID";
+            this.orderGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.orderGridView.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.orderGridView.Name = "orderGridView";
             this.orderGridView.ThemeName = "MaterialBlueGrey";

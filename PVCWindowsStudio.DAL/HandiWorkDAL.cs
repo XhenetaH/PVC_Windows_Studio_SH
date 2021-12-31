@@ -20,7 +20,7 @@ namespace PVCWindowsStudio.DAL
                 {
                     using (var command = DataConnection.Command(connection, "usp_HandiWork_Delete", CommandType.StoredProcedure))
                     {
-                        DataConnection.AddParameter(command, "HandiWork", id);
+                        DataConnection.AddParameter(command, "HandiWorkID", id);
                         int result = command.ExecuteNonQuery();
                         return result > 0;
                     }

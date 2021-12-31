@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -39,12 +40,12 @@ namespace PVCWindowsStudio.UI
                 client.InsertBy = 1;
                 if (clientBll.Insert(client))
                 {
-                    MessageBox.Show("Client is inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertClient);
                     Clear();
                     InitiateData();
                     this.radValidationProvider1.ClearErrorStatus();
                 }
-                else MessageBox.Show("Something went wrong!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
             }
         }
 
@@ -53,6 +54,8 @@ namespace PVCWindowsStudio.UI
             InitiateData();
 
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -69,34 +72,34 @@ namespace PVCWindowsStudio.UI
                     client.LUB = 1;
                     if (clientBll.Update(client))
                     {
-                        RadMessageBox.Show("Client is updated successfully!");
+                        RadMessageBox.Show(MessageTexts.successUpdateClient);
                         Clear();
                         InitiateData();
                         this.radValidationProvider1.ClearErrorStatus();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }            
             }
-            else RadMessageBox.Show("Please select a client!");
+            else RadMessageBox.Show(MessageTexts.selectMessageClient);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (MessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (clientBll.Delete(int.Parse(lblID.Text)))
                     {
-                        MessageBox.Show("Client is deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteClient);
                         InitiateData();
                         Clear();
                     }
-                    else MessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
             else
-                MessageBox.Show("Please select a client!");
+                RadMessageBox.Show(MessageTexts.selectMessageClient);
         }
 
         private void Clear()

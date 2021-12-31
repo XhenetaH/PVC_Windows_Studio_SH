@@ -39,7 +39,7 @@ namespace PVCWindowsStudio.UI
                         decimal nr;
                         foreach (var i in mode)
                         {
-                            if (i.AccessibilityObject.Value.ToString() == "0" || !decimal.TryParse(i.AccessibilityObject.Value,out nr))
+                            if (i.AccessibilityObject.Value.ToString() == "0" || !decimal.TryParse(i.AccessibilityObject.Value,out nr) || i.AccessibilityObject.Value.ToString() == "0.00")
                                 valid = false;
                         }
                     }
@@ -57,6 +57,8 @@ namespace PVCWindowsStudio.UI
         {
             InitiateData();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -71,43 +73,43 @@ namespace PVCWindowsStudio.UI
                     handi.MinHeight = int.Parse(txtMinHeight.Value.ToString());
                     handi.MaxWidth = int.Parse(txtMaxWidth.Value.ToString());
                     handi.MinWidth = int.Parse(txtMinWidth.Value.ToString());
-                    handi.Price = Convert.ToDecimal(txtPricee.Value.ToString());
+                    handi.Price = Convert.ToDecimal(txtPrice.Value.ToString());
                     handi.LUB =1;
 
                     if (handiBll.Update(handi))
                     {
-                        RadMessageBox.Show("HandiWork updated successfully!");
+                        RadMessageBox.Show(MessageTexts.successUpdateHandWork);
                         InitiateData();
                         Clear();
 
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
 
                 }
             }
-            else RadMessageBox.Show("Please select a HandiWork item!");
+            else RadMessageBox.Show(MessageTexts.selectMessageHandWork);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo,RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo,RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (handiBll.Delete(int.Parse(lblID.Text)))
                     {
-                        RadMessageBox.Show("HandiWork item is deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteHandWork);
                         InitiateData();
                         Clear();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
-            else RadMessageBox.Show("Please select a HandiWork item!");
+            else RadMessageBox.Show(MessageTexts.selectMessageHandWork);
         }
         private void Clear()
         {
-            txtPricee.Text = "";
+            txtPrice.Text = "";
             txtMaxHeight.Text = "";
             txtMinHeight.Text = "";
             txtMaxWidth.Text = "";
@@ -128,7 +130,7 @@ namespace PVCWindowsStudio.UI
                     txtMinWidth.Value = handi.MinWidth.ToString();
                     txtMaxHeight.Value = handi.MaxHeight.ToString();
                     txtMinHeight.Value = handi.MinHeight.ToString();
-                    txtPricee.Value = handi.Price;
+                    txtPrice.Value = handi.Price;
                 }
             }
         }
@@ -142,17 +144,22 @@ namespace PVCWindowsStudio.UI
                 handi.MinHeight = int.Parse(txtMinHeight.Value.ToString());
                 handi.MaxWidth = int.Parse(txtMaxWidth.Value.ToString());
                 handi.MinWidth = int.Parse(txtMinWidth.Value.ToString());
-                handi.Price = Convert.ToDecimal(txtPricee.Value.ToString());
+                handi.Price = Convert.ToDecimal(txtPrice.Value.ToString());
                 handi.InsertBy = 1;
                 if (handiBll.Insert(handi))
                 {
-                    RadMessageBox.Show("HandiWork inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertHandWork);
                     InitiateData();
                     Clear();
                 }
-                else RadMessageBox.Show("Something went wrong!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
 
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

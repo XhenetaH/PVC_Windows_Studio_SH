@@ -230,6 +230,7 @@ namespace PVCWindowsStudio.DAL
                 ProductID = int.Parse(reader["ProductID"].ToString()),
                 Name = reader["Name"].ToString(),
                 Other = reader["Other"].ToString(),
+                Color = reader["Color"].ToString(),
                 Picture = (byte[])reader["Picture"],
             };
             return product;
@@ -246,6 +247,7 @@ namespace PVCWindowsStudio.DAL
                         DataConnection.AddParameter(command, "ProductID", model.ProductID);
                         DataConnection.AddParameter(command, "Name", model.Name);
                         DataConnection.AddParameter(command, "Other", model.Other);
+                        DataConnection.AddParameter(command, "Color", model.Color);
                         DataConnection.AddParameter(command, "Picture", model.Picture);
                         DataConnection.AddParameter(command, "LUB", model.LUB);
                         int result = command.ExecuteNonQuery();

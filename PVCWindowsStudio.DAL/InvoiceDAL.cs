@@ -12,7 +12,7 @@ namespace PVCWindowsStudio.DAL
 {
     public class InvoiceDAL : IRepository<Invoices> , IConvertToObject<Invoices>
     {
-        public bool Delete(int id)
+        public bool Delete(int id,int orderId)
         {
             try
             {
@@ -21,7 +21,7 @@ namespace PVCWindowsStudio.DAL
                     using (var command = DataConnection.Command(connection, "usp_Invoice_Delete", CommandType.StoredProcedure))
                     {
                         DataConnection.AddParameter(command, "InvoiceID", id);
-
+                        DataConnection.AddParameter(command, "OrderID", orderId);
                         int result = command.ExecuteNonQuery();
                         return result > 0;
 
@@ -195,6 +195,11 @@ namespace PVCWindowsStudio.DAL
             {
                 return false;
             }
+        }
+
+        public bool Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -40,6 +40,7 @@
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
             Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
             this.txtName = new Telerik.WinControls.UI.RadTextBox();
+            this.priceTxt = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.blindsGrindView = new Telerik.WinControls.UI.RadGridView();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
@@ -59,8 +60,8 @@
             this.btnSave = new Telerik.WinControls.UI.RadButton();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
-            this.priceTxt = new Telerik.WinControls.UI.RadMaskedEditBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +88,18 @@
             this.txtName.Name = "txtName";
             this.txtName.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtName, radValidationRule1);
+            // 
+            // priceTxt
+            // 
+            resources.ApplyResources(this.priceTxt, "priceTxt");
+            this.priceTxt.Name = "priceTxt";
+            // 
+            // 
+            // 
+            this.priceTxt.RootElement.CustomFontSize = 10.5F;
+            this.priceTxt.TabStop = false;
+            this.priceTxt.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.priceTxt, radValidationRule2);
             // 
             // blindsGrindView
             // 
@@ -309,7 +321,8 @@
             // 
             radValidationRule1.Controls.Add(this.txtName);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule1.ToolTipText = "Name can\'t be empty!";
+            radValidationRule1.ToolTipText = "Emri nuk duhet të jetë i zbrazët!";
+            radValidationRule1.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule1.Value = "";
             radValidationRule2.Controls.Add(this.priceTxt);
             radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
@@ -319,18 +332,6 @@
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1,
             radValidationRule2});
-            // 
-            // priceTxt
-            // 
-            resources.ApplyResources(this.priceTxt, "priceTxt");
-            this.priceTxt.Name = "priceTxt";
-            // 
-            // 
-            // 
-            this.priceTxt.RootElement.CustomFontSize = 10.5F;
-            this.priceTxt.TabStop = false;
-            this.priceTxt.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.priceTxt, radValidationRule2);
             // 
             // BlindsForm
             // 
@@ -347,6 +348,7 @@
             this.ThemeName = "MaterialBlueGrey";
             this.Load += new System.EventHandler(this.BlindsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blindsGrindView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
@@ -365,7 +367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.priceTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

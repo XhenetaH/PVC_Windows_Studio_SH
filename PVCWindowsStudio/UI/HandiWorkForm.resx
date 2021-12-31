@@ -219,32 +219,35 @@
   <data name="&gt;&gt;txtMaxWidth.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="txtPricee.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 427</value>
+  <data name="txtPrice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>26, 429</value>
   </data>
-  <data name="txtPricee.Mask" xml:space="preserve">
-    <value>^(?!0\.00)[1-9]\d{0,2}(,\d{3})*(\.\d\d)?$</value>
+  <data name="txtPrice.Mask" xml:space="preserve">
+    <value>F</value>
   </data>
-  <data name="txtPricee.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
-    <value>Regex</value>
+  <data name="txtPrice.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
+    <value>Numeric</value>
   </data>
-  <data name="txtPricee.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 41</value>
+  <data name="txtPrice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 41</value>
   </data>
-  <data name="txtPricee.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="txtPrice.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;txtPricee.Name" xml:space="preserve">
-    <value>txtPricee</value>
+  <data name="txtPrice.Text" xml:space="preserve">
+    <value>0.00</value>
   </data>
-  <data name="&gt;&gt;txtPricee.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtPrice.Name" xml:space="preserve">
+    <value>txtPrice</value>
+  </data>
+  <data name="&gt;&gt;txtPrice.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2021.2.511.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;txtPricee.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtPrice.Parent" xml:space="preserve">
     <value>radPanel5</value>
   </data>
-  <data name="&gt;&gt;txtPricee.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;txtPrice.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;txtMinHeight.Name" xml:space="preserve">
     <value>txtMinHeight</value>
@@ -259,7 +262,7 @@
     <value>2</value>
   </data>
   <metadata name="materialBlueGreyTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 60</value>
+    <value>20, 18</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -272,16 +275,16 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 9</value>
+    <value>0, 9</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 32</value>
+    <value>323, 32</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>HandiWork Management</value>
+    <value>Menaxhimi i Punë Dorës</value>
   </data>
   <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -296,7 +299,7 @@
     <value>radPanel5</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -308,13 +311,13 @@
     <value>24, 399</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 23</value>
+    <value>56, 23</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Price</value>
+    <value>Çmimi</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -338,13 +341,13 @@
     <value>24, 320</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 23</value>
+    <value>139, 23</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
-    <value>Minimum Height</value>
+    <value>Gjatësia Minimale</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -368,13 +371,13 @@
     <value>24, 241</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 23</value>
+    <value>154, 23</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Maximum Height</value>
+    <value>Gjatësia Maksimale</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -398,13 +401,13 @@
     <value>24, 162</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 23</value>
+    <value>140, 23</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Minimum Width</value>
+    <value>Gjerësia Minimale</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -455,13 +458,13 @@
     <value>24, 83</value>
   </data>
   <data name="lblUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 23</value>
+    <value>155, 23</value>
   </data>
   <data name="lblUserName.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="lblUserName.Text" xml:space="preserve">
-    <value>Maximum Width</value>
+    <value>Gjerësia Maksimale</value>
   </data>
   <data name="&gt;&gt;lblUserName.Name" xml:space="preserve">
     <value>lblUserName</value>
@@ -482,7 +485,7 @@
     <value>0, 0</value>
   </data>
   <data name="radPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 526</value>
+    <value>323, 486</value>
   </data>
   <data name="radPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -515,7 +518,7 @@
     <value>3</value>
   </data>
   <data name="btnClear.Text" xml:space="preserve">
-    <value>CLEAR</value>
+    <value>PASTRO</value>
   </data>
   <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
     <value>btnClear</value>
@@ -530,7 +533,7 @@
     <value>0</value>
   </data>
   <data name="resource.Text" xml:space="preserve">
-    <value>CLEAR</value>
+    <value>PASTRO</value>
   </data>
   <data name="resource.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -551,7 +554,7 @@
     <value>2</value>
   </data>
   <data name="btnDelete.Text" xml:space="preserve">
-    <value>DELETE</value>
+    <value>FSHIJE</value>
   </data>
   <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
     <value>btnDelete</value>
@@ -566,7 +569,7 @@
     <value>1</value>
   </data>
   <data name="resource.Text1" xml:space="preserve">
-    <value>DELETE</value>
+    <value>FSHIJE</value>
   </data>
   <data name="resource.Alignment1" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -590,7 +593,7 @@
     <value>1</value>
   </data>
   <data name="btnUpdate.Text" xml:space="preserve">
-    <value>UPDATE</value>
+    <value>NDRYSHO</value>
   </data>
   <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
     <value>btnUpdate</value>
@@ -605,7 +608,7 @@
     <value>2</value>
   </data>
   <data name="resource.Text2" xml:space="preserve">
-    <value>UPDATE</value>
+    <value>NDRYSHO</value>
   </data>
   <data name="resource.Alignment2" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -629,7 +632,7 @@
     <value>0</value>
   </data>
   <data name="btnSave.Text" xml:space="preserve">
-    <value>SAVE</value>
+    <value>RUAJ</value>
   </data>
   <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
     <value>btnSave</value>
@@ -644,7 +647,7 @@
     <value>3</value>
   </data>
   <data name="resource.Text3" xml:space="preserve">
-    <value>SAVE</value>
+    <value>RUAJ</value>
   </data>
   <data name="resource.Alignment3" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -653,10 +656,10 @@
     <value>Bottom</value>
   </data>
   <data name="radPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 526</value>
+    <value>0, 486</value>
   </data>
   <data name="radPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 162</value>
+    <value>323, 202</value>
   </data>
   <data name="radPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -737,19 +740,22 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>Maximum Width</value>
+    <value>Gjerësia Maksimale</value>
   </data>
   <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>Minimum Width</value>
+    <value>Gjerësia Minimale</value>
   </data>
   <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>Minimum Height</value>
+    <value>Gjatësia Minimale</value>
   </data>
   <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>Maximum Height</value>
+    <value>Gjatësia Maksimale</value>
   </data>
   <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>Price</value>
+    <value>Çmimi</value>
+  </data>
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>HandiWorkID</value>
   </data>
   <data name="handworkGridView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>

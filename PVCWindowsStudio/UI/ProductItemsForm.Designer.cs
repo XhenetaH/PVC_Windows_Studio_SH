@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductItemsForm));
-            Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn1 = new Telerik.WinControls.UI.GridViewImageColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewImageColumn gridViewImageColumn2 = new Telerik.WinControls.UI.GridViewImageColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.ddlFormula = new Telerik.WinControls.UI.RadDropDownList();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.btnUpdate = new Telerik.WinControls.UI.RadButton();
@@ -102,12 +103,12 @@
             // ddlFormula
             // 
             this.ddlFormula.DropDownAnimationEnabled = true;
-            radListDataItem1.Text = "Choose Role";
-            this.ddlFormula.Items.Add(radListDataItem1);
+            radListDataItem3.Text = "Choose Role";
+            this.ddlFormula.Items.Add(radListDataItem3);
             resources.ApplyResources(this.ddlFormula, "ddlFormula");
             this.ddlFormula.Name = "ddlFormula";
             this.ddlFormula.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.ddlFormula, radValidationRule1);
+            this.radValidationProvider1.SetValidationRule(this.ddlFormula, radValidationRule2);
             // 
             // btnUpdate
             // 
@@ -192,18 +193,18 @@
             // radValidationProvider1
             // 
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
-            radValidationRule1.Controls.Add(this.ddlFormula);
-            radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotNull;
-            radValidationRule1.ToolTipText = "Formula can\'t be empty!";
-            radValidationRule1.Value = "";
+            radValidationRule2.Controls.Add(this.ddlFormula);
+            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotNull;
+            radValidationRule2.ToolTipText = "Formula can\'t be empty!";
+            radValidationRule2.Value = "";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
-            radValidationRule1});
+            radValidationRule2});
             // 
             // ddlMaterial
             // 
             this.ddlMaterial.DropDownAnimationEnabled = true;
-            radListDataItem2.Text = "Choose Role";
-            this.ddlMaterial.Items.Add(radListDataItem2);
+            radListDataItem1.Text = "Choose Role";
+            this.ddlMaterial.Items.Add(radListDataItem1);
             resources.ApplyResources(this.ddlMaterial, "ddlMaterial");
             this.ddlMaterial.Name = "ddlMaterial";
             this.ddlMaterial.ThemeName = "MaterialBlueGrey";
@@ -239,32 +240,33 @@
             this.productsradGridView.MasterTemplate.AllowSearchRow = true;
             this.productsradGridView.MasterTemplate.AutoGenerateColumns = false;
             this.productsradGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewImageColumn1.EnableExpressionEditor = false;
-            gridViewImageColumn1.FieldName = "Picture";
-            resources.ApplyResources(gridViewImageColumn1, "gridViewImageColumn1");
-            gridViewImageColumn1.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            gridViewImageColumn1.MinWidth = 6;
-            gridViewImageColumn1.Name = "Picture";
-            gridViewImageColumn1.Width = 231;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "ProductID";
-            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
-            gridViewTextBoxColumn1.MinWidth = 6;
-            gridViewTextBoxColumn1.Name = "ProductID";
-            gridViewTextBoxColumn1.Width = 62;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Name";
-            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
-            gridViewTextBoxColumn2.MinWidth = 6;
-            gridViewTextBoxColumn2.Name = "Name";
-            gridViewTextBoxColumn2.Width = 125;
+            gridViewImageColumn2.EnableExpressionEditor = false;
+            gridViewImageColumn2.FieldName = "Picture";
+            resources.ApplyResources(gridViewImageColumn2, "gridViewImageColumn2");
+            gridViewImageColumn2.ImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            gridViewImageColumn2.MinWidth = 6;
+            gridViewImageColumn2.Name = "Picture";
+            gridViewImageColumn2.Width = 271;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "ProductID";
+            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.MinWidth = 6;
+            gridViewTextBoxColumn7.Name = "ProductID";
+            gridViewTextBoxColumn7.Width = 62;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "Name";
+            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
+            gridViewTextBoxColumn8.MinWidth = 6;
+            gridViewTextBoxColumn8.Name = "Name";
+            gridViewTextBoxColumn8.Width = 147;
             this.productsradGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewImageColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
+            gridViewImageColumn2,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.productsradGridView.MasterTemplate.EnableGrouping = false;
             this.productsradGridView.MasterTemplate.ShowRowHeaderColumn = false;
-            this.productsradGridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.productsradGridView.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.productsradGridView.Name = "productsradGridView";
             this.productsradGridView.ThemeName = "MaterialBlueGrey";
             this.productsradGridView.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.productsradGridView_CellClick);
@@ -288,6 +290,7 @@
             this.productitemsGridView.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.productitemsGridView, "productitemsGridView");
             this.productitemsGridView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.productitemsGridView.HideSelection = true;
             // 
             // 
             // 
@@ -297,39 +300,44 @@
             this.productitemsGridView.MasterTemplate.AllowEditRow = false;
             this.productitemsGridView.MasterTemplate.AllowSearchRow = true;
             this.productitemsGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Products.ProductID";
-            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
-            gridViewTextBoxColumn3.MinWidth = 10;
-            gridViewTextBoxColumn3.Name = "ProductID";
-            gridViewTextBoxColumn3.Width = 112;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Products.Name";
-            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
-            gridViewTextBoxColumn4.MinWidth = 6;
-            gridViewTextBoxColumn4.Name = "ProductName";
-            gridViewTextBoxColumn4.Width = 260;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "Materials.Name";
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.MinWidth = 10;
-            gridViewTextBoxColumn5.Name = "MaterialName";
-            gridViewTextBoxColumn5.Width = 254;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Formula.FormulaType";
-            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.MinWidth = 10;
-            gridViewTextBoxColumn6.Name = "Formula";
-            gridViewTextBoxColumn6.Width = 213;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "Products.ProductID";
+            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
+            gridViewTextBoxColumn9.MinWidth = 10;
+            gridViewTextBoxColumn9.Name = "ProductID";
+            gridViewTextBoxColumn9.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn9.Width = 112;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "Products.Name";
+            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
+            gridViewTextBoxColumn10.MinWidth = 6;
+            gridViewTextBoxColumn10.Name = "ProductName";
+            gridViewTextBoxColumn10.Width = 260;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "Materials.Name";
+            resources.ApplyResources(gridViewTextBoxColumn11, "gridViewTextBoxColumn11");
+            gridViewTextBoxColumn11.MinWidth = 10;
+            gridViewTextBoxColumn11.Name = "MaterialName";
+            gridViewTextBoxColumn11.Width = 254;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.FieldName = "Formula.FormulaType";
+            resources.ApplyResources(gridViewTextBoxColumn12, "gridViewTextBoxColumn12");
+            gridViewTextBoxColumn12.MinWidth = 10;
+            gridViewTextBoxColumn12.Name = "Formula";
+            gridViewTextBoxColumn12.Width = 213;
             this.productitemsGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12});
             this.productitemsGridView.MasterTemplate.EnablePaging = true;
             this.productitemsGridView.MasterTemplate.PageSize = 10;
             this.productitemsGridView.MasterTemplate.ShowRowHeaderColumn = false;
-            this.productitemsGridView.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor2.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor2.PropertyName = "ProductID";
+            this.productitemsGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor2});
+            this.productitemsGridView.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.productitemsGridView.Name = "productitemsGridView";
             this.productitemsGridView.ThemeName = "MaterialBlueGrey";
             this.productitemsGridView.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.productitemsGridView_CellClick);

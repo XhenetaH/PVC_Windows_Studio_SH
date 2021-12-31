@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radPanel8 = new Telerik.WinControls.UI.RadPanel();
@@ -118,6 +120,7 @@
             // radGridView3
             // 
             this.radGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGridView3.HideSelection = true;
             this.radGridView3.Location = new System.Drawing.Point(0, 0);
             // 
             // 
@@ -136,18 +139,30 @@
             this.radGridView3.MasterTemplate.AllowSearchRow = true;
             this.radGridView3.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewTextBoxColumn1.FieldName = "FormulaType";
-            gridViewTextBoxColumn1.HeaderText = "Formula Type";
+            gridViewTextBoxColumn1.HeaderText = "Lloji i Formulës";
             gridViewTextBoxColumn1.Name = "FormulaType";
             gridViewTextBoxColumn1.Width = 432;
+            gridViewTextBoxColumn2.FieldName = "FormulaID";
+            gridViewTextBoxColumn2.HeaderText = "FormulaID";
+            gridViewTextBoxColumn2.IsVisible = false;
+            gridViewTextBoxColumn2.Name = "FormulaID";
+            gridViewTextBoxColumn2.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn2.Width = 45;
             this.radGridView3.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2});
             this.radGridView3.MasterTemplate.EnableGrouping = false;
             this.radGridView3.MasterTemplate.EnableSorting = false;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "FormulaID";
+            this.radGridView3.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.radGridView3.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView3.Name = "radGridView3";
             this.radGridView3.Size = new System.Drawing.Size(480, 654);
             this.radGridView3.TabIndex = 1;
             this.radGridView3.ThemeName = "MaterialBlueGrey";
+            this.radGridView3.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView3_CellClick);
             // 
             // radPanel9
             // 
@@ -171,11 +186,11 @@
             this.radButton3.Name = "radButton3";
             this.radButton3.Size = new System.Drawing.Size(480, 47);
             this.radButton3.TabIndex = 5;
-            this.radButton3.Text = "UPDATE";
+            this.radButton3.Text = "NDRYSHO";
             this.radButton3.ThemeName = "MaterialBlueGrey";
             this.radButton3.Click += new System.EventHandler(this.btnUpdate_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton3.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.pencil;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.radButton3.GetChildAt(0))).Text = "UPDATE";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.radButton3.GetChildAt(0))).Text = "NDRYSHO";
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.radButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radButton3.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radButton3.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -193,11 +208,11 @@
             this.radButton4.Name = "radButton4";
             this.radButton4.Size = new System.Drawing.Size(480, 49);
             this.radButton4.TabIndex = 4;
-            this.radButton4.Text = "DELETE";
+            this.radButton4.Text = "FSHIJE";
             this.radButton4.ThemeName = "MaterialBlueGrey";
             this.radButton4.Click += new System.EventHandler(this.btnDelete_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton4.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.trash;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.radButton4.GetChildAt(0))).Text = "DELETE";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.radButton4.GetChildAt(0))).Text = "FSHIJE";
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.radButton4.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radButton4.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radButton4.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -309,10 +324,10 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(186, 79);
             this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Ruaj";
             this.btnSave.ThemeName = "MaterialBlueGrey";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSave.GetChildAt(0))).Text = "Save";
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnSave.GetChildAt(0))).Text = "Ruaj";
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold);
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Alignment = System.Drawing.ContentAlignment.MiddleCenter;

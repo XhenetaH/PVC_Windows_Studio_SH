@@ -40,12 +40,14 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.txtMinHeight = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.txtMaxHeight = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.txtMinWidth = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.txtMaxWidth = new Telerik.WinControls.UI.RadMaskedEditBox();
-            this.txtPricee = new Telerik.WinControls.UI.RadMaskedEditBox();
+            this.txtPrice = new Telerik.WinControls.UI.RadMaskedEditBox();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.radPanel6 = new Telerik.WinControls.UI.RadPanel();
@@ -69,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMinWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxWidth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPricee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel6)).BeginInit();
             this.radPanel6.SuspendLayout();
@@ -126,39 +128,46 @@
             this.txtMaxWidth.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtMaxWidth, radValidationRule4);
             // 
-            // txtPricee
+            // txtPrice
             // 
-            this.txtPricee.Culture = new System.Globalization.CultureInfo("eu");
-            resources.ApplyResources(this.txtPricee, "txtPricee");
-            this.txtPricee.Name = "txtPricee";
-            this.txtPricee.TabStop = false;
-            this.txtPricee.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.txtPricee, radValidationRule5);
+            resources.ApplyResources(this.txtPrice, "txtPrice");
+            this.txtPrice.Name = "txtPrice";
+            // 
+            // 
+            // 
+            this.txtPrice.RootElement.CustomFontSize = 10.5F;
+            this.txtPrice.TabStop = false;
+            this.txtPrice.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.txtPrice, radValidationRule5);
             // 
             // radValidationProvider1
             // 
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
             radValidationRule1.Controls.Add(this.txtMinHeight);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
-            radValidationRule1.ToolTipText = "Minimum Height can\'t be empty!";
+            radValidationRule1.ToolTipText = "Gjatësia minimale duhet të jetë më e lartë se zero!";
+            radValidationRule1.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule1.Value = 0;
             radValidationRule2.Controls.Add(this.txtMaxHeight);
             radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
-            radValidationRule2.ToolTipText = "Maximum Height can\'t be empty!";
+            radValidationRule2.ToolTipText = "Gjatësia maksimale duhet të jetë më e lartë se zero!";
+            radValidationRule2.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule2.Value = 0;
             radValidationRule3.Controls.Add(this.txtMinWidth);
             radValidationRule3.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
-            radValidationRule3.ToolTipText = "Minimum Width can\'t be empty!";
+            radValidationRule3.ToolTipText = "Gjerësia minimale duhet të jetë më e lartë se zero!";
+            radValidationRule3.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule3.Value = 0;
             radValidationRule4.Controls.Add(this.txtMaxWidth);
             radValidationRule4.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
-            radValidationRule4.ToolTipText = "Maximum Width can\'t be empty!";
+            radValidationRule4.ToolTipText = "Gjerësia maksimale duhet të jetë më e lartë se zero!";
+            radValidationRule4.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule4.Value = 0;
-            radValidationRule5.Controls.Add(this.txtPricee);
-            radValidationRule5.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule5.PropertyName = "Value";
-            radValidationRule5.ToolTipText = "Price can\'t be empty!";
-            radValidationRule5.Value = "";
+            radValidationRule5.Controls.Add(this.txtPrice);
+            radValidationRule5.Operator = Telerik.WinControls.Data.FilterOperator.IsNotEqualTo;
+            radValidationRule5.ToolTipText = "Çmimi duhet të jetë më i lartë se zero!";
+            radValidationRule5.ToolTipTitle = "Validimi Dështoi";
+            radValidationRule5.Value = "0.00";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1,
             radValidationRule2,
@@ -181,8 +190,8 @@
             // 
             // radPanel5
             // 
+            this.radPanel5.Controls.Add(this.txtPrice);
             this.radPanel5.Controls.Add(this.label1);
-            this.radPanel5.Controls.Add(this.txtPricee);
             this.radPanel5.Controls.Add(this.txtMinHeight);
             this.radPanel5.Controls.Add(this.txtMaxWidth);
             this.radPanel5.Controls.Add(this.txtMinWidth);
@@ -251,6 +260,7 @@
             this.btnClear.Image = global::PVCWindowsStudio.Properties.Resources.eraser__1_;
             this.btnClear.Name = "btnClear";
             this.btnClear.ThemeName = "MaterialBlueGrey";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnClear.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.eraser__1_;
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnClear.GetChildAt(0))).Text = resources.GetString("resource.Text");
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.btnClear.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -312,6 +322,7 @@
             this.handworkGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.handworkGridView1, "handworkGridView1");
             this.handworkGridView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.handworkGridView1.HideSelection = true;
             // 
             // 
             // 
@@ -351,13 +362,24 @@
             gridViewTextBoxColumn5.MinWidth = 6;
             gridViewTextBoxColumn5.Name = "Price";
             gridViewTextBoxColumn5.Width = 112;
+            gridViewTextBoxColumn6.FieldName = "HandiWorkID";
+            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
+            gridViewTextBoxColumn6.IsVisible = false;
+            gridViewTextBoxColumn6.Name = "HandiWorkID";
+            gridViewTextBoxColumn6.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn6.Width = 46;
             this.handworkGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.handworkGridView1.MasterTemplate.EnablePaging = true;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "HandiWorkID";
+            this.handworkGridView1.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.handworkGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.handworkGridView1.Name = "handworkGridView1";
             this.handworkGridView1.ReadOnly = true;
@@ -388,7 +410,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMinWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxWidth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPricee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel6)).EndInit();
             this.radPanel6.ResumeLayout(false);
@@ -436,7 +458,7 @@
         private Telerik.WinControls.UI.RadMaskedEditBox txtMinWidth;
         private Telerik.WinControls.UI.RadMaskedEditBox txtMaxWidth;
         private Telerik.WinControls.UI.RadMaskedEditBox txtMinHeight;
-        private Telerik.WinControls.UI.RadMaskedEditBox txtPricee;
         private System.Windows.Forms.Label label1;
+        private Telerik.WinControls.UI.RadMaskedEditBox txtPrice;
     }
 }

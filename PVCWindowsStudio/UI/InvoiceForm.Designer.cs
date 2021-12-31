@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewMaskBoxColumn gridViewMaskBoxColumn2 = new Telerik.WinControls.UI.GridViewMaskBoxColumn();
-            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn2 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
-            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
-            this.txtPay = new Telerik.WinControls.UI.RadMaskedEditBox();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewMaskBoxColumn gridViewMaskBoxColumn1 = new Telerik.WinControls.UI.GridViewMaskBoxColumn();
+            Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.materialBlueGreyTheme1 = new Telerik.WinControls.Themes.MaterialBlueGreyTheme();
             this.txtClient = new Telerik.WinControls.UI.RadTextBox();
             this.lblID = new Telerik.WinControls.UI.RadLabel();
@@ -53,7 +53,6 @@
             this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.txtTotalPrice = new Telerik.WinControls.UI.RadTextBox();
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
@@ -61,7 +60,6 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.txtDebt = new Telerik.WinControls.UI.RadTextBox();
-            this.txtPaid = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel4 = new Telerik.WinControls.UI.RadPanel();
             this.btnPrint = new Telerik.WinControls.UI.RadButton();
             this.btnClear = new Telerik.WinControls.UI.RadButton();
@@ -72,7 +70,7 @@
             this.OrderradGridView = new Telerik.WinControls.UI.RadGridView();
             this.InvoiceradGridView = new Telerik.WinControls.UI.RadGridView();
             this.radValidationProvider1 = new Telerik.WinControls.UI.RadValidationProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPay)).BeginInit();
+            this.txtPaid = new Telerik.WinControls.UI.RadMaskedEditBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtClient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
@@ -80,7 +78,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
@@ -89,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).BeginInit();
             this.radPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).BeginInit();
@@ -103,18 +99,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceradGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceradGridView.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtPay
-            // 
-            this.txtPay.Culture = new System.Globalization.CultureInfo("eu");
-            resources.ApplyResources(this.txtPay, "txtPay");
-            this.txtPay.Name = "txtPay";
-            this.txtPay.TabStop = false;
-            this.txtPay.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.txtPay, radValidationRule2);
-            this.txtPay.TextChanged += new System.EventHandler(this.txtPay_TextChanged);
             // 
             // txtClient
             // 
@@ -139,7 +126,7 @@
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.ThemeName = "MaterialBlueGrey";
             ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel5.GetChildAt(0))).Text = resources.GetString("resource.Text1");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel5.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel5.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // radDateTimePicker1
             // 
@@ -153,16 +140,14 @@
             // 
             // radPanel1
             // 
-            this.radPanel1.Controls.Add(this.txtPay);
+            this.radPanel1.Controls.Add(this.txtPaid);
             this.radPanel1.Controls.Add(this.txtTotalPrice);
-            this.radPanel1.Controls.Add(this.radLabel8);
             this.radPanel1.Controls.Add(this.radLabel4);
             this.radPanel1.Controls.Add(this.radLabel2);
             this.radPanel1.Controls.Add(this.radLabel7);
             this.radPanel1.Controls.Add(this.radLabel1);
             this.radPanel1.Controls.Add(this.radLabel6);
             this.radPanel1.Controls.Add(this.txtDebt);
-            this.radPanel1.Controls.Add(this.txtPaid);
             this.radPanel1.Controls.Add(this.radPanel4);
             this.radPanel1.Controls.Add(this.label1);
             this.radPanel1.Controls.Add(this.radLabel5);
@@ -182,37 +167,29 @@
             this.txtTotalPrice.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtTotalPrice, null);
             // 
-            // radLabel8
-            // 
-            resources.ApplyResources(this.radLabel8, "radLabel8");
-            this.radLabel8.Name = "radLabel8";
-            this.radLabel8.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel8.GetChildAt(0))).Text = resources.GetString("resource.Text2");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel8.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            // 
             // radLabel4
             // 
             resources.ApplyResources(this.radLabel4, "radLabel4");
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel4.GetChildAt(0))).Text = resources.GetString("resource.Text3");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel4.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel4.GetChildAt(0))).Text = resources.GetString("resource.Text2");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel4.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // radLabel2
             // 
             resources.ApplyResources(this.radLabel2, "radLabel2");
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel2.GetChildAt(0))).Text = resources.GetString("resource.Text4");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel2.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel2.GetChildAt(0))).Text = resources.GetString("resource.Text3");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel2.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // radLabel7
             // 
             resources.ApplyResources(this.radLabel7, "radLabel7");
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel7.GetChildAt(0))).Text = resources.GetString("resource.Text5");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel7.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel7.GetChildAt(0))).Text = resources.GetString("resource.Text4");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel7.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // radLabel1
             // 
@@ -220,15 +197,15 @@
             resources.ApplyResources(this.radLabel1, "radLabel1");
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel1.GetChildAt(0))).Text = resources.GetString("resource.Text7");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel1.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel1.GetChildAt(0))).Text = resources.GetString("resource.Text6");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel1.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // radLabel3
             // 
             resources.ApplyResources(this.radLabel3, "radLabel3");
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel3.GetChildAt(0))).Text = resources.GetString("resource.Text6");
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel3.GetChildAt(0))).Text = resources.GetString("resource.Text5");
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel3.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             // 
             // radLabel6
@@ -236,8 +213,8 @@
             resources.ApplyResources(this.radLabel6, "radLabel6");
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.ThemeName = "MaterialBlueGrey";
-            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel6.GetChildAt(0))).Text = resources.GetString("resource.Text8");
-            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel6.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            ((Telerik.WinControls.UI.RadLabelElement)(this.radLabel6.GetChildAt(0))).Text = resources.GetString("resource.Text7");
+            ((Telerik.WinControls.Primitives.TextPrimitive)(this.radLabel6.GetChildAt(0).GetChildAt(2).GetChildAt(1))).Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             // 
             // txtDebt
             // 
@@ -247,15 +224,6 @@
             this.txtDebt.ReadOnly = true;
             this.txtDebt.ThemeName = "MaterialBlueGrey";
             this.radValidationProvider1.SetValidationRule(this.txtDebt, null);
-            // 
-            // txtPaid
-            // 
-            this.txtPaid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            resources.ApplyResources(this.txtPaid, "txtPaid");
-            this.txtPaid.Name = "txtPaid";
-            this.txtPaid.ReadOnly = true;
-            this.txtPaid.ThemeName = "MaterialBlueGrey";
-            this.radValidationProvider1.SetValidationRule(this.txtPaid, null);
             // 
             // radPanel4
             // 
@@ -277,7 +245,7 @@
             this.btnPrint.ThemeName = "MaterialBlueGrey";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnPrint.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.print;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnPrint.GetChildAt(0))).Text = resources.GetString("resource.Text9");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnPrint.GetChildAt(0))).Text = resources.GetString("resource.Text8");
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.btnPrint.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnPrint.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnPrint.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -293,7 +261,7 @@
             this.btnClear.ThemeName = "MaterialBlueGrey";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnClear.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.eraser__1_;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnClear.GetChildAt(0))).Text = resources.GetString("resource.Text10");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnClear.GetChildAt(0))).Text = resources.GetString("resource.Text9");
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.btnClear.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnClear.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnClear.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -309,7 +277,7 @@
             this.btnDelete.ThemeName = "MaterialBlueGrey";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnDelete.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.trash;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnDelete.GetChildAt(0))).Text = resources.GetString("resource.Text11");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnDelete.GetChildAt(0))).Text = resources.GetString("resource.Text10");
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.btnDelete.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnDelete.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnDelete.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -325,7 +293,7 @@
             this.btnUpdate.ThemeName = "MaterialBlueGrey";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.btnUpdate.GetChildAt(0))).Image = global::PVCWindowsStudio.Properties.Resources.pencil;
-            ((Telerik.WinControls.UI.RadButtonElement)(this.btnUpdate.GetChildAt(0))).Text = resources.GetString("resource.Text12");
+            ((Telerik.WinControls.UI.RadButtonElement)(this.btnUpdate.GetChildAt(0))).Text = resources.GetString("resource.Text11");
             ((Telerik.WinControls.Primitives.ImagePrimitive)(this.btnUpdate.GetChildAt(0).GetChildAt(1).GetChildAt(0))).ImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnUpdate.GetChildAt(0).GetChildAt(1).GetChildAt(1))).LineLimit = false;
             ((Telerik.WinControls.Primitives.TextPrimitive)(this.btnUpdate.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
@@ -355,64 +323,70 @@
             this.OrderradGridView.BackColor = System.Drawing.Color.White;
             this.OrderradGridView.Cursor = System.Windows.Forms.Cursors.Default;
             this.OrderradGridView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.OrderradGridView.HideSelection = true;
             // 
             // 
             // 
             this.OrderradGridView.MasterTemplate.AllowAddNewRow = false;
             this.OrderradGridView.MasterTemplate.AllowSearchRow = true;
             this.OrderradGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "OrderID";
-            resources.ApplyResources(gridViewTextBoxColumn10, "gridViewTextBoxColumn10");
-            gridViewTextBoxColumn10.MinWidth = 6;
-            gridViewTextBoxColumn10.Name = "OrderID";
-            gridViewTextBoxColumn10.Width = 85;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "Clients.FullName";
-            resources.ApplyResources(gridViewTextBoxColumn11, "gridViewTextBoxColumn11");
-            gridViewTextBoxColumn11.MinWidth = 6;
-            gridViewTextBoxColumn11.Name = "Client";
-            gridViewTextBoxColumn11.Width = 146;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "FullDiscount";
-            resources.ApplyResources(gridViewTextBoxColumn12, "gridViewTextBoxColumn12");
-            gridViewTextBoxColumn12.MinWidth = 6;
-            gridViewTextBoxColumn12.Name = "FullDiscount";
-            gridViewTextBoxColumn12.Width = 97;
-            gridViewMaskBoxColumn2.EnableExpressionEditor = false;
-            gridViewMaskBoxColumn2.FieldName = "TotalPrice";
-            resources.ApplyResources(gridViewMaskBoxColumn2, "gridViewMaskBoxColumn2");
-            gridViewMaskBoxColumn2.Mask = "C";
-            gridViewMaskBoxColumn2.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
-            gridViewMaskBoxColumn2.MinWidth = 6;
-            gridViewMaskBoxColumn2.Name = "TotalPrice";
-            gridViewMaskBoxColumn2.Width = 89;
-            gridViewDateTimeColumn2.EnableExpressionEditor = false;
-            gridViewDateTimeColumn2.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.ShortDate;
-            gridViewDateTimeColumn2.FieldName = "Date";
-            gridViewDateTimeColumn2.FilteringMode = Telerik.WinControls.UI.GridViewTimeFilteringMode.Date;
-            gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            resources.ApplyResources(gridViewDateTimeColumn2, "gridViewDateTimeColumn2");
-            gridViewDateTimeColumn2.MinWidth = 6;
-            gridViewDateTimeColumn2.Name = "Date";
-            gridViewDateTimeColumn2.Width = 92;
-            resources.ApplyResources(gridViewCommandColumn2, "gridViewCommandColumn2");
-            gridViewCommandColumn2.EnableExpressionEditor = false;
-            gridViewCommandColumn2.MinWidth = 6;
-            gridViewCommandColumn2.Name = "saveBtn";
-            gridViewCommandColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            gridViewCommandColumn2.UseDefaultText = true;
-            gridViewCommandColumn2.Width = 96;
-            gridViewCommandColumn2.WrapText = true;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "OrderID";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.MinWidth = 6;
+            gridViewTextBoxColumn1.Name = "OrderID";
+            gridViewTextBoxColumn1.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn1.Width = 85;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Clients.FullName";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.MinWidth = 6;
+            gridViewTextBoxColumn2.Name = "Client";
+            gridViewTextBoxColumn2.Width = 146;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "FullDiscount";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.MinWidth = 6;
+            gridViewTextBoxColumn3.Name = "FullDiscount";
+            gridViewTextBoxColumn3.Width = 97;
+            gridViewMaskBoxColumn1.EnableExpressionEditor = false;
+            gridViewMaskBoxColumn1.FieldName = "TotalPrice";
+            resources.ApplyResources(gridViewMaskBoxColumn1, "gridViewMaskBoxColumn1");
+            gridViewMaskBoxColumn1.Mask = "C";
+            gridViewMaskBoxColumn1.MaskType = Telerik.WinControls.UI.MaskType.Numeric;
+            gridViewMaskBoxColumn1.MinWidth = 6;
+            gridViewMaskBoxColumn1.Name = "TotalPrice";
+            gridViewMaskBoxColumn1.Width = 89;
+            gridViewDateTimeColumn1.EnableExpressionEditor = false;
+            gridViewDateTimeColumn1.ExcelExportType = Telerik.WinControls.UI.Export.DisplayFormatType.ShortDate;
+            gridViewDateTimeColumn1.FieldName = "Date";
+            gridViewDateTimeColumn1.FilteringMode = Telerik.WinControls.UI.GridViewTimeFilteringMode.Date;
+            gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            resources.ApplyResources(gridViewDateTimeColumn1, "gridViewDateTimeColumn1");
+            gridViewDateTimeColumn1.MinWidth = 6;
+            gridViewDateTimeColumn1.Name = "Date";
+            gridViewDateTimeColumn1.Width = 92;
+            resources.ApplyResources(gridViewCommandColumn1, "gridViewCommandColumn1");
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.MinWidth = 6;
+            gridViewCommandColumn1.Name = "saveBtn";
+            gridViewCommandColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            gridViewCommandColumn1.UseDefaultText = true;
+            gridViewCommandColumn1.Width = 96;
+            gridViewCommandColumn1.WrapText = true;
             this.OrderradGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewMaskBoxColumn2,
-            gridViewDateTimeColumn2,
-            gridViewCommandColumn2});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewMaskBoxColumn1,
+            gridViewDateTimeColumn1,
+            gridViewCommandColumn1});
             this.OrderradGridView.MasterTemplate.EnableGrouping = false;
-            this.OrderradGridView.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "OrderID";
+            this.OrderradGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
+            this.OrderradGridView.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.OrderradGridView.Name = "OrderradGridView";
             this.OrderradGridView.ReadOnly = true;
             this.OrderradGridView.ThemeName = "MaterialBlueGrey";
@@ -421,6 +395,7 @@
             // InvoiceradGridView
             // 
             resources.ApplyResources(this.InvoiceradGridView, "InvoiceradGridView");
+            this.InvoiceradGridView.HideSelection = true;
             // 
             // 
             // 
@@ -428,39 +403,44 @@
             this.InvoiceradGridView.MasterTemplate.AllowDragToGroup = false;
             this.InvoiceradGridView.MasterTemplate.AllowSearchRow = true;
             this.InvoiceradGridView.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn13.FieldName = "InvoiceID";
-            resources.ApplyResources(gridViewTextBoxColumn13, "gridViewTextBoxColumn13");
-            gridViewTextBoxColumn13.Name = "InvoiceID";
-            gridViewTextBoxColumn13.Width = 112;
-            gridViewTextBoxColumn14.FieldName = "Order.Clients.FullName";
-            resources.ApplyResources(gridViewTextBoxColumn14, "gridViewTextBoxColumn14");
-            gridViewTextBoxColumn14.Name = "Client";
-            gridViewTextBoxColumn14.Width = 112;
-            gridViewTextBoxColumn15.FieldName = "Order.TotalPrice";
-            resources.ApplyResources(gridViewTextBoxColumn15, "gridViewTextBoxColumn15");
-            gridViewTextBoxColumn15.Name = "Total";
-            gridViewTextBoxColumn15.Width = 45;
-            gridViewTextBoxColumn16.FieldName = "Debt";
-            resources.ApplyResources(gridViewTextBoxColumn16, "gridViewTextBoxColumn16");
-            gridViewTextBoxColumn16.Name = "Debt";
-            gridViewTextBoxColumn16.Width = 112;
-            gridViewTextBoxColumn17.FieldName = "Paid";
-            resources.ApplyResources(gridViewTextBoxColumn17, "gridViewTextBoxColumn17");
-            gridViewTextBoxColumn17.Name = "Paid";
-            gridViewTextBoxColumn17.Width = 112;
-            gridViewTextBoxColumn18.FieldName = "Date";
-            resources.ApplyResources(gridViewTextBoxColumn18, "gridViewTextBoxColumn18");
-            gridViewTextBoxColumn18.Name = "Date";
-            gridViewTextBoxColumn18.Width = 112;
+            gridViewTextBoxColumn4.FieldName = "InvoiceID";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.Name = "InvoiceID";
+            gridViewTextBoxColumn4.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn4.Width = 112;
+            gridViewTextBoxColumn5.FieldName = "Order.Clients.FullName";
+            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
+            gridViewTextBoxColumn5.Name = "Client";
+            gridViewTextBoxColumn5.Width = 112;
+            gridViewTextBoxColumn6.FieldName = "Order.TotalPrice";
+            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
+            gridViewTextBoxColumn6.Name = "Total";
+            gridViewTextBoxColumn6.Width = 45;
+            gridViewTextBoxColumn7.FieldName = "Debt";
+            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
+            gridViewTextBoxColumn7.Name = "Debt";
+            gridViewTextBoxColumn7.Width = 112;
+            gridViewTextBoxColumn8.FieldName = "Paid";
+            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
+            gridViewTextBoxColumn8.Name = "Paid";
+            gridViewTextBoxColumn8.Width = 112;
+            gridViewTextBoxColumn9.FieldName = "Date";
+            resources.ApplyResources(gridViewTextBoxColumn9, "gridViewTextBoxColumn9");
+            gridViewTextBoxColumn9.Name = "Date";
+            gridViewTextBoxColumn9.Width = 112;
             this.InvoiceradGridView.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18});
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.InvoiceradGridView.MasterTemplate.EnableGrouping = false;
-            this.InvoiceradGridView.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            sortDescriptor2.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor2.PropertyName = "InvoiceID";
+            this.InvoiceradGridView.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor2});
+            this.InvoiceradGridView.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.InvoiceradGridView.Name = "InvoiceradGridView";
             this.InvoiceradGridView.ReadOnly = true;
             this.InvoiceradGridView.ThemeName = "MaterialBlueGrey";
@@ -470,13 +450,20 @@
             // radValidationProvider1
             // 
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
-            radValidationRule2.Controls.Add(this.txtPay);
-            radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule2.PropertyName = "Value";
-            radValidationRule2.ToolTipText = "Price is not in correct format!";
-            radValidationRule2.Value = "";
-            this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
-            radValidationRule2});
+            // 
+            // txtPaid
+            // 
+            this.txtPaid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.txtPaid, "txtPaid");
+            this.txtPaid.Name = "txtPaid";
+            // 
+            // 
+            // 
+            this.txtPaid.RootElement.CustomFontSize = 10.5F;
+            this.txtPaid.TabStop = false;
+            this.txtPaid.ThemeName = "MaterialBlueGrey";
+            this.radValidationProvider1.SetValidationRule(this.txtPaid, null);
+            this.txtPaid.TextChanged += new System.EventHandler(this.txtPaid_TextChanged);
             // 
             // InvoiceForm
             // 
@@ -492,7 +479,6 @@
             this.RootElement.ApplyShapeToControl = true;
             this.ThemeName = "MaterialBlueGrey";
             this.Load += new System.EventHandler(this.InvoiceForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
@@ -501,7 +487,6 @@
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
@@ -511,7 +496,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPaid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).EndInit();
             this.radPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).EndInit();
@@ -525,6 +509,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceradGridView.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceradGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radValidationProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPaid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -547,8 +532,6 @@
         private Telerik.WinControls.UI.RadButton btnDelete;
         private Telerik.WinControls.UI.RadButton btnUpdate;
         private Telerik.WinControls.UI.RadTextBox txtDebt;
-        private Telerik.WinControls.UI.RadTextBox txtPaid;
-        private Telerik.WinControls.UI.RadLabel radLabel8;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel7;
@@ -558,6 +541,6 @@
         private Telerik.WinControls.UI.RadTextBox txtTotalPrice;
         private Telerik.WinControls.UI.RadButton btnPrint;
         private Telerik.WinControls.UI.RadValidationProvider radValidationProvider1;
-        private Telerik.WinControls.UI.RadMaskedEditBox txtPay;
+        private Telerik.WinControls.UI.RadMaskedEditBox txtPaid;
     }
 }

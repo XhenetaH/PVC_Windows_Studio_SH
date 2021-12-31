@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -33,14 +34,14 @@ namespace PVCWindowsStudio.UI
 
             ddlColor.DataSource = profileBLL.GetColor();
             ddlColor.DisplayMember = "Color";            
-            ddlColor.Text = "Choose a Color";
-            //ddlProfile.SelectedIndex = -1;
+            ddlColor.Text = "Zgjidhni një ngjyrë";            
         }
         private void ProductsForm_Load(object sender, EventArgs e)
         {
             InitiateData();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
-
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();           
         }
         private bool ValidationMethod()
         {
@@ -54,10 +55,12 @@ namespace PVCWindowsStudio.UI
                     {
                         this.radValidationProvider1.Validate(editorControl);
                         var mode = this.radValidationProvider1.AssociatedControls;
-                        foreach (var i in mode)
+                        for(int i=0; i<mode.Count;i++)
                         {
-                            if (string.IsNullOrEmpty(i.AccessibilityObject.Value.ToString()))
+                            if(mode[i].Text == "Zgjidhni një ngjyrë" || mode[i].Text == "")
+                            {
                                 valid = false;
+                            }
                         }
                     }
                 }
@@ -68,7 +71,7 @@ namespace PVCWindowsStudio.UI
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (productPictureBox.Image == null)
-                RadMessageBox.Show("Picture box can't be empty!");
+                RadMessageBox.Show(MessageTexts.pictureBoxMessage);
             else {
                 if (ValidationMethod())
                 {
@@ -80,12 +83,12 @@ namespace PVCWindowsStudio.UI
 
                     if (productBll.Insert(product))
                     {
-                        RadMessageBox.Show("Product inserted successfully!");
+                        RadMessageBox.Show(MessageTexts.successInsertProduct);
                         InitiateData();
                         Clear();
                         this.radValidationProvider1.ClearErrorStatus();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
         }
@@ -103,6 +106,7 @@ namespace PVCWindowsStudio.UI
             lblID.Text = "";
             txtName.Text = "";
             txtDescription.Text = "";
+            ddlColor.Text = "Zgjidhni një ngjyrë";
             productPictureBox.Image = null;
         }
 
@@ -131,7 +135,7 @@ namespace PVCWindowsStudio.UI
             if (!String.IsNullOrEmpty(lblID.Text))
             {
                 if (productPictureBox.Image == null)
-                    RadMessageBox.Show("Picture box can't be empty!");
+                    RadMessageBox.Show(MessageTexts.pictureBoxMessage);
                 else
                 {
                     if (ValidationMethod())
@@ -139,38 +143,39 @@ namespace PVCWindowsStudio.UI
                         product.Name = txtName.Text;
                         product.Other = txtDescription.Text;
                         product.Picture = ConvertFormImage(productPictureBox.Image);
+                        product.Color = ddlColor.SelectedValue.ToString();
                         product.LUB = 1;
 
                         if (productBll.Update(product))
                         {
-                            RadMessageBox.Show("Product updated successfully!");
+                            RadMessageBox.Show(MessageTexts.successUpdateProduct);
                             InitiateData();
                             Clear();
                             this.radValidationProvider1.ClearErrorStatus();
                         }
-                        else RadMessageBox.Show("Something went wrong!");
+                        else RadMessageBox.Show(MessageTexts.somethingWrong);
                     }
                 }
             }
-            else RadMessageBox.Show("Please select an product!");
+            else RadMessageBox.Show(MessageTexts.selectMessageProduct);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (productBll.Delete(int.Parse(lblID.Text)))
                     {
-                        RadMessageBox.Show("Product is deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteProduct);
                         InitiateData();
                         Clear();
                     }
-                    else RadMessageBox.Show("Something went wrong!");
+                    else RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
-            else RadMessageBox.Show("Please select an product!");
+            else RadMessageBox.Show(MessageTexts.selectMessageProduct);
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -195,6 +200,7 @@ namespace PVCWindowsStudio.UI
                     lblID.Text = product.ProductID.ToString();
                     txtName.Text = product.Name;
                     txtDescription.Text = product.Other;
+                    ddlColor.SelectedValue = product.Color;
                     if (product.Picture?.Length > 0)
                         productPictureBox.Image = ConvertToImage(product.Picture);
                     else

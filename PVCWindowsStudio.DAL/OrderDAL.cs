@@ -237,6 +237,7 @@ namespace PVCWindowsStudio.DAL
                 FullDiscount = reader["Discount"].ToString() + " " + reader["DiscountType"].ToString(),
                 Comment = reader["Comment"].ToString(),
                 TotalPrice = Convert.ToDecimal(reader["TotalPrice"].ToString()),
+                Total = Convert.ToDecimal(reader["Total"].ToString()),
                 Date = Convert.ToDateTime(reader["Date"].ToString()),
                 Clients = new Clients()
                 {

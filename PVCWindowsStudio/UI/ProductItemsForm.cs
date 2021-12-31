@@ -10,23 +10,15 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
     public partial class ProductItemsForm : Telerik.WinControls.UI.RadForm
     {
-        private readonly ProductItemsModel productModel;
+        private readonly ProductItemsModel productModel = new ProductItemsModel();
         public ProductItemsForm()
         {
-            productModel = new ProductItemsModel()
-            {
-                Product = new Products(),
-                ProductItems = new ProductItems(),
-                MaterialBll = new MaterialBLL(),
-                FormulaBll = new FormulaBLL(),
-                ProductBLL = new ProductBLL(),
-                ProductItemsBll = new ProductItemsBLL()
-            };
             InitializeComponent();
         }
 
@@ -49,20 +41,20 @@ namespace PVCWindowsStudio.UI
         {
             InitiateProduct();
             RadMessageBox.SetThemeName("MaterialBlueGrey");
-
-
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
         }
 
         private Image ConvertToImage(byte[] array)
         {
-            Image x = (Bitmap)((new ImageConverter()).ConvertFrom(array));
+            Image x = (Bitmap)new ImageConverter().ConvertFrom(array);
             return x;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (productPictureBox.Image == null)
-                RadMessageBox.Show("Picture box can't be empty!");            
+                RadMessageBox.Show(MessageTexts.pictureBoxMessage);            
             else
             {
                 productModel.ProductItems.ProductID = int.Parse(lblproductID.Text);
@@ -72,11 +64,11 @@ namespace PVCWindowsStudio.UI
 
                 if (productModel.ProductItemsBll.Insert(productModel.ProductItems))
                 {
-                    RadMessageBox.Show("Product is inserted successfully!");
+                    RadMessageBox.Show(MessageTexts.successInsertProductItem);
                     InitiateProductItems(int.Parse(lblproductID.Text));
                     
                 }
-                else RadMessageBox.Show("Something went wrong!");
+                else RadMessageBox.Show(MessageTexts.somethingWrong);
             }
         }
 
@@ -98,7 +90,7 @@ namespace PVCWindowsStudio.UI
             if (!String.IsNullOrEmpty(lblProductItemID.Text))
             {
                 if (productPictureBox.Image == null)
-                    MessageBox.Show("Picture box can't be empty!");
+                    MessageBox.Show(MessageTexts.pictureBoxMessage);
                 else
                 {
                     productModel.ProductItems.ProductItemsID = int.Parse(lblProductItemID.Text);
@@ -109,37 +101,37 @@ namespace PVCWindowsStudio.UI
 
                     if (productModel.ProductItemsBll.Update(productModel.ProductItems))
                     {
-                        RadMessageBox.Show("Product Item uppdated successfully!");
+                        RadMessageBox.Show(MessageTexts.successUpdateProductItem);
                         InitiateProductItems(int.Parse(lblproductID.Text));
-                        Clear();
+                        lblProductItemID.Text = "";
 
                     }
                     else
-                        RadMessageBox.Show("Something went wrong!");
+                        RadMessageBox.Show(MessageTexts.somethingWrong);
 
                 }
             }
-            else RadMessageBox.Show("Please select a product item!");
+            else RadMessageBox.Show(MessageTexts.selectMessageProductItem);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(lblProductItemID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (productModel.ProductItemsBll.Delete(int.Parse(lblProductItemID.Text)))
                     {
-                        RadMessageBox.Show("Product Item deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteProductItem);
                         InitiateProductItems(int.Parse(lblproductID.Text));
-                        Clear();
+                        lblProductItemID.Text = "";
                     }
                     else
-                        RadMessageBox.Show("Shomething went wrong!");
+                        RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
 
             }
-            else RadMessageBox.Show("Please select a product item!");
+            else RadMessageBox.Show(MessageTexts.selectMessageProductItem);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

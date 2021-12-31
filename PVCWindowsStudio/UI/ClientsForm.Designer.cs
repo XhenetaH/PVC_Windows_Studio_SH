@@ -35,6 +35,8 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadValidationRule radValidationRule1 = new Telerik.WinControls.UI.RadValidationRule();
             Telerik.WinControls.UI.RadValidationRule radValidationRule2 = new Telerik.WinControls.UI.RadValidationRule();
@@ -112,6 +114,7 @@
             this.clientGridView1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.clientGridView1, "clientGridView1");
             this.clientGridView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.clientGridView1.HideSelection = true;
             // 
             // 
             // 
@@ -150,13 +153,24 @@
             gridViewTextBoxColumn5.MinWidth = 6;
             gridViewTextBoxColumn5.Name = "Address";
             gridViewTextBoxColumn5.Width = 224;
+            gridViewTextBoxColumn6.FieldName = "ClientID";
+            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
+            gridViewTextBoxColumn6.IsVisible = false;
+            gridViewTextBoxColumn6.Name = "ClientID";
+            gridViewTextBoxColumn6.SortOrder = Telerik.WinControls.UI.RadSortOrder.Descending;
+            gridViewTextBoxColumn6.Width = 47;
             this.clientGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
             gridViewTextBoxColumn3,
             gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5});
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.clientGridView1.MasterTemplate.EnablePaging = true;
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "ClientID";
+            this.clientGridView1.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
+            sortDescriptor1});
             this.clientGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.clientGridView1.Name = "clientGridView1";
             this.clientGridView1.ThemeName = "MaterialBlueGrey";
@@ -328,11 +342,13 @@
             this.radValidationProvider1.ValidationMode = Telerik.WinControls.UI.ValidationMode.Programmatically;
             radValidationRule1.Controls.Add(this.txtName);
             radValidationRule1.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule1.ToolTipText = "Name can\'t be empty!";
+            radValidationRule1.ToolTipText = "Emri nuk mund të jetë i zbrazët!";
+            radValidationRule1.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule1.Value = "";
             radValidationRule2.Controls.Add(this.txtLastName);
             radValidationRule2.Operator = Telerik.WinControls.Data.FilterOperator.IsNotLike;
-            radValidationRule2.ToolTipText = "Last Name can\'t be empty!";
+            radValidationRule2.ToolTipText = "Mbiemri nuk mund të jetë i zbrazët!";
+            radValidationRule2.ToolTipTitle = "Validimi Dështoi!";
             radValidationRule2.Value = "";
             this.radValidationProvider1.ValidationRules.AddRange(new Telerik.WinControls.Data.FilterDescriptor[] {
             radValidationRule1,

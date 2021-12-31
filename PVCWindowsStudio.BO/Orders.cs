@@ -16,6 +16,7 @@ namespace PVCWindowsStudio.BO
         public string DiscountType { get; set; }
         public string FullDiscount { get; set; }
         public decimal TotalPrice { get; set; }
+        public decimal Total { get; set; }
         public virtual Clients Clients { get; set; }
     }
 }

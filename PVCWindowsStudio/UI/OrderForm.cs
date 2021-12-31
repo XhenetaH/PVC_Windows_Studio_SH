@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
-
+using Telerik.WinControls.UI.Localization;
 
 namespace PVCWindowsStudio.UI
 {
@@ -34,10 +34,12 @@ namespace PVCWindowsStudio.UI
             clientMultiComboBox.DataSource = clientBll.GetName();
             clientMultiComboBox.SelectedIndex = -1;
             clientMultiComboBox.AutoCompleteMode = AutoCompleteMode.Append;           
-            clientMultiComboBox.Text = "Choose a client";
+            clientMultiComboBox.Text = "Zgjidhni një klient";
             discountCmb.SelectedIndex = 1;
 
             RadMessageBox.SetThemeName("MaterialBlueGrey");
+            RadGridLocalizationProvider.CurrentProvider = new MyGridViewLocalizationProvider();
+            RadMessageLocalizationProvider.CurrentProvider = new MyMessageBoxLocalizationProvider();
         }
 
         
@@ -77,7 +79,7 @@ namespace PVCWindowsStudio.UI
         }
         private void Clear()
         {
-            clientMultiComboBox.Text = "Choose a client";
+            clientMultiComboBox.Text = "Zgjidhni një klient";
             discountCmb.SelectedIndex = 1;
 
             lblID.Text = "";
@@ -110,21 +112,21 @@ namespace PVCWindowsStudio.UI
                     if (discountCmb.SelectedIndex == 1)                    
                         order.TotalPrice = Math.Round(order.TotalPrice + discount);                    
                     else
-                        order.TotalPrice = Math.Round(order.TotalPrice + ((discount / 100) * order.TotalPrice));
+                        order.TotalPrice = Math.Round(order.TotalPrice + (order.Total - (order.Total-((discount / 100) * order.Total))));
                 }
                 order.LUB = 1;
 
                 if (orderBll.Update(order))
                 {
-                    RadMessageBox.Show("Order updated successfully!");
+                    RadMessageBox.Show(MessageTexts.successUpdateOrder);
                     InitiateData();
                     Clear();
                 }
                 else
-                    RadMessageBox.Show("Something went wrong!");
+                    RadMessageBox.Show(MessageTexts.somethingWrong);
             }
             else
-                RadMessageBox.Show("Please select an order!");
+                RadMessageBox.Show(MessageTexts.selectMessageOrder);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -136,20 +138,20 @@ namespace PVCWindowsStudio.UI
         {
             if (!String.IsNullOrEmpty(lblID.Text))
             {
-                if (RadMessageBox.Show("Are you sure you want to delete this?", "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
+                if (RadMessageBox.Show(MessageTexts.deleteMessage, "", MessageBoxButtons.YesNo, RadMessageIcon.Question) == DialogResult.Yes)
                 {
                     if (orderBll.DeleteAll(int.Parse(lblID.Text)))
                     {
-                        RadMessageBox.Show("Order deleted successfully!");
+                        RadMessageBox.Show(MessageTexts.successDeleteOrder);
                         InitiateData();
                         Clear();
                     }
                     else
-                        RadMessageBox.Show("Something went wrong!");
+                        RadMessageBox.Show(MessageTexts.somethingWrong);
                 }
             }
             else
-                RadMessageBox.Show("Please select an order!");
+                RadMessageBox.Show(MessageTexts.selectMessageOrder);
         }
 
 
@@ -166,7 +168,7 @@ namespace PVCWindowsStudio.UI
                 orderReport.Show();
             }
             else
-                RadMessageBox.Show("Please select an order!");
+                RadMessageBox.Show(MessageTexts.selectMessageOrder);
         }
 
         private void classicOrder_Click(object sender, EventArgs e)
@@ -177,7 +179,7 @@ namespace PVCWindowsStudio.UI
                 orderReport.Show();
             }
             else
-                RadMessageBox.Show("Please select an order!");
+                RadMessageBox.Show(MessageTexts.selectMessageOrder);
         }
         
     }

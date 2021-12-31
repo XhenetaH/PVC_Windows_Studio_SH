@@ -117,18 +117,18 @@
             this.productItemMenuBtn,
             this.formulaMenuBtn});
             this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "Products Management";
+            this.radMenuItem3.Text = "Menaxhimi i Produkteve";
             // 
             // productMenuBtn
             // 
             this.productMenuBtn.Name = "productMenuBtn";
-            this.productMenuBtn.Text = "Products";
+            this.productMenuBtn.Text = "Produktet";
             this.productMenuBtn.Click += new System.EventHandler(this.productMenuBtn_Click);
             // 
             // productItemMenuBtn
             // 
             this.productItemMenuBtn.Name = "productItemMenuBtn";
-            this.productItemMenuBtn.Text = "Product Items";
+            this.productItemMenuBtn.Text = "Pjesët e Produktit";
             this.productItemMenuBtn.Click += new System.EventHandler(this.productItemMenuBtn_Click);
             // 
             // formulaMenuBtn
@@ -144,18 +144,18 @@
             this.priceListMenuBtn,
             this.handWorkMenuBtn});
             this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Price List";
+            this.radMenuItem4.Text = "Lista e Çmimeve";
             // 
             // priceListMenuBtn
             // 
             this.priceListMenuBtn.Name = "priceListMenuBtn";
-            this.priceListMenuBtn.Text = "Price List";
+            this.priceListMenuBtn.Text = "Lista e Çmimeve";
             this.priceListMenuBtn.Click += new System.EventHandler(this.priceListMenuBtn_Click);
             // 
             // handWorkMenuBtn
             // 
             this.handWorkMenuBtn.Name = "handWorkMenuBtn";
-            this.handWorkMenuBtn.Text = "Hand Work";
+            this.handWorkMenuBtn.Text = "Çmimet e Punë Dorës";
             this.handWorkMenuBtn.Click += new System.EventHandler(this.handWorkMenuBtn_Click);
             // 
             // radMenuItem5
@@ -164,24 +164,24 @@
             this.orderMenuBtn,
             this.orderDetailsMenuBtn});
             this.radMenuItem5.Name = "radMenuItem5";
-            this.radMenuItem5.Text = "Orders History";
+            this.radMenuItem5.Text = "Historia e Ofertave";
             // 
             // orderMenuBtn
             // 
             this.orderMenuBtn.Name = "orderMenuBtn";
-            this.orderMenuBtn.Text = "Order";
+            this.orderMenuBtn.Text = "Ofertat";
             this.orderMenuBtn.Click += new System.EventHandler(this.orderMenuBtn_Click);
             // 
             // orderDetailsMenuBtn
             // 
             this.orderDetailsMenuBtn.Name = "orderDetailsMenuBtn";
-            this.orderDetailsMenuBtn.Text = "Order Details";
+            this.orderDetailsMenuBtn.Text = "Detajet e Ofertave";
             this.orderDetailsMenuBtn.Click += new System.EventHandler(this.orderDetailsMenuBtn_Click);
             // 
             // invoiceMenuBtn
             // 
             this.invoiceMenuBtn.Name = "invoiceMenuBtn";
-            this.invoiceMenuBtn.Text = "Invoices";
+            this.invoiceMenuBtn.Text = "Faturat";
             this.invoiceMenuBtn.Click += new System.EventHandler(this.invoiceMenuBtn_Click);
             // 
             // clientsMenuBtn
